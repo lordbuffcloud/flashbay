@@ -1,0 +1,101 @@
+name: Weekly Link Verify
+
+on:
+  schedule:
+    # Every Monday at 14:00 UTC (= ~10am ET, ~7am PT) — fresh week, fresh check
+    - cron: "0 14 * * 1"
+  workflow_dispatch: {} # allow manual triggering from the Actions tab
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Run link verifier
+        id: verify
+        continue-on-error: true
+        run: bun run tools/verify-links.ts
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-links-report
+          path: verify-links-report.json
+          retention-days: 90
+
+      - name: Open issue on broken links
+        if: steps.verify.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('verify-links-report.json', 'utf8'));
+            const broken = report.results.filter(r => !r.ok);
+            const today = new Date().toISOString().slice(0, 10);
+
+            const lines = [
+              `**Weekly link-verify run on ${today}** found ${broken.length} broken link(s) across ${report.total_links} checked.`,
+              ``,
+              `Catalog version: \`${report.catalog_version}\``,
+              ``,
+              `| Status | Device / Firmware | Field | URL |`,
+              `| --- | --- | --- | --- |`,
+              ...broken.map(b => {
+                const where = b.firmware_name ? `\`${b.device_id}\` / ${b.firmware_name}` : `\`${b.device_id}\``;
+                const status = typeof b.status === 'number' ? `\`${b.status}\`` : `**${b.status}**`;
+                return `| ${status} | ${where} | ${b.field} | ${b.url} |`;
+              }),
+              ``,
+              `Full report in the workflow artifact (\`verify-links-report.json\`).`,
+              ``,
+              `Action: review each broken link. If the upstream moved, edit \`data/devices.json\` and bump \`last_verified_at\`. If the firmware is genuinely dead, mark it \`archived: true\`.`,
+            ].join('\n');
+
+            // Look for an existing open verify-issue from this week to avoid duplicates
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'link-verify',
+              state: 'open',
+            });
+
+            const title = `[link-verify] ${broken.length} broken link${broken.length === 1 ? '' : 's'} (${today})`;
+
+            if (existing.data.length > 0) {
+              // Update the most recent open issue with this week's run
+              const latest = existing.data[0];
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: latest.number,
+                body: lines,
+              });
+              console.log(`Commented on existing issue #${latest.number}`);
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body: lines,
+                labels: ['link-verify', 'maintenance'],
+              });
+              console.log(`Opened issue #${created.data.number}`);
+            }
+
+      - name: Fail run if links broken
+        if: steps.verify.outcome == 'failure'
+        run: |
+          echo "::error::Broken links detected — see issue and artifact."
+          exit 1
