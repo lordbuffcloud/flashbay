@@ -1,5 +1,6 @@
 import { FlatList, Image, Platform, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 import { useDevices } from "@/hooks/useDevices";
 import { DeviceCard } from "@/components/DeviceCard";
 import { EmptyState } from "@/components/EmptyState";
@@ -14,10 +15,10 @@ const SUBMIT_URL =
 
 export default function DeviceBrowseScreen() {
   const { catalog, loading, error, refresh } = useDevices();
+  const router = useRouter();
 
-  function handleDevicePress(_device: Device) {
-    // Device Detail screen will land in a follow-up feature.
-    // For now, just a no-op so the card is pressable.
+  function handleDevicePress(device: Device) {
+    router.push({ pathname: "/device/[id]", params: { id: device.id } });
   }
 
   return (

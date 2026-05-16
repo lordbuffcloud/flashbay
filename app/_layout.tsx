@@ -12,8 +12,16 @@ export const unstable_settings = {
 export default function RootLayout() {
   return (
     <ThemeProvider value={DarkTheme}>
-      <Stack screenOptions={{ contentStyle: { backgroundColor: '#000000' } }}>
+      <Stack
+        screenOptions={{
+          contentStyle: { backgroundColor: '#000000' },
+          headerStyle: { backgroundColor: '#000000' },
+          headerTintColor: '#39FF14',
+          headerTitleStyle: { fontFamily: 'SpaceMono', color: '#F5F5F5' },
+        }}
+      >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="device/[id]" options={{ title: 'DEVICE', headerBackTitle: 'Back' }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
       </Stack>
       <StatusBar style="light" />
