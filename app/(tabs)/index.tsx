@@ -1,98 +1,83 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { FlatList, Image, Platform, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useDevices } from "@/hooks/useDevices";
+import { DeviceCard } from "@/components/DeviceCard";
+import { EmptyState } from "@/components/EmptyState";
+import { ErrorState } from "@/components/ErrorState";
+import { MonoText } from "@/components/MonoText";
+import { openExternal } from "@/lib/openExternal";
+import { images } from "@/constants/images";
+import type { Device } from "@/types/Device";
 
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+const SUBMIT_URL =
+  "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml";
 
-export default function HomeScreen() {
+export default function DeviceBrowseScreen() {
+  const { catalog, loading, error, refresh } = useDevices();
+
+  function handleDevicePress(_device: Device) {
+    // Device Detail screen will land in a follow-up feature.
+    // For now, just a no-op so the card is pressable.
+  }
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
-
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }} edges={["top"]}>
+      <View className="flex-1 bg-terminal-black">
+        <Header />
+        {error ? (
+          <ErrorState onRetry={refresh} />
+        ) : (
+          <FlatList
+            data={catalog?.devices ?? []}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <DeviceCard device={item} onPress={handleDevicePress} />
+            )}
+            ItemSeparatorComponent={() => <View className="h-2" />}
+            contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
+            ListEmptyComponent={
+              loading ? (
+                <View className="py-12 items-center">
+                  <MonoText className="text-terminal-muted text-xs">
+                    LOADING CATALOG…
+                  </MonoText>
+                </View>
+              ) : (
+                <EmptyState />
+              )
+            }
+          />
+        )}
+        <SubmitBar />
+      </View>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+function Header() {
+  return (
+    <View className="border-b border-terminal-border px-4 py-3 flex-row items-center justify-between">
+      <Image
+        source={images.wordmark}
+        style={{ width: 160, height: 32 }}
+        resizeMode="contain"
+      />
+      <MonoText className="text-terminal-muted text-xs">
+        {Platform.OS === "web" ? "WEB" : Platform.OS.toUpperCase()}
+      </MonoText>
+    </View>
+  );
+}
+
+function SubmitBar() {
+  return (
+    <View className="border-t border-terminal-border px-4 py-3">
+      <MonoText
+        className="text-terminal-amber text-xs"
+        onPress={() => openExternal(SUBMIT_URL)}
+      >
+        [ SUBMIT FIRMWARE → GITHUB ISSUE ]
+      </MonoText>
+    </View>
+  );
+}
