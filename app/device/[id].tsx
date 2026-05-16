@@ -11,10 +11,17 @@ export default function DeviceDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const { catalog, loading, error, refresh } = useDevices();
 
-  const device = useMemo(
-    () => catalog?.devices.find((d) => d.id === id),
-    [catalog, id],
-  );
+  const device = useMemo(() => {
+    const found = catalog?.devices.find((d) => d.id === id);
+    if (!found) return undefined;
+    // Sort firmware newest-first by release_date, archived to the bottom.
+    const sorted = [...found.firmware].sort((a, b) => {
+      if (a.archived === true && b.archived !== true) return 1;
+      if (b.archived === true && a.archived !== true) return -1;
+      return b.release_date.localeCompare(a.release_date);
+    });
+    return { ...found, firmware: sorted };
+  }, [catalog, id]);
 
   if (loading) {
     return (

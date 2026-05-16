@@ -1,4 +1,4 @@
-import { FlatList, Image, Platform, View } from "react-native";
+import { FlatList, Image, Platform, RefreshControl, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -43,6 +43,14 @@ export default function DeviceBrowseScreen() {
             )}
             ItemSeparatorComponent={() => <View className="h-2" />}
             contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
+            refreshControl={
+              <RefreshControl
+                refreshing={loading}
+                onRefresh={refresh}
+                tintColor="#39FF14"
+                colors={["#39FF14"]}
+              />
+            }
             ListEmptyComponent={
               loading ? (
                 <View className="py-12 items-center">

@@ -1,4 +1,4 @@
-import { FlatList, TextInput, View } from "react-native";
+import { FlatList, RefreshControl, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -62,6 +62,14 @@ export default function SearchScreen() {
             )}
             ItemSeparatorComponent={() => <View className="h-2" />}
             contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
+            refreshControl={
+              <RefreshControl
+                refreshing={loading}
+                onRefresh={refresh}
+                tintColor="#39FF14"
+                colors={["#39FF14"]}
+              />
+            }
             ListHeaderComponent={
               <View className="pb-3">
                 <MonoText className="text-terminal-muted text-xs">
