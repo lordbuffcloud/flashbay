@@ -1,6 +1,6 @@
 {
-  "version": "1.0.1",
-  "generated": "2026-05-16T14:30:00Z",
+  "version": "1.0.2",
+  "generated": "2026-05-16T14:45:00Z",
   "license": "CC-BY-4.0",
   "submission_url": "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml",
   "devices": [
@@ -10,27 +10,33 @@
       "manufacturer": "jbohack + zr_crackiin",
       "category": "esp32",
       "tags": ["esp32-wroom-32u", "wifi", "ble", "nrf24", "mousejack", "evil-portal", "handheld", "oled-128x64", "usb-c"],
-      "description": "Handheld ESP32-based pentesting tool. ESP32 WROOM-32U dual-core 240MHz, WiFi b/g/n, BLE 4.2, three NRF24 radios, 0.96\" OLED (128x64 SSD1306), USB-C, 2500mAh battery.",
-      "url": "https://github.com/jbohack/nyanbox",
+      "description": "Handheld ESP32-based pentesting tool. ESP32 WROOM-32U dual-core 240MHz, WiFi b/g/n, BLE 4.2, three NRF24 radios, 0.96\" OLED (128x64 SSD1306), USB-C, 2500mAh battery. Fork of CiferTech's nRFBOX.",
+      "url": "https://github.com/jbohack/nyanBOX",
       "firmware": [
         {
           "fork": "stock",
           "name": "nyanBOX",
-          "version": "4.26.11",
-          "release_date": "2026-04-15",
-          "url": "https://github.com/jbohack/nyanbox/releases/latest",
-          "notes": "Official nyanBOX firmware by jbohack and zr_crackiin. The base platform.",
-          "flashable_in_browser": false
+          "version": "main-branch",
+          "release_date": "2026-05-01",
+          "url": "https://github.com/jbohack/nyanBOX",
+          "notes": "Canonical upstream by jbohack + zr_crackiin. Ships from main branch only — repo has no tagged releases.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "nyanBEE",
-          "version": "1.4.26",
+          "version": "v1.4.26",
           "release_date": "2026-05-05",
           "url": "https://ck42x.com/nyanbee",
-          "notes": "60+ tools — WiFi handshake/PMKID/evil-portal (8 templates), 15+ BLE detectors, HoneyBLE multi-family lab, NRF24 MouseJack/replay/Stinger, bee-themed Mission Mode + gamification, HTML/JSON engagement reports. Built on nyanBOX v4.26.11. Source private during active development.",
+          "notes": "ck42x firmware — 54 tools across WiFi/BLE/RF/recon, 22 exclusive to Nyanbee. Bee-themed Mission Mode + gamification. Free binary; source private during active development. SHA-256 verification published.",
           "flashable_in_browser": true,
-          "flash_url": "https://ck42x.com/nyanbee/flash-stock"
+          "flash_url": "https://ck42x.com/nyanbee/flash-stock",
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -46,39 +52,67 @@
         {
           "fork": "stock",
           "name": "Official",
-          "version": "1.4.4",
-          "release_date": "2026-03-15",
-          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/latest",
-          "notes": "Official Flipper Devices firmware. Stable, supported.",
+          "version": "1.4.3",
+          "release_date": "2024-12-05",
+          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.4.3",
+          "notes": "Official Flipper firmware. Update cadence has slowed considerably — 1.4.3 was a bugfix to 1.4.2's IR CLI plugin.",
           "flashable_in_browser": true,
-          "flash_url": "https://lab.flipper.net"
-        },
-        {
-          "fork": "community",
-          "name": "RogueMaster",
-          "version": "1027",
-          "release_date": "2026-04-01",
-          "url": "https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/latest",
-          "notes": "Maximum-feature community fork. Most third-party apps preloaded.",
-          "flashable_in_browser": false
+          "flash_url": "https://lab.flipper.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Unleashed",
-          "version": "1.4.0",
-          "release_date": "2026-03-20",
-          "url": "https://github.com/DarkFlippers/unleashed-firmware/releases/latest",
-          "notes": "Unlocked features, region-free Sub-GHz, frequency analyzer.",
-          "flashable_in_browser": false
+          "version": "unlshd-089",
+          "release_date": "2026-05-09",
+          "url": "https://github.com/DarkFlippers/unleashed-firmware/releases/tag/unlshd-089",
+          "notes": "Most stable community fork — API-compatible with OFW, adds region unlock and protocol expansions. unlshd-089 is a SubGHz hotfix for FAAC SLH decode.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lab.flipper.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Momentum",
+          "version": "mntm-012",
+          "release_date": "2026-01-02",
+          "url": "https://github.com/Next-Flip/Momentum-Firmware/releases/tag/mntm-012",
+          "notes": "Direct successor to Xtreme by the same dev team. Most feature-rich fork — 80+ apps, full JS SDK, custom asset packs.",
+          "flashable_in_browser": true,
+          "flash_url": "https://momentum-fw.dev/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "MED"
+        },
+        {
+          "fork": "community",
+          "name": "RogueMaster",
+          "version": "RM0422-1127-0.420.0-960438b",
+          "release_date": "2026-04-22",
+          "url": "https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/latest",
+          "notes": "Bleeding-edge kitchen-sink fork that syncs both OFW and Unleashed. GitHub weekly builds; Patreon daily.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lab.flipper.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Xtreme",
-          "version": "076",
-          "release_date": "2026-04-10",
-          "url": "https://github.com/Flipper-XFW/Xtreme-Firmware/releases/latest",
-          "notes": "Customization-focused fork. UI themes, asset packs.",
-          "flashable_in_browser": false
+          "version": "XFW-0053_02022024",
+          "release_date": "2024-02-02",
+          "url": "https://github.com/Flipper-XFW/Xtreme-Firmware",
+          "notes": "ARCHIVED 2024-11-19. Dev team forked forward into Momentum. Historical reference only — do not flash.",
+          "flashable_in_browser": false,
+          "archived": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -93,91 +127,97 @@
       "firmware": [
         {
           "fork": "stock",
-          "name": "Official",
-          "version": "2024.02.1",
-          "release_date": "2024-02-15",
-          "url": "https://github.com/greatscottgadgets/hackrf/releases/latest",
-          "notes": "Official firmware via dfu-util or hackrf_spiflash.",
-          "flashable_in_browser": false
+          "name": "Official HackRF",
+          "version": "2026.01.3",
+          "release_date": "2026-01-30",
+          "url": "https://github.com/greatscottgadgets/hackrf/releases/tag/v2026.01.3",
+          "notes": "Official firmware from Great Scott Gadgets. Fixes mixer frequency lock failures and adds larger SPI flash support for HackRF Pro.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "PortaPack Mayhem",
-          "version": "2.1.0",
-          "release_date": "2026-02-10",
-          "url": "https://github.com/eried/portapack-mayhem/releases/latest",
-          "notes": "For HackRF + PortaPack H2/H4 add-on. Adds standalone capability.",
-          "flashable_in_browser": false
+          "version": "v2.4.0",
+          "release_date": "2025-03-24",
+          "url": "https://github.com/portapack-mayhem/mayhem-firmware/releases/tag/v2.4.0",
+          "notes": "Standalone firmware for HackRF + PortaPack H1/H2/H4/H4M add-on. Fork of unmaintained Havoc. Adds HackRF Pro (PRALINE) support. Nightly builds released almost daily; v2.4.0 is current stable.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     },
     {
       "id": "proxmark3-rdv4",
       "name": "Proxmark3 RDV4",
-      "manufacturer": "Proxgrind / RRG",
+      "manufacturer": "RfidResearchGroup",
       "category": "rfid-nfc",
       "tags": ["rfid", "nfc", "hf", "lf", "mifare"],
       "description": "High/low frequency RFID research tool. Read, write, emulate, sniff.",
       "url": "https://proxmark.com",
       "firmware": [
         {
-          "fork": "stock",
-          "name": "Official",
-          "version": "4.18589",
-          "release_date": "2026-04-05",
-          "url": "https://github.com/RfidResearchGroup/proxmark3/releases/latest",
-          "notes": "RRG / Iceman firmware. The de-facto standard.",
-          "flashable_in_browser": false
+          "fork": "community",
+          "name": "Iceman (RRG)",
+          "version": "v4.21611",
+          "release_date": "2026-04-14",
+          "url": "https://github.com/RfidResearchGroup/proxmark3/releases/tag/v4.21611",
+          "notes": "De-facto standard Proxmark3 firmware — 'BREAKMEIFYOUCAN!' release. Adds Qt6 client, new `lf relay` command, fixes hf mf/mfp wrbl. Tuned for RDV4 by default.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     },
     {
-      "id": "omg-cable",
-      "name": "O.MG Cable",
-      "manufacturer": "Mischief Gadgets / Hak5",
+      "id": "omg-universal",
+      "name": "O.MG Cable / Plug / UnBlocker",
+      "manufacturer": "Mischief Gadgets (Hak5)",
       "category": "implant",
       "tags": ["badusb", "wifi", "implant", "ducky-script"],
-      "description": "Looks like a charging cable. Is a WiFi-controlled BadUSB implant with payload execution.",
+      "description": "Family of USB implants — looks like a charging cable, AC adapter, or USB blocker. WiFi-controlled BadUSB with payload execution.",
       "url": "https://o.mg.lol",
       "firmware": [
         {
           "fork": "stock",
-          "name": "Official Programmer",
-          "version": "1.6",
-          "release_date": "2026-03-01",
-          "url": "https://github.com/O-MG/O.MG-Firmware/releases/latest",
-          "notes": "Browser-flashable via O.MG Web Programmer.",
+          "name": "O.MG Universal Firmware",
+          "version": "v3.0-251217",
+          "release_date": "2024-12-17",
+          "url": "https://github.com/O-MG/O.MG-Firmware/releases/tag/v3.0-251217",
+          "notes": "Single universal firmware for all O.MG devices (Cable, Adapter, Plug, UnBlocker). v3.0-251217 fixed BR keymap forward/back slash transposition. The legacy DemonSeed variant is absorbed into this universal firmware.",
           "flashable_in_browser": true,
-          "flash_url": "https://o.mg.lol/programmer"
+          "flash_url": "https://o-mg.github.io/WebFlasher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     },
     {
       "id": "pwnagotchi",
       "name": "Pwnagotchi",
-      "manufacturer": "evilsocket (community)",
+      "manufacturer": "evilsocket (original) / jayofelony (current maintainer)",
       "category": "wifi",
       "tags": ["wifi", "wpa", "handshake-capture", "rpi-zero", "ai"],
       "description": "Raspberry Pi Zero W-based WiFi handshake collector with a virtual-pet UI.",
       "url": "https://pwnagotchi.ai",
       "firmware": [
         {
-          "fork": "stock",
-          "name": "Official",
-          "version": "1.5.5",
-          "release_date": "2023-08-01",
-          "url": "https://github.com/evilsocket/pwnagotchi/releases/latest",
-          "notes": "SD card image. Flashed via Raspberry Pi Imager.",
-          "flashable_in_browser": false
-        },
-        {
           "fork": "community",
-          "name": "jayofelony Modular",
-          "version": "2.9.4",
-          "release_date": "2026-04-12",
-          "url": "https://github.com/jayofelony/pwnagotchi/releases/latest",
-          "notes": "Actively maintained community fork. Pi Zero 2W support.",
-          "flashable_in_browser": false
+          "name": "jayofelony Pwnagotchi",
+          "version": "2.9.5.4",
+          "release_date": "2025-01-29",
+          "url": "https://github.com/jayofelony/pwnagotchi/releases/tag/v2.9.5.4",
+          "notes": "Current de-facto Pwnagotchi distribution — the original evilsocket project is unmaintained. Adds Trixie RPi OS support, Bluetooth tethering, PiSugar plugin updates. Active 2026 development on main branch but no new tagged release since 2.9.5.4.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -192,39 +232,45 @@
       "firmware": [
         {
           "fork": "stock",
-          "name": "Official",
-          "version": "2.7.3",
-          "release_date": "2026-02-20",
-          "url": "https://shop.hak5.org/pages/downloads",
-          "notes": "Uploaded via web UI on the device. Not GitHub-distributed.",
-          "flashable_in_browser": false
+          "name": "Official (Hak5 portal)",
+          "version": "check-vendor-portal",
+          "release_date": "2026-05-16",
+          "url": "https://downloads.hak5.org/pineapple/mk7",
+          "notes": "Hak5's download portal — page renders client-side, exact current version not machine-readable. On the 2.x line per docs.hak5.org. Check the portal for latest.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-16",
+          "confidence": "LOW"
         }
       ]
     },
     {
-      "id": "usb-rubber-ducky",
-      "name": "USB Rubber Ducky",
+      "id": "usb-rubber-ducky-mk2",
+      "name": "USB Rubber Ducky Mark II",
       "manufacturer": "Hak5",
       "category": "badusb",
       "tags": ["badusb", "hid", "ducky-script", "keystroke-injection"],
-      "description": "Keystroke injection tool. Looks like a USB drive, types pre-loaded payloads at superhuman speed.",
+      "description": "Keystroke injection tool. Looks like a USB drive, executes pre-compiled payloads at superhuman speed.",
       "url": "https://shop.hak5.org/products/usb-rubber-ducky",
       "firmware": [
         {
           "fork": "stock",
-          "name": "Official (Gen 3)",
-          "version": "DuckyScript 3.0",
-          "release_date": "2025-11-10",
-          "url": "https://shop.hak5.org/pages/downloads",
-          "notes": "Encoded via web-based Payload Studio at payloadstudio.hak5.org.",
+          "name": "Mark II (PayloadStudio architecture)",
+          "version": "flashless",
+          "release_date": "2022-08-12",
+          "url": "https://docs.hak5.org/hak5-usb-rubber-ducky/usb-rubber-ducky-by-hak5/",
+          "notes": "Mark II (2022) is explicitly flashless — payloads are compiled in Hak5 PayloadStudio rather than firmware-flashed. There is no 'Gen3'. Mark I (2011) and Mark II (2022) are the only generations.",
           "flashable_in_browser": true,
-          "flash_url": "https://payloadstudio.hak5.org"
+          "flash_url": "https://payloadstudio.hak5.org",
+          "release_tracking": "payload_compiler",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     },
     {
       "id": "bash-bunny",
-      "name": "Bash Bunny",
+      "name": "Bash Bunny Mark II",
       "manufacturer": "Hak5",
       "category": "badusb",
       "tags": ["badusb", "hid", "mass-storage", "ethernet", "serial"],
@@ -233,12 +279,15 @@
       "firmware": [
         {
           "fork": "stock",
-          "name": "Official",
-          "version": "1.7",
-          "release_date": "2025-09-15",
-          "url": "https://shop.hak5.org/pages/downloads",
-          "notes": "Copied to the device via USB mass storage mode.",
-          "flashable_in_browser": false
+          "name": "Official (Hak5 portal)",
+          "version": "check-vendor-portal",
+          "release_date": "2026-05-16",
+          "url": "https://downloads.hak5.org/bunny",
+          "notes": "Mark II ships with 1.7 from the factory. Latest firmware lives on the Hak5 download portal — page renders client-side, current version not machine-readable. NEVER DOWNGRADE — will brick.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-16",
+          "confidence": "MED"
         }
       ]
     },
@@ -247,28 +296,34 @@
       "name": "M5Stack Cardputer",
       "manufacturer": "M5Stack",
       "category": "esp32",
-      "tags": ["esp32-s3", "keyboard", "display", "wifi", "ble", "ir"],
-      "description": "Credit-card-sized ESP32-S3 computer with QWERTY keyboard. Popular for Bruce firmware.",
+      "tags": ["esp32-s3", "keyboard", "display", "wifi", "ble", "ir", "microphone", "rgb-led"],
+      "description": "Credit-card-sized ESP32-S3 computer with QWERTY keyboard. Popular target for pentesting firmwares.",
       "url": "https://shop.m5stack.com/products/m5stack-cardputer-kit-w-m5stamps3",
       "firmware": [
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.10.1",
-          "release_date": "2026-04-25",
+          "version": "1.14",
+          "release_date": "2026-02-01",
           "url": "https://github.com/pr3y/Bruce/releases/latest",
-          "notes": "Pentesting firmware for M5Stack devices. WiFi, BLE, RF, IR, RFID.",
+          "notes": "Most feature-rich Cardputer firmware — CC1101/NRF24/FM/PN532/BadUSB/RFID/WiFi/BLE. Full hardware support (microphone, RGB LED). Also runs on M5StickC PLUS/PLUS2, Core/Core2/CoreS3, plus Lilygo T-series.",
           "flashable_in_browser": true,
-          "flash_url": "https://pr3y.github.io/Bruce/install.html"
+          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Nemo",
-          "version": "0.4.2",
-          "release_date": "2026-03-30",
-          "url": "https://github.com/n0xa/m5stick-nemo/releases/latest",
-          "notes": "Lighter pentesting toolkit for M5Stack platforms.",
-          "flashable_in_browser": false
+          "version": "v3.2.1",
+          "release_date": "2025-01-27",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
+          "notes": "Defensive/prank-focused firmware. Targets Cardputer/ADV, StickCPlus2, StickS3. Includes BadUSB Hunter for testing cables against BadUSB attacks.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -277,19 +332,48 @@
       "name": "ESP32 Marauder",
       "manufacturer": "JustCallMeKoko (community)",
       "category": "esp32",
-      "tags": ["esp32", "wifi", "ble", "deauth", "evil-portal", "kismet"],
-      "description": "WiFi + BLE pentesting firmware for ESP32 boards. Deauth, evil portal, sniffing, scanning.",
+      "tags": ["esp32", "wifi", "ble", "deauth", "evil-portal", "kismet", "wardriving"],
+      "description": "WiFi + BLE pentesting firmware for ESP32 boards. Deauth, evil portal, sniffing, scanning. Many compatible boards.",
       "url": "https://github.com/justcallmekoko/ESP32Marauder",
       "firmware": [
         {
-          "fork": "community",
-          "name": "ESP32 Marauder",
-          "version": "1.2.6",
-          "release_date": "2026-04-18",
-          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/latest",
-          "notes": "Multiple builds per ESP32 board variant. Browser-flashable via web installer.",
+          "fork": "stock",
+          "name": "ESP32 Marauder (official)",
+          "version": "v1.12.1",
+          "release_date": "2025-05-05",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
+          "notes": "Canonical WiFi/Bluetooth offensive+defensive ESP32 firmware. Latest tagged release adds Flock advertising rework and channel hop for Flock Sniff. Wiki updates from 2026-04-30 indicate active dev; no new tagged release yet.",
           "flashable_in_browser": true,
-          "flash_url": "https://justcallmekoko.github.io/ESP32Marauder/web-install/"
+          "flash_url": "https://justcallmekoko.github.io/ESP32Marauder/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Bruce (Marauder-compatible boards)",
+          "version": "1.14",
+          "release_date": "2026-02-01",
+          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "notes": "Bruce runs on many of the same ESP32-S3/CYD boards as Marauder. Different feature focus (BadUSB, RFID) but overlapping wardriving/deauther toolset.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Ghost ESP",
+          "version": "VA1.4.8",
+          "release_date": "2025-03-31",
+          "url": "https://github.com/Spooks4576/Ghost_ESP/releases/tag/VA1.4.8",
+          "notes": "Pentest-focused ESP32 firmware optimized for screen-based boards, especially Cheap Yellow Display (CYD). Adds tap-to-scroll, numpad AP selection, UI scaling. Public site ghostesp.net.",
+          "flashable_in_browser": true,
+          "flash_url": "https://flasher.ghostesp.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
         }
       ]
     }
