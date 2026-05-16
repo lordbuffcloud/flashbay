@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "generated": "2026-05-16T14:45:00Z",
+  "version": "1.0.3",
+  "generated": "2026-05-16T15:00:00Z",
   "license": "CC-BY-4.0",
   "submission_url": "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml",
   "devices": [
@@ -374,6 +374,149 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-16",
           "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "apex5-module",
+      "name": "Apex 5 Module",
+      "manufacturer": "JustCallMeKoko",
+      "category": "flipper-accessory",
+      "tags": ["esp32-c5", "wifi-6", "5ghz", "sub-ghz", "nrf24", "gps", "flipper-zero"],
+      "description": "ESP32-C5 module for Flipper Zero. Adds 5 GHz WiFi 6, dual Sub-GHz radios, NRF24, and GPS. Announced Feb 2026 at $99. Marauder-family hardware.",
+      "url": "https://www.cnx-software.com/2026/02/11/esp32-marauder-5g-apex-5-module-for-flipper-zero-combines-esp32-c5-two-sub-ghz-radios-nrf24-and-gps/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Apex 5 Firmware",
+          "version": "check-vendor-portal",
+          "release_date": "2026-02-12",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder",
+          "notes": "Newly announced product. Firmware ships from JustCallMeKoko's Marauder ecosystem. Verify current version on release before flashing — this entry needs re-verification post-launch.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-16",
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "m5stickc-plus2",
+      "name": "M5StickC PLUS2",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": ["esp32-pico-v3", "wifi", "ble", "ir", "rtc", "wearable", "compact"],
+      "description": "Compact ESP32 wearable with 1.14\" color display. Same firmware ecosystem as Cardputer (Bruce, Nemo). Popular for wearable wireless recon.",
+      "url": "https://shop.m5stack.com/products/m5stickc-plus2",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.14",
+          "release_date": "2026-02-01",
+          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "notes": "Same Bruce release as Cardputer — WiFi/BLE/RFID/BadUSB. Targets StickCPlus2 explicitly.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Nemo",
+          "version": "v3.2.1",
+          "release_date": "2025-01-27",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
+          "notes": "Defensive/prank firmware. Nemo targets StickCPlus2 as a first-class platform.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-tembed-cc1101",
+      "name": "LilyGo T-Embed CC1101",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": ["esp32-s3", "cc1101", "sub-ghz", "rotary-encoder", "tft", "rf"],
+      "description": "ESP32-S3 handheld with built-in CC1101 Sub-GHz radio, rotary encoder, color TFT display. Bruce's flagship target alongside Cardputer.",
+      "url": "https://www.lilygo.cc/products/t-embed-cc1101",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.14",
+          "release_date": "2026-02-01",
+          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "notes": "T-Embed CC1101 is a flagship Bruce target — first-class CC1101 Sub-GHz support, rotary-encoder UI.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "cheap-yellow-display",
+      "name": "Cheap Yellow Display (CYD)",
+      "manufacturer": "Sunton / generic",
+      "category": "esp32",
+      "tags": ["esp32", "esp32-2432s028", "touchscreen", "tft", "wifi", "ble", "budget"],
+      "description": "$10-15 ESP32 + 2.8\" touchscreen. Massive entry-level appeal for the ESP32 pentest ecosystem. Runs Ghost ESP and Bruce. Multiple Chinese vendors sell variants.",
+      "url": "https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Ghost ESP",
+          "version": "VA1.4.8",
+          "release_date": "2025-03-31",
+          "url": "https://github.com/Spooks4576/Ghost_ESP/releases/tag/VA1.4.8",
+          "notes": "Ghost ESP is optimized for CYD specifically — tap-to-scroll, touch-friendly numpad AP selection, UI scaling for the 320x240 display.",
+          "flashable_in_browser": true,
+          "flash_url": "https://flasher.ghostesp.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.14",
+          "release_date": "2026-02-01",
+          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "notes": "Bruce supports CYD as one of its core target platforms.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "yard-stick-one",
+      "name": "Yard Stick One",
+      "manufacturer": "Great Scott Gadgets",
+      "category": "sdr",
+      "tags": ["sub-1ghz", "rf", "tx", "rx", "cc1111", "rfcat"],
+      "description": "Half-duplex sub-1 GHz wireless test tool. CC1111-based. Controlled via rfcat from a host. Mature firmware, low update cadence — a staple of the RF cybersec toolkit.",
+      "url": "https://greatscottgadgets.com/yardstickone/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "rfcat + CC-Bootloader",
+          "version": "release-1.9.6",
+          "release_date": "2025-08-20",
+          "url": "https://github.com/atlas0fd00m/rfcat/releases/latest",
+          "notes": "rfcat firmware + Python control library by Atlas. Stable, infrequent updates. Flashed via dfu-util when device is in bootloader mode (hold button on connect).",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-16",
+          "confidence": "MED"
         }
       ]
     }
