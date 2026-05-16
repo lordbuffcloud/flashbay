@@ -1,0 +1,267 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-05-16T00:00:00Z",
+  "license": "CC-BY-4.0",
+  "submission_url": "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml",
+  "devices": [
+    {
+      "id": "flipper-zero",
+      "name": "Flipper Zero",
+      "manufacturer": "Flipper Devices",
+      "category": "multi-tool",
+      "tags": ["sub-ghz", "nfc", "rfid", "ir", "ibutton", "gpio", "badusb"],
+      "description": "Portable multi-tool for pentesters and geeks. Sub-GHz, NFC, RFID, IR, iButton, GPIO, BadUSB.",
+      "url": "https://flipperzero.one",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official",
+          "version": "1.4.4",
+          "release_date": "2026-03-15",
+          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/latest",
+          "notes": "Official Flipper Devices firmware. Stable, supported.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lab.flipper.net"
+        },
+        {
+          "fork": "community",
+          "name": "RogueMaster",
+          "version": "1027",
+          "release_date": "2026-04-01",
+          "url": "https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/latest",
+          "notes": "Maximum-feature community fork. Most third-party apps preloaded.",
+          "flashable_in_browser": false
+        },
+        {
+          "fork": "community",
+          "name": "Unleashed",
+          "version": "1.4.0",
+          "release_date": "2026-03-20",
+          "url": "https://github.com/DarkFlippers/unleashed-firmware/releases/latest",
+          "notes": "Unlocked features, region-free Sub-GHz, frequency analyzer.",
+          "flashable_in_browser": false
+        },
+        {
+          "fork": "community",
+          "name": "Xtreme",
+          "version": "076",
+          "release_date": "2026-04-10",
+          "url": "https://github.com/Flipper-XFW/Xtreme-Firmware/releases/latest",
+          "notes": "Customization-focused fork. UI themes, asset packs.",
+          "flashable_in_browser": false
+        }
+      ]
+    },
+    {
+      "id": "hackrf-one",
+      "name": "HackRF One",
+      "manufacturer": "Great Scott Gadgets",
+      "category": "sdr",
+      "tags": ["sdr", "rf", "tx", "rx", "1mhz-6ghz"],
+      "description": "Wide-band software-defined radio. 1 MHz to 6 GHz, half-duplex transceiver.",
+      "url": "https://greatscottgadgets.com/hackrf/one/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official",
+          "version": "2024.02.1",
+          "release_date": "2024-02-15",
+          "url": "https://github.com/greatscottgadgets/hackrf/releases/latest",
+          "notes": "Official firmware via dfu-util or hackrf_spiflash.",
+          "flashable_in_browser": false
+        },
+        {
+          "fork": "community",
+          "name": "PortaPack Mayhem",
+          "version": "2.1.0",
+          "release_date": "2026-02-10",
+          "url": "https://github.com/eried/portapack-mayhem/releases/latest",
+          "notes": "For HackRF + PortaPack H2/H4 add-on. Adds standalone capability.",
+          "flashable_in_browser": false
+        }
+      ]
+    },
+    {
+      "id": "proxmark3-rdv4",
+      "name": "Proxmark3 RDV4",
+      "manufacturer": "Proxgrind / RRG",
+      "category": "rfid-nfc",
+      "tags": ["rfid", "nfc", "hf", "lf", "mifare"],
+      "description": "High/low frequency RFID research tool. Read, write, emulate, sniff.",
+      "url": "https://proxmark.com",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official",
+          "version": "4.18589",
+          "release_date": "2026-04-05",
+          "url": "https://github.com/RfidResearchGroup/proxmark3/releases/latest",
+          "notes": "RRG / Iceman firmware. The de-facto standard.",
+          "flashable_in_browser": false
+        }
+      ]
+    },
+    {
+      "id": "omg-cable",
+      "name": "O.MG Cable",
+      "manufacturer": "Mischief Gadgets / Hak5",
+      "category": "implant",
+      "tags": ["badusb", "wifi", "implant", "ducky-script"],
+      "description": "Looks like a charging cable. Is a WiFi-controlled BadUSB implant with payload execution.",
+      "url": "https://o.mg.lol",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official Programmer",
+          "version": "1.6",
+          "release_date": "2026-03-01",
+          "url": "https://github.com/O-MG/O.MG-Firmware/releases/latest",
+          "notes": "Browser-flashable via O.MG Web Programmer.",
+          "flashable_in_browser": true,
+          "flash_url": "https://o.mg.lol/programmer"
+        }
+      ]
+    },
+    {
+      "id": "pwnagotchi",
+      "name": "Pwnagotchi",
+      "manufacturer": "evilsocket (community)",
+      "category": "wifi",
+      "tags": ["wifi", "wpa", "handshake-capture", "rpi-zero", "ai"],
+      "description": "Raspberry Pi Zero W-based WiFi handshake collector with a virtual-pet UI.",
+      "url": "https://pwnagotchi.ai",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official",
+          "version": "1.5.5",
+          "release_date": "2023-08-01",
+          "url": "https://github.com/evilsocket/pwnagotchi/releases/latest",
+          "notes": "SD card image. Flashed via Raspberry Pi Imager.",
+          "flashable_in_browser": false
+        },
+        {
+          "fork": "community",
+          "name": "jayofelony Modular",
+          "version": "2.9.4",
+          "release_date": "2026-04-12",
+          "url": "https://github.com/jayofelony/pwnagotchi/releases/latest",
+          "notes": "Actively maintained community fork. Pi Zero 2W support.",
+          "flashable_in_browser": false
+        }
+      ]
+    },
+    {
+      "id": "wifi-pineapple-mk7",
+      "name": "WiFi Pineapple Mark VII",
+      "manufacturer": "Hak5",
+      "category": "wifi",
+      "tags": ["wifi", "rogue-ap", "audit", "mitm"],
+      "description": "Wireless network auditing platform. Rogue AP, MITM, recon modules.",
+      "url": "https://shop.hak5.org/products/wifi-pineapple",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official",
+          "version": "2.7.3",
+          "release_date": "2026-02-20",
+          "url": "https://shop.hak5.org/pages/downloads",
+          "notes": "Uploaded via web UI on the device. Not GitHub-distributed.",
+          "flashable_in_browser": false
+        }
+      ]
+    },
+    {
+      "id": "usb-rubber-ducky",
+      "name": "USB Rubber Ducky",
+      "manufacturer": "Hak5",
+      "category": "badusb",
+      "tags": ["badusb", "hid", "ducky-script", "keystroke-injection"],
+      "description": "Keystroke injection tool. Looks like a USB drive, types pre-loaded payloads at superhuman speed.",
+      "url": "https://shop.hak5.org/products/usb-rubber-ducky",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official (Gen 3)",
+          "version": "DuckyScript 3.0",
+          "release_date": "2025-11-10",
+          "url": "https://shop.hak5.org/pages/downloads",
+          "notes": "Encoded via web-based Payload Studio at payloadstudio.hak5.org.",
+          "flashable_in_browser": true,
+          "flash_url": "https://payloadstudio.hak5.org"
+        }
+      ]
+    },
+    {
+      "id": "bash-bunny",
+      "name": "Bash Bunny",
+      "manufacturer": "Hak5",
+      "category": "badusb",
+      "tags": ["badusb", "hid", "mass-storage", "ethernet", "serial"],
+      "description": "Multi-vector USB attack platform. HID, mass storage, ethernet, serial — all at once.",
+      "url": "https://shop.hak5.org/products/bash-bunny",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official",
+          "version": "1.7",
+          "release_date": "2025-09-15",
+          "url": "https://shop.hak5.org/pages/downloads",
+          "notes": "Copied to the device via USB mass storage mode.",
+          "flashable_in_browser": false
+        }
+      ]
+    },
+    {
+      "id": "m5stack-cardputer",
+      "name": "M5Stack Cardputer",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": ["esp32-s3", "keyboard", "display", "wifi", "ble", "ir"],
+      "description": "Credit-card-sized ESP32-S3 computer with QWERTY keyboard. Popular for Bruce firmware.",
+      "url": "https://shop.m5stack.com/products/m5stack-cardputer-kit-w-m5stamps3",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.10.1",
+          "release_date": "2026-04-25",
+          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "notes": "Pentesting firmware for M5Stack devices. WiFi, BLE, RF, IR, RFID.",
+          "flashable_in_browser": true,
+          "flash_url": "https://pr3y.github.io/Bruce/install.html"
+        },
+        {
+          "fork": "community",
+          "name": "Nemo",
+          "version": "0.4.2",
+          "release_date": "2026-03-30",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/latest",
+          "notes": "Lighter pentesting toolkit for M5Stack platforms.",
+          "flashable_in_browser": false
+        }
+      ]
+    },
+    {
+      "id": "esp32-marauder",
+      "name": "ESP32 Marauder",
+      "manufacturer": "JustCallMeKoko (community)",
+      "category": "esp32",
+      "tags": ["esp32", "wifi", "ble", "deauth", "evil-portal", "kismet"],
+      "description": "WiFi + BLE pentesting firmware for ESP32 boards. Deauth, evil portal, sniffing, scanning.",
+      "url": "https://github.com/justcallmekoko/ESP32Marauder",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "ESP32 Marauder",
+          "version": "1.2.6",
+          "release_date": "2026-04-18",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/latest",
+          "notes": "Multiple builds per ESP32 board variant. Browser-flashable via web installer.",
+          "flashable_in_browser": true,
+          "flash_url": "https://justcallmekoko.github.io/ESP32Marauder/web-install/"
+        }
+      ]
+    }
+  ]
+}

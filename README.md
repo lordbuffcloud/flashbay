@@ -1,50 +1,97 @@
-# Welcome to your Expo app 👋
+# Flashbay
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Firmware aggregator for the cybersecurity hardware community.
+> One place to find current firmware (stock + community forks) for every device.
 
-## Get started
+[![Data License](https://img.shields.io/badge/data-CC--BY--4.0-39FF14)](https://creativecommons.org/licenses/by/4.0/)
+[![Code License](https://img.shields.io/badge/code-MIT-39FF14)]()
+[![Status](https://img.shields.io/badge/status-v1--alpha-FFAA00)]()
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## What it is
 
-2. Start the app
+A read-only catalog of firmware releases across the cybersec-hardware ecosystem — Flipper Zero (stock, RogueMaster, Unleashed, Xtreme), HackRF, Proxmark3, O.MG, Pwnagotchi, WiFi Pineapple, ESP32 (Marauder, Bruce), M5Stack, and more. Each entry links to the upstream release page. **We index. We do not host binaries.**
 
-   ```bash
-   npx expo start
-   ```
+**Expo Universal app** — one codebase, three targets:
 
-In the output, you'll find options to open the app in a
+- **Mobile (iOS + Android)** — browse, save, deep-link to web installers
+- **Web (`flashbay.ck42x.com`)** — same + in-browser flashing via WebUSB / WebSerial for supported devices
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Why
 
-## Get a fresh project
+Firmware for cybersec hardware is scattered across dozens of GitHub repos, vendor sites, and community forks. Operators waste time hunting for "the current RogueMaster build" or "is this M5Stack Bruce release safe to flash." Flashbay aggregates the links and surfaces version status in one place.
 
-When you're ready, run:
+---
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Expo SDK 54 + React Native 0.81 |
+| Routing | Expo Router (file-based, universal) |
+| Language | TypeScript (strict, no `any`) |
+| Styling | NativeWind 4 (Tailwind syntax in RN; works on web) |
+| State | Zustand + AsyncStorage |
+| Web flashing | esptool-js (web-only, ESP32/ESP8266) |
+| Hosting (web) | Cloudflare Pages at `flashbay.ck42x.com` |
+| Data | `data/devices.json` in this repo, fetched at runtime |
+| Submit flow | GitHub Issue template — no backend |
+
+---
+
+## Contributing firmware
+
+The catalog is community-curated. Submit a firmware via:
+
+[**Open a firmware-submission issue →**](https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml)
+
+Maintainer reviews and merges to `data/devices.json` via PR.
+
+---
+
+## Local development
 
 ```bash
-npm run reset-project
+git clone https://github.com/lordbuffcloud/flashbay.git
+cd flashbay
+npm install
+npm run web      # web target — best for development, supports WebUSB flashing
+npm run ios      # iOS simulator
+npm run android  # Android emulator
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Visit http://localhost:8081 for the web build.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project layout
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+app/                routes (Expo Router file-based)
+components/         reusable UI (DeviceCard, FirmwareRow, BracketFrame, ...)
+constants/          theme tokens + centralized image imports
+data/devices.json   v1 data source
+hooks/              custom hooks (useDevices, useFavorites, ...)
+lib/                helpers (fetchDevices, openExternal, cn, ...)
+store/              Zustand stores
+types/              shared TypeScript types
+assets/images/      brand + state illustrations
+AGENTS.md           AI-coding-agent instructions — read before any feature
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## License
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Code:** MIT
+- **Data (`devices.json`):** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Firmware:** each entry links to upstream; respect upstream licenses
+
+---
+
+## Built with
+
+[Practical Vibe Coding with AI](https://javascript-mastery.s3.us-east-1.amazonaws.com/resources/Practical-Vibe-Coding-With-AI.pdf) — JS Mastery's 7-lesson AI-coding workflow.

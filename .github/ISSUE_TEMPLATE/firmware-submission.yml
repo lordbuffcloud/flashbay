@@ -1,0 +1,135 @@
+name: Firmware submission
+description: Add a new firmware (or fork) to the Flashbay catalog.
+title: "[firmware] <device-name> — <fork-name> <version>"
+labels: ["firmware-submission", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Submit a firmware to Flashbay
+
+        Thanks for contributing. We aggregate firmware **links** — we do not host binaries.
+        Make sure the firmware is publicly downloadable from the source you cite.
+
+  - type: input
+    id: device-name
+    attributes:
+      label: Device name
+      description: The hardware device this firmware targets.
+      placeholder: "Flipper Zero"
+    validations:
+      required: true
+
+  - type: input
+    id: manufacturer
+    attributes:
+      label: Manufacturer
+      placeholder: "Flipper Devices"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - multi-tool
+        - sdr
+        - rfid-nfc
+        - implant
+        - wifi
+        - badusb
+        - esp32
+        - sniffer
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: fork-name
+    attributes:
+      label: Firmware / fork name
+      description: "stock" if it's the official firmware, otherwise the fork name (RogueMaster, Unleashed, Marauder, etc.)
+      placeholder: "Unleashed"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: fork-type
+    attributes:
+      label: Fork type
+      options:
+        - stock
+        - community
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "1.4.0"
+    validations:
+      required: true
+
+  - type: input
+    id: release-date
+    attributes:
+      label: Release date (YYYY-MM-DD)
+      placeholder: "2026-05-16"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Download URL (release page)
+      description: GitHub releases page, vendor download page, or other public source.
+      placeholder: "https://github.com/.../releases/latest"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (one or two sentences)
+      placeholder: "Unlocked features, region-free Sub-GHz, frequency analyzer."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: flashable-in-browser
+    attributes:
+      label: Browser-flashable?
+      description: Can a user install this firmware from a Chrome/Edge web installer (WebUSB / WebSerial / WebDFU)?
+      options:
+        - "no — requires desktop client or specialized hardware"
+        - "yes — has a working web installer"
+    validations:
+      required: true
+
+  - type: input
+    id: flash-url
+    attributes:
+      label: Web installer URL (only if browser-flashable)
+      placeholder: "https://lab.flipper.net"
+    validations:
+      required: false
+
+  - type: textarea
+    id: source-confirmation
+    attributes:
+      label: Source confirmation
+      description: Paste a screenshot or link confirming the firmware is publicly distributed by the source you cited.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: license-check
+    attributes:
+      label: License and ethics
+      options:
+        - label: I confirm this firmware is publicly distributed by the cited source and that linking to it does not violate any license terms.
+          required: true
+        - label: This firmware is for legitimate research, education, or authorized testing only.
+          required: true
