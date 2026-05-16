@@ -27,6 +27,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="flash"
+        options={{
+          title: "Flash",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="bolt.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="explore"
         options={{
           title: "Search",
