@@ -1,0 +1,73 @@
+name: Weekly Firmware Research
+
+on:
+  schedule:
+    # Every Monday at 14:30 UTC — 30 min after weekly-verify so link health
+    # is already known when research runs
+    - cron: "30 14 * * 1"
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "OpenAI model (default gpt-4o)"
+        required: false
+        default: "gpt-4o"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Run research script
+        id: research
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ inputs.model || 'gpt-4o' }}
+        run: bun run tools/research-firmware.ts
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-report
+          path: |
+            research-report.md
+          retention-days: 90
+
+      - name: Check for catalog changes
+        id: diff
+        run: |
+          if git diff --quiet data/devices.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No catalog changes."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Catalog changes detected."
+          fi
+
+      - name: Create pull request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "data: weekly research refresh"
+          title: "data: weekly research refresh (${{ github.run_id }})"
+          body-path: research-report.md
+          branch: weekly-research/${{ github.run_id }}
+          delete-branch: true
+          labels: |
+            research-refresh
+            needs-review
+          add-paths: |
+            data/devices.json
