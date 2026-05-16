@@ -1,9 +1,39 @@
 {
-  "version": "1.0.0",
-  "generated": "2026-05-16T00:00:00Z",
+  "version": "1.0.1",
+  "generated": "2026-05-16T14:30:00Z",
   "license": "CC-BY-4.0",
   "submission_url": "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml",
   "devices": [
+    {
+      "id": "nyanbox",
+      "name": "Nyanbox",
+      "manufacturer": "jbohack + zr_crackiin",
+      "category": "esp32",
+      "tags": ["esp32-wroom-32u", "wifi", "ble", "nrf24", "mousejack", "evil-portal", "handheld", "oled-128x64", "usb-c"],
+      "description": "Handheld ESP32-based pentesting tool. ESP32 WROOM-32U dual-core 240MHz, WiFi b/g/n, BLE 4.2, three NRF24 radios, 0.96\" OLED (128x64 SSD1306), USB-C, 2500mAh battery.",
+      "url": "https://github.com/jbohack/nyanbox",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "nyanBOX",
+          "version": "4.26.11",
+          "release_date": "2026-04-15",
+          "url": "https://github.com/jbohack/nyanbox/releases/latest",
+          "notes": "Official nyanBOX firmware by jbohack and zr_crackiin. The base platform.",
+          "flashable_in_browser": false
+        },
+        {
+          "fork": "community",
+          "name": "nyanBEE",
+          "version": "1.4.26",
+          "release_date": "2026-05-05",
+          "url": "https://ck42x.com/nyanbee",
+          "notes": "60+ tools — WiFi handshake/PMKID/evil-portal (8 templates), 15+ BLE detectors, HoneyBLE multi-family lab, NRF24 MouseJack/replay/Stinger, bee-themed Mission Mode + gamification, HTML/JSON engagement reports. Built on nyanBOX v4.26.11. Source private during active development.",
+          "flashable_in_browser": true,
+          "flash_url": "https://ck42x.com/nyanbee/flash-stock"
+        }
+      ]
+    },
     {
       "id": "flipper-zero",
       "name": "Flipper Zero",
