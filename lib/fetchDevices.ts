@@ -2,6 +2,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { DevicesCatalog } from "@/types/Device";
 import bundledCatalog from "@/data/devices.json";
 
+export function getBundledCatalog(): DevicesCatalog {
+  return bundledCatalog as DevicesCatalog;
+}
+
 const REMOTE_URL =
   "https://raw.githubusercontent.com/lordbuffcloud/flashbay/main/data/devices.json";
 
@@ -40,5 +44,5 @@ export async function fetchDevices(): Promise<DevicesCatalog> {
   }
 
   // 3. Last resort: bundled JSON
-  return bundledCatalog as DevicesCatalog;
+  return getBundledCatalog();
 }

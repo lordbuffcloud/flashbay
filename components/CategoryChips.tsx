@@ -1,4 +1,4 @@
-import { Pressable, ScrollView, View } from "react-native";
+import { Pressable, ScrollView } from "react-native";
 import { MonoText } from "./MonoText";
 import { DEVICE_CATEGORIES, ALL_CATEGORY } from "@/constants/categories";
 
@@ -12,7 +12,7 @@ export function CategoryChips({ active, onChange }: CategoryChipsProps) {
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{ paddingHorizontal: 12, paddingVertical: 8 }}
+      contentContainerStyle={{ paddingHorizontal: 12, paddingVertical: 10, gap: 8 }}
     >
       {DEVICE_CATEGORIES.map((cat) => {
         const isActive = cat.id === active;
@@ -22,12 +22,14 @@ export function CategoryChips({ active, onChange }: CategoryChipsProps) {
             onPress={() => onChange(cat.id)}
             className={
               isActive
-                ? "border border-terminal-green bg-terminal-green mr-2 px-3 py-1.5"
-                : "border border-terminal-border mr-2 px-3 py-1.5 active:bg-terminal-border"
+                ? "border border-terminal-green bg-terminal-green px-3 py-2"
+                : "border border-terminal-border bg-terminal-surface px-3 py-2 active:border-terminal-muted"
             }
           >
             <MonoText
-              className={isActive ? "text-terminal-black text-xs" : "text-terminal-muted text-xs"}
+              className={
+                isActive ? "text-terminal-black text-xs font-bold" : "text-terminal-muted text-xs"
+              }
             >
               {cat.label}
             </MonoText>

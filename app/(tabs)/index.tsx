@@ -9,6 +9,8 @@ import { EmptyState } from "@/components/EmptyState";
 import { ErrorState } from "@/components/ErrorState";
 import { MonoText } from "@/components/MonoText";
 import { CategoryChips } from "@/components/CategoryChips";
+import { SearchBar } from "@/components/SearchBar";
+import { CatalogStats } from "@/components/CatalogStats";
 import { openExternal } from "@/lib/openExternal";
 import { images } from "@/constants/images";
 import type { Device } from "@/types/Device";
@@ -17,11 +19,12 @@ const SUBMIT_URL =
   "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml";
 
 export default function DeviceBrowseScreen() {
-  const { catalog, loading, error, refresh } = useDevices();
+  const { catalog, syncing, error, refresh } = useDevices();
   const router = useRouter();
   const [category, setCategory] = useState<string>("all");
+  const [query, setQuery] = useState<string>("");
 
-  const devices = useFilteredDevices(catalog?.devices, { category });
+  const devices = useFilteredDevices(catalog.devices, { category, query });
 
   function handleDevicePress(device: Device) {
     router.push({ pathname: "/device/[id]", params: { id: device.id } });
@@ -31,9 +34,13 @@ export default function DeviceBrowseScreen() {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }} edges={["top"]}>
       <View className="flex-1 bg-terminal-black">
         <Header />
+        <View className="px-3 pt-3 pb-1 gap-2">
+          <SearchBar value={query} onChangeText={setQuery} />
+          <CatalogStats catalog={catalog} visibleCount={devices.length} syncing={syncing} />
+        </View>
         <CategoryChips active={category} onChange={setCategory} />
         {error ? (
-          <ErrorState onRetry={refresh} />
+          <ErrorState label="Remote sync failed — showing bundled catalog" onRetry={refresh} />
         ) : (
           <FlatList
             data={devices}
@@ -45,23 +52,13 @@ export default function DeviceBrowseScreen() {
             contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
             refreshControl={
               <RefreshControl
-                refreshing={loading}
+                refreshing={syncing}
                 onRefresh={refresh}
                 tintColor="#39FF14"
                 colors={["#39FF14"]}
               />
             }
-            ListEmptyComponent={
-              loading ? (
-                <View className="py-12 items-center">
-                  <MonoText className="text-terminal-muted text-xs">
-                    LOADING CATALOG…
-                  </MonoText>
-                </View>
-              ) : (
-                <EmptyState />
-              )
-            }
+            ListEmptyComponent={<EmptyState label="NO MATCHING DEVICES" />}
           />
         )}
         <SubmitBar />
@@ -87,12 +84,12 @@ function Header() {
 
 function SubmitBar() {
   return (
-    <View className="border-t border-terminal-border px-4 py-3">
+    <View className="border-t border-terminal-border px-4 py-3 bg-terminal-surface">
       <MonoText
         className="text-terminal-amber text-xs"
         onPress={() => openExternal(SUBMIT_URL)}
       >
-        [ SUBMIT FIRMWARE → GITHUB ISSUE ]
+        Submit firmware via GitHub issue →
       </MonoText>
     </View>
   );

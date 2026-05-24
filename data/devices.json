@@ -1,6 +1,6 @@
 {
-  "version": "1.0.3",
-  "generated": "2026-05-16T15:00:00Z",
+  "version": "1.0.4",
+  "generated": "2026-05-23T12:00:00Z",
   "license": "CC-BY-4.0",
   "submission_url": "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml",
   "devices": [
@@ -22,7 +22,7 @@
           "notes": "Canonical upstream by jbohack + zr_crackiin. Ships from main branch only — repo has no tagged releases.",
           "flashable_in_browser": false,
           "release_tracking": "main_branch_only",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
@@ -35,7 +35,7 @@
           "flashable_in_browser": true,
           "flash_url": "https://ck42x.com/nyanbee/flash-stock",
           "release_tracking": "vendor_portal",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -53,13 +53,13 @@
           "fork": "stock",
           "name": "Official",
           "version": "1.4.3",
-          "release_date": "2024-12-05",
+          "release_date": "2025-12-05",
           "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.4.3",
-          "notes": "Official Flipper firmware. Update cadence has slowed considerably — 1.4.3 was a bugfix to 1.4.2's IR CLI plugin.",
+          "notes": "Official Flipper firmware. Update cadence has slowed — 1.4.3 was a bugfix to 1.4.2's IR CLI plugin. Still the latest tagged OFW release.",
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
@@ -72,21 +72,21 @@
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Momentum",
           "version": "mntm-012",
-          "release_date": "2026-01-02",
+          "release_date": "2025-12-31",
           "url": "https://github.com/Next-Flip/Momentum-Firmware/releases/tag/mntm-012",
-          "notes": "Direct successor to Xtreme by the same dev team. Most feature-rich fork — 80+ apps, full JS SDK, custom asset packs.",
+          "notes": "Direct successor to Xtreme by the same dev team. Most feature-rich fork — 80+ apps, full JS SDK, custom asset packs. Flash via momentum-fw.dev Web Updater or Flipper Lab.",
           "flashable_in_browser": true,
-          "flash_url": "https://momentum-fw.dev/",
+          "flash_url": "https://momentum-fw.dev/update",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
-          "confidence": "MED"
+          "last_verified_at": "2026-05-23",
+          "confidence": "HIGH"
         },
         {
           "fork": "community",
@@ -98,7 +98,7 @@
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
@@ -111,7 +111,7 @@
           "flashable_in_browser": false,
           "archived": true,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -134,19 +134,19 @@
           "notes": "Official firmware from Great Scott Gadgets. Fixes mixer frequency lock failures and adds larger SPI flash support for HackRF Pro.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "PortaPack Mayhem",
           "version": "v2.4.0",
-          "release_date": "2025-03-24",
+          "release_date": "2026-03-24",
           "url": "https://github.com/portapack-mayhem/mayhem-firmware/releases/tag/v2.4.0",
           "notes": "Standalone firmware for HackRF + PortaPack H1/H2/H4/H4M add-on. Fork of unmaintained Havoc. Adds HackRF Pro (PRALINE) support. Nightly builds released almost daily; v2.4.0 is current stable.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -158,7 +158,7 @@
       "category": "rfid-nfc",
       "tags": ["rfid", "nfc", "hf", "lf", "mifare"],
       "description": "High/low frequency RFID research tool. Read, write, emulate, sniff.",
-      "url": "https://proxmark.com",
+      "url": "https://github.com/RfidResearchGroup/proxmark3",
       "firmware": [
         {
           "fork": "community",
@@ -169,7 +169,7 @@
           "notes": "De-facto standard Proxmark3 firmware — 'BREAKMEIFYOUCAN!' release. Adds Qt6 client, new `lf relay` command, fixes hf mf/mfp wrbl. Tuned for RDV4 by default.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -187,13 +187,13 @@
           "fork": "stock",
           "name": "O.MG Universal Firmware",
           "version": "v3.0-251217",
-          "release_date": "2024-12-17",
+          "release_date": "2025-12-17",
           "url": "https://github.com/O-MG/O.MG-Firmware/releases/tag/v3.0-251217",
           "notes": "Single universal firmware for all O.MG devices (Cable, Adapter, Plug, UnBlocker). v3.0-251217 fixed BR keymap forward/back slash transposition. The legacy DemonSeed variant is absorbed into this universal firmware.",
           "flashable_in_browser": true,
           "flash_url": "https://o-mg.github.io/WebFlasher/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -211,12 +211,12 @@
           "fork": "community",
           "name": "jayofelony Pwnagotchi",
           "version": "2.9.5.4",
-          "release_date": "2025-01-29",
+          "release_date": "2026-01-29",
           "url": "https://github.com/jayofelony/pwnagotchi/releases/tag/v2.9.5.4",
           "notes": "Current de-facto Pwnagotchi distribution — the original evilsocket project is unmaintained. Adds Trixie RPi OS support, Bluetooth tethering, PiSugar plugin updates. Active 2026 development on main branch but no new tagged release since 2.9.5.4.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -234,12 +234,12 @@
           "fork": "stock",
           "name": "Official (Hak5 portal)",
           "version": "check-vendor-portal",
-          "release_date": "2026-05-16",
+          "release_date": "2026-05-23",
           "url": "https://downloads.hak5.org/pineapple/mk7",
           "notes": "Hak5's download portal — page renders client-side, exact current version not machine-readable. On the 2.x line per docs.hak5.org. Check the portal for latest.",
           "flashable_in_browser": false,
           "release_tracking": "vendor_portal",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "LOW"
         }
       ]
@@ -263,7 +263,7 @@
           "flashable_in_browser": true,
           "flash_url": "https://payloadstudio.hak5.org",
           "release_tracking": "payload_compiler",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -281,12 +281,12 @@
           "fork": "stock",
           "name": "Official (Hak5 portal)",
           "version": "check-vendor-portal",
-          "release_date": "2026-05-16",
+          "release_date": "2026-05-23",
           "url": "https://downloads.hak5.org/bunny",
           "notes": "Mark II ships with 1.7 from the factory. Latest firmware lives on the Hak5 download portal — page renders client-side, current version not machine-readable. NEVER DOWNGRADE — will brick.",
           "flashable_in_browser": false,
           "release_tracking": "vendor_portal",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "MED"
         }
       ]
@@ -305,24 +305,24 @@
           "name": "Bruce",
           "version": "1.14",
           "release_date": "2026-02-01",
-          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
           "notes": "Most feature-rich Cardputer firmware — CC1101/NRF24/FM/PN532/BadUSB/RFID/WiFi/BLE. Full hardware support (microphone, RGB LED). Also runs on M5StickC PLUS/PLUS2, Core/Core2/CoreS3, plus Lilygo T-series.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Nemo",
           "version": "v3.2.1",
-          "release_date": "2025-01-27",
+          "release_date": "2026-01-27",
           "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
           "notes": "Defensive/prank-focused firmware. Targets Cardputer/ADV, StickCPlus2, StickS3. Includes BadUSB Hunter for testing cables against BadUSB attacks.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -340,13 +340,13 @@
           "fork": "stock",
           "name": "ESP32 Marauder (official)",
           "version": "v1.12.1",
-          "release_date": "2025-05-05",
+          "release_date": "2026-05-05",
           "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
-          "notes": "Canonical WiFi/Bluetooth offensive+defensive ESP32 firmware. Latest tagged release adds Flock advertising rework and channel hop for Flock Sniff. Wiki updates from 2026-04-30 indicate active dev; no new tagged release yet.",
+          "notes": "Canonical WiFi/Bluetooth offensive+defensive ESP32 firmware. v1.12.1 adds Flock advertising rework and channel hop for Flock Sniff. Flash via FZEE Flasher (board-aware) or ESP Terminator; Spacehuhn Web Updater also works with manual binary selection.",
           "flashable_in_browser": true,
-          "flash_url": "https://justcallmekoko.github.io/ESP32Marauder/",
+          "flash_url": "https://fzeeflasher.github.io/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
@@ -354,12 +354,12 @@
           "name": "Bruce (Marauder-compatible boards)",
           "version": "1.14",
           "release_date": "2026-02-01",
-          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
           "notes": "Bruce runs on many of the same ESP32-S3/CYD boards as Marauder. Different feature focus (BadUSB, RFID) but overlapping wardriving/deauther toolset.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
@@ -372,7 +372,7 @@
           "flashable_in_browser": true,
           "flash_url": "https://flasher.ghostesp.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -395,7 +395,7 @@
           "notes": "Newly announced product. Firmware ships from JustCallMeKoko's Marauder ecosystem. Verify current version on release before flashing — this entry needs re-verification post-launch.",
           "flashable_in_browser": false,
           "release_tracking": "vendor_portal",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "LOW"
         }
       ]
@@ -414,24 +414,24 @@
           "name": "Bruce",
           "version": "1.14",
           "release_date": "2026-02-01",
-          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
           "notes": "Same Bruce release as Cardputer — WiFi/BLE/RFID/BadUSB. Targets StickCPlus2 explicitly.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Nemo",
           "version": "v3.2.1",
-          "release_date": "2025-01-27",
+          "release_date": "2026-01-27",
           "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
           "notes": "Defensive/prank firmware. Nemo targets StickCPlus2 as a first-class platform.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -450,12 +450,12 @@
           "name": "Bruce",
           "version": "1.14",
           "release_date": "2026-02-01",
-          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
           "notes": "T-Embed CC1101 is a flagship Bruce target — first-class CC1101 Sub-GHz support, rotary-encoder UI.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -479,7 +479,7 @@
           "flashable_in_browser": true,
           "flash_url": "https://flasher.ghostesp.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         },
         {
@@ -487,12 +487,12 @@
           "name": "Bruce",
           "version": "1.14",
           "release_date": "2026-02-01",
-          "url": "https://github.com/pr3y/Bruce/releases/latest",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
           "notes": "Bruce supports CYD as one of its core target platforms.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/catalog.html",
+          "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
+          "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
         }
       ]
@@ -509,14 +509,14 @@
         {
           "fork": "stock",
           "name": "rfcat + CC-Bootloader",
-          "version": "release-1.9.6",
-          "release_date": "2025-08-20",
-          "url": "https://github.com/atlas0fd00m/rfcat/releases/latest",
-          "notes": "rfcat firmware + Python control library by Atlas. Stable, infrequent updates. Flashed via dfu-util when device is in bootloader mode (hold button on connect).",
+          "version": "v2.0.1",
+          "release_date": "2023-08-29",
+          "url": "https://github.com/atlas0fd00m/rfcat/releases/tag/v2.0.1",
+          "notes": "rfcat firmware + Python control library by Atlas. Latest tagged release is v2.0.1 — stable, infrequent updates. Flashed via dfu-util when device is in bootloader mode (hold button on connect).",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-16",
-          "confidence": "MED"
+          "last_verified_at": "2026-05-23",
+          "confidence": "HIGH"
         }
       ]
     }

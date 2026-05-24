@@ -1,4 +1,4 @@
-import { FlatList, RefreshControl, TextInput, View } from "react-native";
+import { FlatList, RefreshControl, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -9,15 +9,17 @@ import { EmptyState } from "@/components/EmptyState";
 import { ErrorState } from "@/components/ErrorState";
 import { MonoText } from "@/components/MonoText";
 import { CategoryChips } from "@/components/CategoryChips";
+import { SearchBar } from "@/components/SearchBar";
+import { CatalogStats } from "@/components/CatalogStats";
 import type { Device } from "@/types/Device";
 
 export default function SearchScreen() {
-  const { catalog, loading, error, refresh } = useDevices();
+  const { catalog, syncing, error, refresh } = useDevices();
   const router = useRouter();
   const [query, setQuery] = useState<string>("");
   const [category, setCategory] = useState<string>("all");
 
-  const results = useFilteredDevices(catalog?.devices, { query, category });
+  const results = useFilteredDevices(catalog.devices, { query, category });
 
   function handleDevicePress(device: Device) {
     router.push({ pathname: "/device/[id]", params: { id: device.id } });
@@ -27,32 +29,25 @@ export default function SearchScreen() {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }} edges={["top"]}>
       <View className="flex-1 bg-terminal-black">
         <View className="border-b border-terminal-border px-4 py-3">
-          <View className="flex-row items-center">
-            <MonoText className="text-terminal-green text-base mr-2">{">"}</MonoText>
-            <TextInput
-              value={query}
-              onChangeText={setQuery}
-              placeholder="SEARCH NAME / MANUFACTURER / FORK / TAG"
-              placeholderTextColor="#3F3F3F"
-              autoCapitalize="characters"
-              autoCorrect={false}
-              className="flex-1 text-terminal-text font-mono text-sm"
-            />
-            {query.length > 0 && (
-              <MonoText
-                onPress={() => setQuery("")}
-                className="text-terminal-amber text-xs ml-2"
-              >
-                [×]
-              </MonoText>
-            )}
-          </View>
+          <MonoText className="text-terminal-green text-base font-bold">Search catalog</MonoText>
+          <MonoText className="text-terminal-muted text-xs mt-1">
+            Match device names, manufacturers, fork names, or tags.
+          </MonoText>
+        </View>
+
+        <View className="px-3 pt-3 pb-1 gap-2">
+          <SearchBar
+            value={query}
+            onChangeText={setQuery}
+            placeholder="e.g. flipper, bruce, sub-ghz, hak5…"
+          />
+          <CatalogStats catalog={catalog} visibleCount={results.length} syncing={syncing} />
         </View>
 
         <CategoryChips active={category} onChange={setCategory} />
 
         {error ? (
-          <ErrorState onRetry={refresh} />
+          <ErrorState label="Remote sync failed — showing bundled catalog" onRetry={refresh} />
         ) : (
           <FlatList
             data={results}
@@ -64,30 +59,13 @@ export default function SearchScreen() {
             contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
             refreshControl={
               <RefreshControl
-                refreshing={loading}
+                refreshing={syncing}
                 onRefresh={refresh}
                 tintColor="#39FF14"
                 colors={["#39FF14"]}
               />
             }
-            ListHeaderComponent={
-              <View className="pb-3">
-                <MonoText className="text-terminal-muted text-xs">
-                  {results.length} of {catalog?.devices.length ?? 0} devices
-                </MonoText>
-              </View>
-            }
-            ListEmptyComponent={
-              loading ? (
-                <View className="py-12 items-center">
-                  <MonoText className="text-terminal-muted text-xs">
-                    LOADING CATALOG…
-                  </MonoText>
-                </View>
-              ) : (
-                <EmptyState label="NO MATCHES" />
-              )
-            }
+            ListEmptyComponent={<EmptyState label="NO MATCHES" />}
           />
         )}
       </View>

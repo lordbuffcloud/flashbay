@@ -1,4 +1,4 @@
-import { FlatList, Image, Platform, Pressable, View } from "react-native";
+import { FlatList, Platform, Pressable, RefreshControl, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useMemo } from "react";
 import { useDevices } from "@/hooks/useDevices";
@@ -6,7 +6,7 @@ import { MonoText } from "@/components/MonoText";
 import { ErrorState } from "@/components/ErrorState";
 import { EmptyState } from "@/components/EmptyState";
 import { openExternal } from "@/lib/openExternal";
-import { images } from "@/constants/images";
+import { formatCategoryLabel } from "@/lib/deviceHelpers";
 import type { Device, Firmware } from "@/types/Device";
 
 interface FlashableEntry {
@@ -14,35 +14,20 @@ interface FlashableEntry {
   firmware: Firmware;
 }
 
-/**
- * Flash Wizard — central launchpad for in-browser firmware flashing.
- *
- * v1 (this commit):
- *   - Lists every firmware in the catalog with `flashable_in_browser: true`
- *   - Web: launches the firmware's external flasher in a new tab
- *   - Mobile: shows "flash on desktop" handoff with copyable URL
- *
- * v1.x (planned):
- *   - For ESP32 firmware without an external flasher (e.g. Marauder build that ships
- *     just the .bin), run esptool-js in-app for direct WebSerial flashing.
- *   - For Nyanbee + flashers Cris owns, optionally embed-style flash steps inline
- *     instead of redirecting out.
- */
 export default function FlashWizardScreen() {
-  const { catalog, loading, error, refresh } = useDevices();
+  const { catalog, syncing, error, refresh } = useDevices();
   const isWeb = Platform.OS === "web";
 
   const flashables = useMemo<FlashableEntry[]>(() => {
-    if (!catalog) return [];
     const out: FlashableEntry[] = [];
     for (const device of catalog.devices) {
       for (const firmware of device.firmware) {
-        if (firmware.flashable_in_browser && firmware.flash_url) {
+        if (firmware.flashable_in_browser && firmware.flash_url && !firmware.archived) {
           out.push({ device, firmware });
         }
       }
     }
-    return out;
+    return out.sort((a, b) => a.device.name.localeCompare(b.device.name));
   }, [catalog]);
 
   return (
@@ -50,7 +35,7 @@ export default function FlashWizardScreen() {
       <View className="flex-1 bg-terminal-black">
         <Header isWeb={isWeb} count={flashables.length} />
         {error ? (
-          <ErrorState onRetry={refresh} />
+          <ErrorState label="Remote sync failed — showing bundled catalog" onRetry={refresh} />
         ) : (
           <FlatList
             data={flashables}
@@ -62,17 +47,15 @@ export default function FlashWizardScreen() {
             )}
             ItemSeparatorComponent={() => <View className="h-2" />}
             contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
-            ListEmptyComponent={
-              loading ? (
-                <View className="py-12 items-center">
-                  <MonoText className="text-terminal-muted text-xs">
-                    LOADING CATALOG…
-                  </MonoText>
-                </View>
-              ) : (
-                <EmptyState label="NO FLASHABLE FIRMWARE" />
-              )
+            refreshControl={
+              <RefreshControl
+                refreshing={syncing}
+                onRefresh={refresh}
+                tintColor="#39FF14"
+                colors={["#39FF14"]}
+              />
             }
+            ListEmptyComponent={<EmptyState label="NO FLASHABLE FIRMWARE" />}
           />
         )}
       </View>
@@ -89,17 +72,13 @@ function Header({ isWeb, count }: HeaderProps) {
   return (
     <View className="border-b border-terminal-border px-4 py-3">
       <View className="flex-row items-baseline justify-between">
-        <MonoText className="text-terminal-green text-base font-bold">
-          FLASH WIZARD
-        </MonoText>
-        <MonoText className="text-terminal-muted text-xs">
-          {count} READY
-        </MonoText>
+        <MonoText className="text-terminal-green text-base font-bold">Flash wizard</MonoText>
+        <MonoText className="text-terminal-muted text-xs">{count} ready</MonoText>
       </View>
-      <MonoText className="text-terminal-muted text-xs mt-1">
+      <MonoText className="text-terminal-muted text-xs mt-2 leading-5">
         {isWeb
-          ? "WebUSB / WebSerial supported on Chrome + Edge. Connect device, launch flasher."
-          : "Mobile is browse-only. Open this page on a desktop browser to flash."}
+          ? "Launch external flashers via WebUSB / WebSerial. Use Chrome or Edge on desktop."
+          : "Browse flash targets here. Open flashbay on a desktop browser to run in-browser installers."}
       </MonoText>
     </View>
   );
@@ -122,48 +101,51 @@ function FlashableRow({ entry, canFlashHere }: FlashableRowProps) {
 
   return (
     <View className="border border-terminal-border bg-terminal-surface px-4 py-3">
-      <View className="flex-row items-baseline justify-between">
-        <MonoText className="text-terminal-green text-base font-bold">
-          {device.name}
-        </MonoText>
-        <MonoText className="text-terminal-amber text-xs uppercase">
-          [{firmware.fork.toUpperCase()}]
-        </MonoText>
+      <View className="flex-row items-start justify-between gap-3">
+        <View className="flex-1">
+          <MonoText className="text-terminal-green text-base font-bold">{device.name}</MonoText>
+          <MonoText className="text-terminal-muted text-xs mt-1">
+            {formatCategoryLabel(device.category)}
+          </MonoText>
+        </View>
+        <MonoText className="text-terminal-amber text-[10px] uppercase">{firmware.fork}</MonoText>
       </View>
-      <MonoText className="text-terminal-text text-sm mt-1">
+
+      <MonoText className="text-terminal-text text-sm mt-2">
         {firmware.name}{" "}
-        <MonoText className="text-terminal-muted">v{firmware.version}</MonoText>
+        <MonoText className="text-terminal-green text-sm">{firmware.version}</MonoText>
       </MonoText>
-      <MonoText className="text-terminal-muted text-xs mt-2">
+
+      <MonoText className="text-terminal-muted text-xs mt-2 leading-5" numberOfLines={3}>
         {firmware.notes}
       </MonoText>
 
-      <View className="flex-row items-center mt-3">
+      <View className="flex-row flex-wrap items-center mt-3 gap-2">
         {canFlashHere ? (
           <Pressable
             onPress={() => openExternal(desktopUrl)}
-            className="border border-terminal-green px-3 py-2 mr-2 active:bg-terminal-border"
+            className="border border-terminal-green px-3 py-2 active:bg-terminal-border"
           >
-            <MonoText className="text-terminal-green text-xs">
-              [ LAUNCH FLASHER → ]
-            </MonoText>
+            <MonoText className="text-terminal-green text-xs">Launch flasher</MonoText>
           </Pressable>
         ) : (
           <Pressable
             onPress={copyDesktopHint}
-            className="border border-terminal-amber px-3 py-2 mr-2 active:bg-terminal-border"
+            className="border border-terminal-amber px-3 py-2 active:bg-terminal-border"
           >
-            <MonoText className="text-terminal-amber text-xs">
-              [ COPY DESKTOP URL ]
-            </MonoText>
+            <MonoText className="text-terminal-amber text-xs">Copy flasher URL</MonoText>
           </Pressable>
         )}
+        <Pressable
+          onPress={() => openExternal(firmware.url)}
+          className="border border-terminal-border px-3 py-2 active:bg-terminal-border"
+        >
+          <MonoText className="text-terminal-muted text-xs">Release page</MonoText>
+        </Pressable>
       </View>
 
       {!canFlashHere && (
-        <MonoText className="text-terminal-muted text-xs mt-2">
-          {desktopUrl}
-        </MonoText>
+        <MonoText className="text-terminal-muted text-[10px] mt-2">{desktopUrl}</MonoText>
       )}
     </View>
   );
