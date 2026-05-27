@@ -426,9 +426,9 @@
         {
           "fork": "community",
           "name": "Bruce (Marauder-compatible boards)",
-          "version": "1.14",
-          "release_date": "2026-02-01",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
           "notes": "Bruce runs on many of the same ESP32-S3/CYD boards as Marauder. Different feature focus (BadUSB, RFID) but overlapping wardriving/deauther toolset.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",

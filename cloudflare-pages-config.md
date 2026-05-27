@@ -114,4 +114,17 @@ In a browser: hard-refresh the page, confirm the wordmark and monogram render, t
 
 When a PR merges to `main` that only changes `data/devices.json`, Cloudflare Pages will trigger a rebuild automatically (any push to `main` triggers a build by default). No extra config needed.
 
+### GitHub Actions deploy (`.github/workflows/deploy-pages.yml`)
+
+If the site still shows an old device count after a git push, the Pages project may not be connected to GitHub. Add these repository secrets and let the workflow deploy on every `main` push:
+
+| Secret | Where to get it |
+|---|---|
+| `CLOUDFLARE_API_TOKEN` | Cloudflare dashboard → API Tokens → Pages Edit |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare dashboard sidebar |
+
+Then: **Actions** → **Deploy web to Cloudflare Pages** → **Run workflow**, or push to `main`.
+
+The web app loads `data/devices.json` from GitHub at runtime. After catalog-only changes, a hard refresh is usually enough; stale `localStorage` caches are invalidated automatically when the catalog version increases.
+
 For zero-rebuild data refresh (faster), see future work: move `devices.json` to Cloudflare R2 with a cache-busting query param.
