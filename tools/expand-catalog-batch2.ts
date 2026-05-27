@@ -260,7 +260,7 @@ const BATCH2: Device[] = [
     tags: ["esp32-s3", "usb-dongle", "display", "usb-army-knife"],
     description:
       "USB-dongle ESP32-S3 with 1.47\" round display. USB Army Knife tested hardware — similar class to T-Dongle S3.",
-    url: "https://www.waveshare.com/esp32-s3-1.47inch.htm",
+    url: "https://www.waveshare.com/esp32-s3-lcd-1.47.htm",
     firmware: [
       {
         fork: "community",
