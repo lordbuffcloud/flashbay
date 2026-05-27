@@ -1,6 +1,6 @@
 {
-  "version": "1.0.4",
-  "generated": "2026-05-23T12:00:00Z",
+  "version": "1.2.0",
+  "generated": "2026-05-27T21:24:26.944Z",
   "license": "CC-BY-4.0",
   "submission_url": "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml",
   "devices": [
@@ -9,7 +9,17 @@
       "name": "Nyanbox",
       "manufacturer": "jbohack + zr_crackiin",
       "category": "esp32",
-      "tags": ["esp32-wroom-32u", "wifi", "ble", "nrf24", "mousejack", "evil-portal", "handheld", "oled-128x64", "usb-c"],
+      "tags": [
+        "esp32-wroom-32u",
+        "wifi",
+        "ble",
+        "nrf24",
+        "mousejack",
+        "evil-portal",
+        "handheld",
+        "oled-128x64",
+        "usb-c"
+      ],
       "description": "Handheld ESP32-based pentesting tool. ESP32 WROOM-32U dual-core 240MHz, WiFi b/g/n, BLE 4.2, three NRF24 radios, 0.96\" OLED (128x64 SSD1306), USB-C, 2500mAh battery. Fork of CiferTech's nRFBOX.",
       "url": "https://github.com/jbohack/nyanBOX",
       "firmware": [
@@ -45,7 +55,15 @@
       "name": "Flipper Zero",
       "manufacturer": "Flipper Devices",
       "category": "multi-tool",
-      "tags": ["sub-ghz", "nfc", "rfid", "ir", "ibutton", "gpio", "badusb"],
+      "tags": [
+        "sub-ghz",
+        "nfc",
+        "rfid",
+        "ir",
+        "ibutton",
+        "gpio",
+        "badusb"
+      ],
       "description": "Portable multi-tool for pentesters and geeks. Sub-GHz, NFC, RFID, IR, iButton, GPIO, BadUSB.",
       "url": "https://flipperzero.one",
       "firmware": [
@@ -91,14 +109,14 @@
         {
           "fork": "community",
           "name": "RogueMaster",
-          "version": "RM0422-1127-0.420.0-960438b",
-          "release_date": "2026-04-22",
-          "url": "https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/latest",
+          "version": "RM0526-0321-0.420.0-0e7e039",
+          "release_date": "2026-03-21",
+          "url": "https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/tag/RM0526-0321-0.420.0-0e7e039",
           "notes": "Bleeding-edge kitchen-sink fork that syncs both OFW and Unleashed. GitHub weekly builds; Patreon daily.",
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
         },
         {
@@ -121,7 +139,13 @@
       "name": "HackRF One",
       "manufacturer": "Great Scott Gadgets",
       "category": "sdr",
-      "tags": ["sdr", "rf", "tx", "rx", "1mhz-6ghz"],
+      "tags": [
+        "sdr",
+        "rf",
+        "tx",
+        "rx",
+        "1mhz-6ghz"
+      ],
       "description": "Wide-band software-defined radio. 1 MHz to 6 GHz, half-duplex transceiver.",
       "url": "https://greatscottgadgets.com/hackrf/one/",
       "firmware": [
@@ -156,7 +180,13 @@
       "name": "Proxmark3 RDV4",
       "manufacturer": "RfidResearchGroup",
       "category": "rfid-nfc",
-      "tags": ["rfid", "nfc", "hf", "lf", "mifare"],
+      "tags": [
+        "rfid",
+        "nfc",
+        "hf",
+        "lf",
+        "mifare"
+      ],
       "description": "High/low frequency RFID research tool. Read, write, emulate, sniff.",
       "url": "https://github.com/RfidResearchGroup/proxmark3",
       "firmware": [
@@ -179,7 +209,12 @@
       "name": "O.MG Cable / Plug / UnBlocker",
       "manufacturer": "Mischief Gadgets (Hak5)",
       "category": "implant",
-      "tags": ["badusb", "wifi", "implant", "ducky-script"],
+      "tags": [
+        "badusb",
+        "wifi",
+        "implant",
+        "ducky-script"
+      ],
       "description": "Family of USB implants — looks like a charging cable, AC adapter, or USB blocker. WiFi-controlled BadUSB with payload execution.",
       "url": "https://o.mg.lol",
       "firmware": [
@@ -203,7 +238,13 @@
       "name": "Pwnagotchi",
       "manufacturer": "evilsocket (original) / jayofelony (current maintainer)",
       "category": "wifi",
-      "tags": ["wifi", "wpa", "handshake-capture", "rpi-zero", "ai"],
+      "tags": [
+        "wifi",
+        "wpa",
+        "handshake-capture",
+        "rpi-zero",
+        "ai"
+      ],
       "description": "Raspberry Pi Zero W-based WiFi handshake collector with a virtual-pet UI.",
       "url": "https://pwnagotchi.ai",
       "firmware": [
@@ -226,7 +267,12 @@
       "name": "WiFi Pineapple Mark VII",
       "manufacturer": "Hak5",
       "category": "wifi",
-      "tags": ["wifi", "rogue-ap", "audit", "mitm"],
+      "tags": [
+        "wifi",
+        "rogue-ap",
+        "audit",
+        "mitm"
+      ],
       "description": "Wireless network auditing platform. Rogue AP, MITM, recon modules.",
       "url": "https://shop.hak5.org/products/wifi-pineapple",
       "firmware": [
@@ -249,7 +295,12 @@
       "name": "USB Rubber Ducky Mark II",
       "manufacturer": "Hak5",
       "category": "badusb",
-      "tags": ["badusb", "hid", "ducky-script", "keystroke-injection"],
+      "tags": [
+        "badusb",
+        "hid",
+        "ducky-script",
+        "keystroke-injection"
+      ],
       "description": "Keystroke injection tool. Looks like a USB drive, executes pre-compiled payloads at superhuman speed.",
       "url": "https://shop.hak5.org/products/usb-rubber-ducky",
       "firmware": [
@@ -273,7 +324,13 @@
       "name": "Bash Bunny Mark II",
       "manufacturer": "Hak5",
       "category": "badusb",
-      "tags": ["badusb", "hid", "mass-storage", "ethernet", "serial"],
+      "tags": [
+        "badusb",
+        "hid",
+        "mass-storage",
+        "ethernet",
+        "serial"
+      ],
       "description": "Multi-vector USB attack platform. HID, mass storage, ethernet, serial — all at once.",
       "url": "https://shop.hak5.org/products/bash-bunny",
       "firmware": [
@@ -296,21 +353,30 @@
       "name": "M5Stack Cardputer",
       "manufacturer": "M5Stack",
       "category": "esp32",
-      "tags": ["esp32-s3", "keyboard", "display", "wifi", "ble", "ir", "microphone", "rgb-led"],
+      "tags": [
+        "esp32-s3",
+        "keyboard",
+        "display",
+        "wifi",
+        "ble",
+        "ir",
+        "microphone",
+        "rgb-led"
+      ],
       "description": "Credit-card-sized ESP32-S3 computer with QWERTY keyboard. Popular target for pentesting firmwares.",
       "url": "https://shop.m5stack.com/products/m5stack-cardputer-kit-w-m5stamps3",
       "firmware": [
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.14",
-          "release_date": "2026-02-01",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
           "notes": "Most feature-rich Cardputer firmware — CC1101/NRF24/FM/PN532/BadUSB/RFID/WiFi/BLE. Full hardware support (microphone, RGB LED). Also runs on M5StickC PLUS/PLUS2, Core/Core2/CoreS3, plus Lilygo T-series.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
         },
         {
@@ -332,7 +398,15 @@
       "name": "ESP32 Marauder",
       "manufacturer": "JustCallMeKoko (community)",
       "category": "esp32",
-      "tags": ["esp32", "wifi", "ble", "deauth", "evil-portal", "kismet", "wardriving"],
+      "tags": [
+        "esp32",
+        "wifi",
+        "ble",
+        "deauth",
+        "evil-portal",
+        "kismet",
+        "wardriving"
+      ],
       "description": "WiFi + BLE pentesting firmware for ESP32 boards. Deauth, evil portal, sniffing, scanning. Many compatible boards.",
       "url": "https://github.com/justcallmekoko/ESP32Marauder",
       "firmware": [
@@ -382,7 +456,15 @@
       "name": "Apex 5 Module",
       "manufacturer": "JustCallMeKoko",
       "category": "flipper-accessory",
-      "tags": ["esp32-c5", "wifi-6", "5ghz", "sub-ghz", "nrf24", "gps", "flipper-zero"],
+      "tags": [
+        "esp32-c5",
+        "wifi-6",
+        "5ghz",
+        "sub-ghz",
+        "nrf24",
+        "gps",
+        "flipper-zero"
+      ],
       "description": "ESP32-C5 module for Flipper Zero. Adds 5 GHz WiFi 6, dual Sub-GHz radios, NRF24, and GPS. Announced Feb 2026 at $99. Marauder-family hardware.",
       "url": "https://www.cnx-software.com/2026/02/11/esp32-marauder-5g-apex-5-module-for-flipper-zero-combines-esp32-c5-two-sub-ghz-radios-nrf24-and-gps/",
       "firmware": [
@@ -405,21 +487,29 @@
       "name": "M5StickC PLUS2",
       "manufacturer": "M5Stack",
       "category": "esp32",
-      "tags": ["esp32-pico-v3", "wifi", "ble", "ir", "rtc", "wearable", "compact"],
+      "tags": [
+        "esp32-pico-v3",
+        "wifi",
+        "ble",
+        "ir",
+        "rtc",
+        "wearable",
+        "compact"
+      ],
       "description": "Compact ESP32 wearable with 1.14\" color display. Same firmware ecosystem as Cardputer (Bruce, Nemo). Popular for wearable wireless recon.",
       "url": "https://shop.m5stack.com/products/m5stickc-plus2",
       "firmware": [
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.14",
-          "release_date": "2026-02-01",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
           "notes": "Same Bruce release as Cardputer — WiFi/BLE/RFID/BadUSB. Targets StickCPlus2 explicitly.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
         },
         {
@@ -441,21 +531,28 @@
       "name": "LilyGo T-Embed CC1101",
       "manufacturer": "LilyGo",
       "category": "esp32",
-      "tags": ["esp32-s3", "cc1101", "sub-ghz", "rotary-encoder", "tft", "rf"],
+      "tags": [
+        "esp32-s3",
+        "cc1101",
+        "sub-ghz",
+        "rotary-encoder",
+        "tft",
+        "rf"
+      ],
       "description": "ESP32-S3 handheld with built-in CC1101 Sub-GHz radio, rotary encoder, color TFT display. Bruce's flagship target alongside Cardputer.",
       "url": "https://www.lilygo.cc/products/t-embed-cc1101",
       "firmware": [
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.14",
-          "release_date": "2026-02-01",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
           "notes": "T-Embed CC1101 is a flagship Bruce target — first-class CC1101 Sub-GHz support, rotary-encoder UI.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
         }
       ]
@@ -465,7 +562,15 @@
       "name": "Cheap Yellow Display (CYD)",
       "manufacturer": "Sunton / generic",
       "category": "esp32",
-      "tags": ["esp32", "esp32-2432s028", "touchscreen", "tft", "wifi", "ble", "budget"],
+      "tags": [
+        "esp32",
+        "esp32-2432s028",
+        "touchscreen",
+        "tft",
+        "wifi",
+        "ble",
+        "budget"
+      ],
       "description": "$10-15 ESP32 + 2.8\" touchscreen. Massive entry-level appeal for the ESP32 pentest ecosystem. Runs Ghost ESP and Bruce. Multiple Chinese vendors sell variants.",
       "url": "https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display",
       "firmware": [
@@ -485,14 +590,14 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.14",
-          "release_date": "2026-02-01",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.14",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
           "notes": "Bruce supports CYD as one of its core target platforms.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
         }
       ]
@@ -502,7 +607,14 @@
       "name": "Yard Stick One",
       "manufacturer": "Great Scott Gadgets",
       "category": "sdr",
-      "tags": ["sub-1ghz", "rf", "tx", "rx", "cc1111", "rfcat"],
+      "tags": [
+        "sub-1ghz",
+        "rf",
+        "tx",
+        "rx",
+        "cc1111",
+        "rfcat"
+      ],
       "description": "Half-duplex sub-1 GHz wireless test tool. CC1111-based. Controlled via rfcat from a host. Mature firmware, low update cadence — a staple of the RF cybersec toolkit.",
       "url": "https://greatscottgadgets.com/yardstickone/",
       "firmware": [
@@ -516,6 +628,1369 @@
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-23",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-dongle-s3",
+      "name": "LilyGo T-Dongle S3",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "usb-dongle",
+        "hid",
+        "badusb",
+        "wifi",
+        "ble",
+        "st7735",
+        "covert"
+      ],
+      "description": "USB-stick ESP32-S3 with 0.96\" ST7735 display, TF slot, and hidden microSD in the USB-A shell. Primary platform for USB Army Knife and popular Marauder target.",
+      "url": "https://www.lilygo.cc/products/t-dongle-s3",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "USB Army Knife",
+          "version": "main-branch",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/i-am-shodan/USBArmyKnife",
+          "notes": "HID + mass storage + WiFi/BLE attack surface with web UI. Builds from GitHub Actions (no tagged releases). Flash via ESP Web Tools or project docs; hold BOOT (G0) for download mode.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "stock",
+          "name": "ESP32 Marauder",
+          "version": "v1.12.1",
+          "release_date": "2026-05-05",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
+          "notes": "Marauder port for T-Dongle S3 — select board in FZEE Flasher or ESP32 Marauder web updater.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fzeeflasher.github.io/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-cardputer-adv",
+      "name": "M5Stack Cardputer ADV",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "keyboard",
+        "mic",
+        "ir",
+        "gps",
+        "cc1101-cap"
+      ],
+      "description": "Advanced Cardputer with improved keyboard, microphone, and expansion caps (GPS, CC1101 Sub-GHz). Same Bruce/Nemo ecosystem as the original Cardputer.",
+      "url": "https://shop.m5stack.com/products/m5stack-cardputer-adv-esp32-s3",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Full Bruce feature set on Cardputer ADV — CC1101 cap, PN532, BadUSB, WiFi/BLE offensive tools.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Nemo",
+          "version": "v3.2.1",
+          "release_date": "2026-01-27",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
+          "notes": "Nemo targets Cardputer ADV alongside StickCPlus2 and original Cardputer.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-cardputer-zero",
+      "name": "M5Stack Cardputer Zero",
+      "manufacturer": "M5Stack",
+      "status": "preorder",
+      "category": "multi-tool",
+      "tags": [
+        "linux",
+        "rpi-cm0",
+        "keyboard",
+        "coming-soon",
+        "wifi",
+        "ble",
+        "ethernet"
+      ],
+      "description": "Pocket Linux handheld (Raspberry Pi CM0) with 46-key keyboard and 1.9\" display — not ESP32. Community firmware via M5 on-device store expected post-Kickstarter (May 2026).",
+      "url": "https://shop.m5stack.com/pages/m5-cardputerzero",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "M5 official (preorder)",
+          "version": "kickstarter-2026",
+          "release_date": "2026-05-26",
+          "url": "https://shop.m5stack.com/pages/m5-cardputerzero",
+          "notes": "Hardware launching on Kickstarter May 2026. Firmware distribution model TBD — likely M5 app store + SD images, not WebUSB ESP flashing. Re-verify when units ship.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-deck",
+      "name": "LilyGo T-Deck",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "keyboard",
+        "trackball",
+        "lora",
+        "meshtastic",
+        "badusb"
+      ],
+      "description": "ESP32-S3 QWERTY handheld with trackball. Bruce for BadUSB/CC1101; Meshtastic is the other major firmware line for this hardware.",
+      "url": "https://lilygo.cc/products/t-deck",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce on T-Deck / T-Deck Pro — BadUSB and CC1101; no NRF24 on Deck form factor.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Meshtastic",
+          "version": "check-releases",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/meshtastic/firmware/releases/latest",
+          "notes": "Primary firmware for many T-Deck owners — LoRa mesh, not offensive WiFi. Flash via Meshtastic web flasher or device OTA.",
+          "flashable_in_browser": true,
+          "flash_url": "https://flasher.meshtastic.org/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-display-s3",
+      "name": "LilyGo T-Display-S3",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "touchscreen",
+        "170x320",
+        "badusb",
+        "wifi"
+      ],
+      "description": "Compact ESP32-S3 board with 1.9\" ST7789 display. Bruce target; common Marauder/CYD-adjacent budget board.",
+      "url": "https://lilygo.cc/products/t-display-s3",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce T-Display-S3 — WiFi/BLE/CC1101 shield support; touchscreen pin conflicts documented upstream.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-embed",
+      "name": "LilyGo T-Embed",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "rotary-encoder",
+        "tft",
+        "speaker"
+      ],
+      "description": "T-Embed without integrated CC1101 — predecessor to T-Embed CC1101. Bruce-supported with full UI stack.",
+      "url": "https://lilygo.cc/products/t-embed",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce on original T-Embed — add CC1101/NRF shields per Bruce wiring docs.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-watch-s3",
+      "name": "LilyGo T-Watch S3",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "wearable",
+        "badusb",
+        "touch"
+      ],
+      "description": "Watch-form ESP32-S3. Bruce supports BadUSB; limited RF compared to T-Embed/Cardputer.",
+      "url": "https://lilygo.cc/products/t-watch-s3",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce T-Watch S3 — primarily BadUSB + WiFi tooling in wearable form factor.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-lora-pager",
+      "name": "LilyGo T-LoRa Pager",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "lora",
+        "pager",
+        "meshtastic",
+        "badusb"
+      ],
+      "description": "Pager-style ESP32-S3 with LoRa. Meshtastic-first hardware; Bruce adds BadUSB path.",
+      "url": "https://lilygo.cc/products/t-lora-pager",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce BadUSB + WiFi on T-LoRa Pager.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Meshtastic",
+          "version": "check-releases",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/meshtastic/firmware/releases/latest",
+          "notes": "Stock use case for this device — LoRa mesh pager firmware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://flasher.meshtastic.org/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "m5stickc-plus",
+      "name": "M5StickC PLUS",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-pico",
+        "wearable",
+        "compact",
+        "ir"
+      ],
+      "description": "Older compact M5 stick (ESP32-PICO). Bruce LITE builds available; superseded by PLUS2 but still common.",
+      "url": "https://docs.m5stack.com/en/core/M5StickC%20PLUS",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce supports M5StickC PLUS with LITE_VERSION constraints — check Bruce board matrix.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Nemo",
+          "version": "v3.2.1",
+          "release_date": "2026-01-27",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
+          "notes": "Nemo lists StickCPlus as supported platform.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-core2",
+      "name": "M5Stack Core2",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32",
+        "touchscreen",
+        "speaker",
+        "vibration"
+      ],
+      "description": "ESP32 touchscreen IoT core. Bruce community target for WiFi/BLE/RF when paired with radio modules.",
+      "url": "https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-v1-1",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce on M5Core2 — tone speaker, no RGB; add CC1101/NRF via Grove/shields.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-cores3",
+      "name": "M5Stack CoreS3",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "touchscreen",
+        "camera"
+      ],
+      "description": "ESP32-S3 flagship M5 core with capacitive touch and camera module support.",
+      "url": "https://shop.m5stack.com/products/m5stack-cores3-esp32s3-lotdevelopment-kit",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce on CoreS3/SE — ESP32-S3 performance; no microphone path on Bruce matrix.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "chameleon-ultra",
+      "name": "Chameleon Ultra",
+      "manufacturer": "Proxgrind / RRG ecosystem",
+      "category": "rfid-nfc",
+      "tags": [
+        "nfc",
+        "rfid",
+        "hf",
+        "lf",
+        "emulation",
+        "offline"
+      ],
+      "description": "Standalone NFC/RFID research and emulation tool. Flash via CLI or MTools BLE; DFU packages on GitHub releases.",
+      "url": "https://github.com/RfidResearchGroup/ChameleonUltra",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Chameleon Ultra FW",
+          "version": "v2.1.0",
+          "release_date": "2024-09-02",
+          "url": "https://github.com/RfidResearchGroup/ChameleonUltra/releases/tag/v2.1.0",
+          "notes": "Official Ultra firmware v2.1.0 — Ultralight emulation, hardnested, HIDProx LF, CLI rework. Flash via chameleon CLI or MTools.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "chameleon-lite",
+      "name": "Chameleon Lite",
+      "manufacturer": "Proxgrind / RRG ecosystem",
+      "category": "rfid-nfc",
+      "tags": [
+        "nfc",
+        "hf",
+        "emulation",
+        "compact"
+      ],
+      "description": "Compact NFC emulation device in the Chameleon family. Same RRG tooling chain as Ultra.",
+      "url": "https://github.com/RfidResearchGroup/ChameleonUltra",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Chameleon Lite FW",
+          "version": "v2.1.0",
+          "release_date": "2024-09-02",
+          "url": "https://github.com/RfidResearchGroup/ChameleonUltra/releases/tag/v2.1.0",
+          "notes": "Lite builds ship as lite-dfu-app.zip on the ChameleonUltra release page. Flash via chameleon CLI, Ultra GUI, or MTools BLE.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "MED"
+        }
+      ]
+    },
+    {
+      "id": "esp8266-deauther",
+      "name": "ESP8266 Deauther",
+      "manufacturer": "Spacehuhn / community boards",
+      "category": "wifi",
+      "tags": [
+        "esp8266",
+        "deauth",
+        "wifi",
+        "oled",
+        "dstike"
+      ],
+      "description": "Classic ESP8266 WiFi deauther boards (DSTIKE Deauther, NodeMCU + OLED, etc.). Original Spacehuhn firmware ecosystem.",
+      "url": "https://github.com/SpacehuhnTech/esp8266_deauther",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "esp8266_deauther",
+          "version": "2.6.1",
+          "release_date": "2021-08-07",
+          "url": "https://github.com/SpacehuhnTech/esp8266_deauther/releases/tag/2.6.1",
+          "notes": "Stable 2.6.1 — project maintenance slowed but still the reference deauther FW. Flash via esptool or deauther web installer builds.",
+          "flashable_in_browser": true,
+          "flash_url": "https://deauther.com/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "flipper-wifi-devboard",
+      "name": "Flipper WiFi Dev Board",
+      "manufacturer": "Flipper Devices",
+      "category": "flipper-accessory",
+      "tags": [
+        "esp32-s3",
+        "flipper",
+        "wifi",
+        "marauder",
+        "gpio"
+      ],
+      "description": "ESP32-S3 companion for Flipper Zero — runs ESP32 Marauder when flashed standalone via USB, or pairs with Flipper apps when docked.",
+      "url": "https://shop.flipperzero.one/products/wifi-devboard",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "ESP32 Marauder",
+          "version": "v1.12.1",
+          "release_date": "2026-05-05",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
+          "notes": "Primary community use — Marauder on WiFi Devboard via FZEE or Marauder flasher.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fzeeflasher.github.io/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "stock",
+          "name": "Flipper stock (companion mode)",
+          "version": "via-ofw",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/flipperdevices/flipperzero-firmware",
+          "notes": "When used as Flipper GPIO accessory, update Flipper OFW — no separate ESP flash needed for companion apps.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lab.flipper.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lan-turtle",
+      "name": "LAN Turtle",
+      "manufacturer": "Hak5",
+      "category": "implant",
+      "tags": [
+        "linux",
+        "ethernet",
+        "shell",
+        "persistent"
+      ],
+      "description": "Covert Ethernet implant running OpenWrt-based Hak5 platform for persistent network access.",
+      "url": "https://shop.hak5.org/products/lan-turtle",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official (Hak5 portal)",
+          "version": "check-vendor-portal",
+          "release_date": "2026-05-27",
+          "url": "https://downloads.hak5.org/",
+          "notes": "Firmware hosted on Hak5 downloads portal — client-rendered page; verify version in device UI before upgrading.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "shark-jack",
+      "name": "Shark Jack",
+      "manufacturer": "Hak5",
+      "category": "implant",
+      "tags": [
+        "ethernet",
+        "linux",
+        "payloads",
+        "covert"
+      ],
+      "description": "Compact Ethernet attack tool — inline network implants and payload execution.",
+      "url": "https://shop.hak5.org/products/shark-jack",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official (Hak5 portal)",
+          "version": "check-vendor-portal",
+          "release_date": "2026-05-27",
+          "url": "https://downloads.hak5.org/",
+          "notes": "Check Hak5 downloads for Shark Jack firmware bundles.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "packet-squirrel",
+      "name": "Packet Squirrel",
+      "manufacturer": "Hak5",
+      "category": "implant",
+      "tags": [
+        "ethernet",
+        "mitm",
+        "logging",
+        "openwrt"
+      ],
+      "description": "Inline Ethernet MITM and packet capture appliance from Hak5.",
+      "url": "https://shop.hak5.org/products/packet-squirrel",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official (Hak5 portal)",
+          "version": "check-vendor-portal",
+          "release_date": "2026-05-27",
+          "url": "https://downloads.hak5.org/",
+          "notes": "Firmware via Hak5 download portal.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "wifi-duck",
+      "name": "WiFi Duck / WHID Elite",
+      "manufacturer": "Hak5 / community clones",
+      "category": "badusb",
+      "tags": [
+        "badusb",
+        "wifi",
+        "hid",
+        "ducky-script"
+      ],
+      "description": "WiFi-controlled HID injectors (Hak5 WiFi Duck, WHID Elite clones). Web UI for payload staging over WiFi.",
+      "url": "https://docs.hak5.org/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "WiFi Duck (Hak5 legacy)",
+          "version": "check-vendor-docs",
+          "release_date": "2026-05-27",
+          "url": "https://docs.hak5.org/",
+          "notes": "Hak5 WiFi Duck firmware updates via vendor docs. WHID Elite uses separate WHID ecosystem — not interchangeable.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "MED"
+        },
+        {
+          "fork": "community",
+          "name": "WHID Elite (community)",
+          "version": "check-vendor",
+          "release_date": "2026-05-27",
+          "url": "https://whid.ninja/",
+          "notes": "Popular WHID Elite injector — firmware/tools on vendor site, not GitHub releases.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "MED"
+        }
+      ]
+    },
+    {
+      "id": "rtl-sdr-blog-v3",
+      "name": "RTL-SDR Blog V3",
+      "manufacturer": "RTL-SDR Blog",
+      "category": "sdr",
+      "tags": [
+        "rtlsdr",
+        "receive-only",
+        "sdrsharp",
+        "gqrx"
+      ],
+      "description": "USB software-defined radio dongle (receive-only). Used with SDR#, GQRX, URH — not a transmit platform like HackRF.",
+      "url": "https://www.rtl-sdr.com/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "RTL2832U drivers + software",
+          "version": "vendor-bundle",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/rtlsdrblog/rtl-sdr-blog",
+          "notes": "No flashable MCU firmware — configure host drivers (Zadig on Windows) and SDR application stack.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "ubertooth-one",
+      "name": "Ubertooth One",
+      "manufacturer": "Great Scott Gadgets",
+      "category": "sdr",
+      "tags": [
+        "bluetooth",
+        "ble",
+        "2.4ghz",
+        "sniffing"
+      ],
+      "description": "2.4 GHz wireless development platform for Bluetooth monitoring and experimentation.",
+      "url": "https://github.com/greatscottgadgets/ubertooth",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Ubertooth firmware",
+          "version": "2020-12-R1",
+          "release_date": "2020-12-11",
+          "url": "https://github.com/greatscottgadgets/ubertooth/releases/tag/2020-12-R1",
+          "notes": "Stable release line — flash via DFU according to GSG docs. Host tools: Kismet, Wireshark plugins.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-stick-s3",
+      "name": "M5StickS3",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "compact",
+        "wearable"
+      ],
+      "description": "Newer M5 stick form factor (ESP32-S3). Nemo first-class; Bruce support expanding.",
+      "url": "https://shop.m5stack.com/products/m5stickc-s3",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Nemo",
+          "version": "v3.2.1",
+          "release_date": "2026-01-27",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
+          "notes": "Nemo lists StickS3 as supported target.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Check Bruce board matrix for StickS3 — same generation as PLUS2/Cardputer.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "proxmark3-easy",
+      "name": "Proxmark3 Easy / Lite",
+      "manufacturer": "Various (RRG-compatible clones)",
+      "category": "rfid-nfc",
+      "tags": [
+        "rfid",
+        "nfc",
+        "clone",
+        "budget"
+      ],
+      "description": "Budget Proxmark3 clones (Easy, Lite, V4). Often ship with outdated FW — flash Iceman for full feature parity with RDV4.",
+      "url": "https://github.com/RfidResearchGroup/proxmark3",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Iceman (RRG)",
+          "version": "v4.21611",
+          "release_date": "2026-04-14",
+          "url": "https://github.com/RfidResearchGroup/proxmark3/releases/tag/v4.21611",
+          "notes": "Same Iceman build as RDV4 — verify antenna/flash size for clone hardware before flashing.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "wifi-pineapple-mk7c",
+      "name": "WiFi Pineapple Pager / MK7C",
+      "manufacturer": "Hak5",
+      "category": "wifi",
+      "tags": [
+        "wifi",
+        "pager",
+        "rogue-ap",
+        "portable"
+      ],
+      "description": "Portable WiFi Pineapple form factor (Pager / MK7C line). Hak5 ecosystem firmware.",
+      "url": "https://shop.hak5.org/products/wifi-pineapple",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official (Hak5 portal)",
+          "version": "check-vendor-portal",
+          "release_date": "2026-05-27",
+          "url": "https://downloads.hak5.org/pineapple",
+          "notes": "Pineapple firmware via Hak5 downloads — same portal family as MK7.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "houndbee-cyd",
+      "name": "houndBEE (CYD)",
+      "manufacturer": "CK42X",
+      "status": "coming_soon",
+      "category": "esp32",
+      "tags": [
+        "cyd",
+        "esp32",
+        "ck42x",
+        "coming-soon"
+      ],
+      "description": "CK42X-native Cheap Yellow Display firmware (MIT fork of ESP32-DIV + nyanBEE modules). Alpha — not flashable yet.",
+      "url": "https://ck42x.com/houndbee",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "houndBEE-CYD",
+          "version": "alpha-phase-0",
+          "release_date": "2026-05-27",
+          "url": "https://ck42x.com/houndbee",
+          "notes": "Phase 0 scaffolding only — no binaries. Watch ck42x.com/houndbee for first flashable release.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-core-basic",
+      "name": "M5Stack Core BASIC",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32",
+        "m5core",
+        "touchscreen",
+        "grove"
+      ],
+      "description": "Original M5Stack Core (ESP32) with 2\" TFT and Grove port. Bruce community target when paired with CC1101/NRF24 shields.",
+      "url": "https://docs.m5stack.com/en/core/Core",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce on M5Core BASIC — tone speaker, BadUSB¹ via USB; add RF modules per Bruce wiring docs.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "bruce-rf-reaper",
+      "name": "Bruce RF Reaper",
+      "manufacturer": "Smoochiee / Bruce (open hardware)",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "open-hardware",
+        "cc1101",
+        "nrf24",
+        "bruce-native"
+      ],
+      "description": "Official Bruce open-source PCB — ESP32-S3 with CC1101, NRF24, fuel gauge, and RGB. Designed for Bruce firmware out of the box.",
+      "url": "https://bruce.computer/boards",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Flagship Bruce OSS board — full RF feature matrix on bruce.computer/boards. Order PCBs via Elecrow/PCBWay links on site.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "bruce-pcb-v2",
+      "name": "Bruce PCB V2 (Smoochiee)",
+      "manufacturer": "Smoochiee / Bruce",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "open-hardware",
+        "smoochiee",
+        "cc1101",
+        "nrf24"
+      ],
+      "description": "Community Bruce PCB V2 by Smoochiee — RF exploration board with CC1101, NRF24, PN532 path, and extensive GPIO.",
+      "url": "https://bruce.computer/boards",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Smoochiee V2 in Bruce board matrix — same flasher flow as other ESP32-S3 Bruce targets.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "chameleon-mini",
+      "name": "ChameleonMini",
+      "manufacturer": "Kamelio / RRG ecosystem",
+      "category": "rfid-nfc",
+      "tags": [
+        "nfc",
+        "hf",
+        "emulation",
+        "avr",
+        "legacy"
+      ],
+      "description": "Classic contactless smartcard emulator (NFC). AVR-based; distinct from Chameleon Ultra/Lite NRF52 line. RRG maintains a community fork.",
+      "url": "https://github.com/RfidResearchGroup/ChameleonMini",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "RRG ChameleonMini",
+          "version": "Build-f524d973",
+          "release_date": "2023-11-15",
+          "url": "https://github.com/RfidResearchGroup/ChameleonMini/releases/tag/Build-f524d97378405e6fdc0edd8b2b672c86ccc745f8",
+          "notes": "RRG fork of KAOS ChameleonMini. Infrequent tagged builds — verify latest release before flashing. CLI via chameleonmini project docs.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "MED"
+        }
+      ]
+    },
+    {
+      "id": "greatfet-one",
+      "name": "GreatFET One",
+      "manufacturer": "Great Scott Gadgets",
+      "category": "sdr",
+      "tags": [
+        "usb",
+        "gpio",
+        "facedancer",
+        "logic-analyzer",
+        "greatfet"
+      ],
+      "description": "USB peripheral multitool — Facedancer USB attacks, logic analyzer, SPI/I2C bridge. Companion to HackRF in GSG ecosystem.",
+      "url": "https://greatscottgadgets.com/greatfet/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "GreatFET firmware",
+          "version": "v2026.0.0",
+          "release_date": "2026-05-22",
+          "url": "https://github.com/greatscottgadgets/greatfet/releases/tag/v2026.0.0",
+          "notes": "Official GSG release v2026.0.0. Flash via DFU / greatfet tooling per wiki. Host tools: Facedancer, libgreat.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "bladerf",
+      "name": "bladeRF",
+      "manufacturer": "Nuand",
+      "category": "sdr",
+      "tags": [
+        "sdr",
+        "fpga",
+        "full-duplex",
+        "tx",
+        "rx"
+      ],
+      "description": "USB 3.0 SDR platform (bladeRF x40/x115, micro, 2.0 micro xA4/xA9). FPGA-hosted signal processing; distinct from HackRF use cases.",
+      "url": "https://www.nuand.com/bladeRF/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "bladeRF FPGA + FX3",
+          "version": "2025.10",
+          "release_date": "2025-10-01",
+          "url": "https://github.com/Nuand/bladeRF/releases/tag/2025.10",
+          "notes": "Nuand host + FPGA bitstream releases. Flash via bladeRF-cli / libbladeRF documentation for your hardware revision.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "hak5-key-croc",
+      "name": "Key Croc",
+      "manufacturer": "Hak5",
+      "category": "implant",
+      "tags": [
+        "keylogger",
+        "badusb",
+        "linux",
+        "covert",
+        "hak5"
+      ],
+      "description": "Inline keyboard implant — logs keystrokes and runs payloads when deployed between keyboard and target.",
+      "url": "https://shop.hak5.org/products/key-croc",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Official (Hak5 portal)",
+          "version": "check-vendor-portal",
+          "release_date": "2026-05-27",
+          "url": "https://downloads.hak5.org/",
+          "notes": "Key Croc firmware distributed via Hak5 downloads portal. Verify version on device before upgrade.",
+          "flashable_in_browser": false,
+          "release_tracking": "vendor_portal",
+          "last_verified_at": "2026-05-27",
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-m5dial",
+      "name": "M5Dial",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "rotary",
+        "touch",
+        "round-display"
+      ],
+      "description": "ESP32-S3 round display with rotary encoder and touch. Growing Bruce community target for compact UI pentest tools.",
+      "url": "https://shop.m5stack.com/products/m5dial-esp32-s3-smart-rotary-knob-w-1-28-round-touch-screen",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Check Bruce release notes for M5Dial support — flash via bruce.computer flasher when listed in board picker.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-atoms3",
+      "name": "M5Stack AtomS3",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "compact",
+        "led-matrix"
+      ],
+      "description": "Tiny ESP32-S3 module with LED matrix. Popular for badges; Marauder ports exist for some Atom form factors.",
+      "url": "https://shop.m5stack.com/products/atoms3",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "ESP32 Marauder",
+          "version": "v1.12.1",
+          "release_date": "2026-05-05",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
+          "notes": "Some Marauder community builds target AtomS3 — confirm board variant in FZEE Flasher before flashing.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fzeeflasher.github.io/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "esp32-c5-devkitc",
+      "name": "ESP32-C5 DevKitC-1",
+      "manufacturer": "Espressif",
+      "category": "esp32",
+      "tags": [
+        "esp32-c5",
+        "wifi-6",
+        "ble",
+        "devkit"
+      ],
+      "description": "Espressif ESP32-C5 dev kit (Wi-Fi 6 / BLE). Bruce adds C5 support for early adopters — check matrix for feature limits.",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c5/esp32-c5-devkitc-1/index.html",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "Bruce ESP32-C5 row — WiFi/BLE/RF features per BruceDevices board matrix; no BadUSB on C5.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-embed-cc1101-plus",
+      "name": "LilyGo T-Embed CC1101 Plus",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "cc1101",
+        "nrf24",
+        "handheld"
+      ],
+      "description": "Updated T-Embed CC1101 with NRF24 and refined RF layout. Bruce first-class target alongside original T-Embed CC1101.",
+      "url": "https://www.lilygo.cc/products/t-embed-cc1101-plus",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.15",
+          "release_date": "2026-05-25",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "notes": "T-Embed CC1101 Plus — full CC1101 + NRF24 in Bruce 1.15 board matrix.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-beam-supreme",
+      "name": "LilyGo T-Beam Supreme",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "lora",
+        "gps",
+        "meshtastic"
+      ],
+      "description": "ESP32-S3 + SX1262 LoRa + GPS flagship for Meshtastic. Not a WiFi offensive board — mesh firmware is the primary path.",
+      "url": "https://lilygo.cc/products/t-beam-supreme",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Meshtastic",
+          "version": "check-releases",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/meshtastic/firmware/releases/latest",
+          "notes": "Primary firmware for T-Beam Supreme — flash via flasher.meshtastic.org and select board target.",
+          "flashable_in_browser": true,
+          "flash_url": "https://flasher.meshtastic.org/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "waveshare-esp32-s3-147",
+      "name": "Waveshare ESP32-S3 1.47\"",
+      "manufacturer": "Waveshare",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "usb-dongle",
+        "display",
+        "usb-army-knife"
+      ],
+      "description": "USB-dongle ESP32-S3 with 1.47\" round display. USB Army Knife tested hardware — similar class to T-Dongle S3.",
+      "url": "https://www.waveshare.com/esp32-s3-lcd-1.47.htm",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "USB Army Knife",
+          "version": "main-branch",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/i-am-shodan/USBArmyKnife",
+          "notes": "Documented USB Army Knife compatible board. Build from GitHub Actions artifacts per project README.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "pocket-dongle-s3",
+      "name": "Pocket Dongle S3",
+      "manufacturer": "LilyGo (clone form factor)",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "usb-dongle",
+        "covert"
+      ],
+      "description": "T-Dongle S3–style clone with different SD/button layout. USB Army Knife supports with slower SD — verify hardware before flash.",
+      "url": "https://github.com/i-am-shodan/USBArmyKnife",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "USB Army Knife",
+          "version": "main-branch",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/i-am-shodan/USBArmyKnife",
+          "notes": "Listed in USB Army Knife hardware table as Pocket-Dongle-S3. Use Generic board profile if autodetect fails.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-05-27",
+          "confidence": "MED"
+        }
+      ]
+    },
+    {
+      "id": "dstike-deauther",
+      "name": "DSTIKE Deauther (boards)",
+      "manufacturer": "DSTIKE / Spacehuhn ecosystem",
+      "category": "wifi",
+      "tags": [
+        "esp8266",
+        "deauth",
+        "oled",
+        "dstike",
+        "monster"
+      ],
+      "description": "Commercial ESP8266 deauther boards (Deauther Monster, Watch, Pro, etc.) running the Spacehuhn esp8266_deauther firmware family.",
+      "url": "https://github.com/SpacehuhnTech/esp8266_deauther",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "esp8266_deauther",
+          "version": "2.6.1",
+          "release_date": "2021-08-07",
+          "url": "https://github.com/SpacehuhnTech/esp8266_deauther/releases/tag/2.6.1",
+          "notes": "Same firmware as generic ESP8266 Deauther entry — DSTIKE boards ship pre-flashed but often outdated. Re-flash via deauther.com or esptool.",
+          "flashable_in_browser": true,
+          "flash_url": "https://deauther.com/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "flipper-nfc-module",
+      "name": "Flipper Zero NFC Module",
+      "manufacturer": "Flipper Devices",
+      "category": "flipper-accessory",
+      "tags": [
+        "nfc",
+        "flipper",
+        "gpio",
+        "module"
+      ],
+      "description": "Official Flipper NFC expansion module. Firmware ships with Flipper OFW — update the Flipper, not the module in isolation.",
+      "url": "https://shop.flipperzero.one/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Flipper OFW (includes NFC stack)",
+          "version": "1.4.3",
+          "release_date": "2025-12-05",
+          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.4.3",
+          "notes": "NFC features driven by main Flipper firmware. Use lab.flipper.net or qFlipper to update.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lab.flipper.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "flipper-subghz-module",
+      "name": "Flipper Zero Sub-GHz Module",
+      "manufacturer": "Flipper Devices",
+      "category": "flipper-accessory",
+      "tags": [
+        "sub-ghz",
+        "flipper",
+        "cc1101",
+        "module"
+      ],
+      "description": "External Sub-GHz module for Flipper Zero (CC1101). Hardware firmware bundled with Flipper OFW / community forks.",
+      "url": "https://shop.flipperzero.one/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Flipper OFW",
+          "version": "1.4.3",
+          "release_date": "2025-12-05",
+          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.4.3",
+          "notes": "Sub-GHz stack updated via Flipper firmware. Community forks (Unleashed, Momentum) add regional/protocol patches.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lab.flipper.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Unleashed",
+          "version": "unlshd-089",
+          "release_date": "2026-05-09",
+          "url": "https://github.com/DarkFlippers/unleashed-firmware/releases/tag/unlshd-089",
+          "notes": "Region unlock and extended Sub-GHz protocols — flash entire Flipper, module follows.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lab.flipper.net/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "heltec-wifi-lora-32",
+      "name": "Heltec WiFi LoRa 32 (V3)",
+      "manufacturer": "Heltec",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "lora",
+        "oled",
+        "meshtastic"
+      ],
+      "description": "Popular ESP32-S3 + SX1262 LoRa board. Meshtastic community standard; not a Bruce/Marauder primary target.",
+      "url": "https://heltec.org/project/wifi-lora-32-v3/",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Meshtastic",
+          "version": "check-releases",
+          "release_date": "2026-05-27",
+          "url": "https://github.com/meshtastic/firmware/releases/latest",
+          "notes": "Heltec V3 is a common Meshtastic target — select exact board in Meshtastic flasher.",
+          "flashable_in_browser": true,
+          "flash_url": "https://flasher.meshtastic.org/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
         }
       ]

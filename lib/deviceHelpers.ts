@@ -28,6 +28,17 @@ export function formatCategoryLabel(category: string): string {
   return category.replace(/-/g, " ").toUpperCase();
 }
 
+export function formatDeviceStatus(status?: Device["status"]): string | null {
+  switch (status) {
+    case "coming_soon":
+      return "COMING SOON";
+    case "preorder":
+      return "PREORDER";
+    default:
+      return null;
+  }
+}
+
 export function formatRelativeVerified(date?: string): string | null {
   if (!date) return null;
   const verified = new Date(date);

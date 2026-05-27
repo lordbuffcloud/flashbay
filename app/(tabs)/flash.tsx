@@ -1,10 +1,10 @@
 import { FlatList, Platform, Pressable, RefreshControl, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { useMemo } from "react";
 import { useDevices } from "@/hooks/useDevices";
 import { MonoText } from "@/components/MonoText";
 import { ErrorState } from "@/components/ErrorState";
 import { EmptyState } from "@/components/EmptyState";
+import { ScreenShell } from "@/components/ScreenShell";
 import { openExternal } from "@/lib/openExternal";
 import { formatCategoryLabel } from "@/lib/deviceHelpers";
 import type { Device, Firmware } from "@/types/Device";
@@ -31,8 +31,8 @@ export default function FlashWizardScreen() {
   }, [catalog]);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }} edges={["top"]}>
-      <View className="flex-1 bg-terminal-black">
+    <ScreenShell edges={["top", "bottom"]}>
+      <View className="flex-1">
         <Header isWeb={isWeb} count={flashables.length} />
         {error ? (
           <ErrorState label="Remote sync failed — showing bundled catalog" onRetry={refresh} />
@@ -46,7 +46,7 @@ export default function FlashWizardScreen() {
               <FlashableRow entry={item} canFlashHere={isWeb} />
             )}
             ItemSeparatorComponent={() => <View className="h-2" />}
-            contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
+            contentContainerStyle={{ paddingHorizontal: 12, paddingTop: 8, paddingBottom: 16 }}
             refreshControl={
               <RefreshControl
                 refreshing={syncing}
@@ -59,7 +59,7 @@ export default function FlashWizardScreen() {
           />
         )}
       </View>
-    </SafeAreaView>
+    </ScreenShell>
   );
 }
 
@@ -71,14 +71,14 @@ interface HeaderProps {
 function Header({ isWeb, count }: HeaderProps) {
   return (
     <View className="border-b border-terminal-border px-4 py-3">
-      <View className="flex-row items-baseline justify-between">
+      <View className="flex-row flex-wrap items-baseline justify-between gap-2">
         <MonoText className="text-terminal-green text-base font-bold">Flash wizard</MonoText>
         <MonoText className="text-terminal-muted text-xs">{count} ready</MonoText>
       </View>
       <MonoText className="text-terminal-muted text-xs mt-2 leading-5">
         {isWeb
           ? "Launch external flashers via WebUSB / WebSerial. Use Chrome or Edge on desktop."
-          : "Browse flash targets here. Open flashbay on a desktop browser to run in-browser installers."}
+          : "Browse flash targets here. Open flashbay.ck42x.com on a desktop browser to run installers."}
       </MonoText>
     </View>
   );
@@ -100,15 +100,17 @@ function FlashableRow({ entry, canFlashHere }: FlashableRowProps) {
   }
 
   return (
-    <View className="border border-terminal-border bg-terminal-surface px-4 py-3">
+    <View className="border border-terminal-border bg-terminal-surface px-4 py-4">
       <View className="flex-row items-start justify-between gap-3">
-        <View className="flex-1">
+        <View className="flex-1 min-w-0">
           <MonoText className="text-terminal-green text-base font-bold">{device.name}</MonoText>
           <MonoText className="text-terminal-muted text-xs mt-1">
             {formatCategoryLabel(device.category)}
           </MonoText>
         </View>
-        <MonoText className="text-terminal-amber text-[10px] uppercase">{firmware.fork}</MonoText>
+        <MonoText className="text-terminal-amber text-[10px] uppercase shrink-0">
+          {firmware.fork}
+        </MonoText>
       </View>
 
       <MonoText className="text-terminal-text text-sm mt-2">
@@ -116,36 +118,36 @@ function FlashableRow({ entry, canFlashHere }: FlashableRowProps) {
         <MonoText className="text-terminal-green text-sm">{firmware.version}</MonoText>
       </MonoText>
 
-      <MonoText className="text-terminal-muted text-xs mt-2 leading-5" numberOfLines={3}>
-        {firmware.notes}
-      </MonoText>
+      <MonoText className="text-terminal-muted text-xs mt-2 leading-5">{firmware.notes}</MonoText>
 
-      <View className="flex-row flex-wrap items-center mt-3 gap-2">
+      <View className="flex-row flex-wrap items-stretch mt-3 gap-2">
         {canFlashHere ? (
           <Pressable
             onPress={() => openExternal(desktopUrl)}
-            className="border border-terminal-green px-3 py-2 active:bg-terminal-border"
+            className="border border-terminal-green px-4 py-3 min-h-[44px] justify-center active:bg-terminal-border"
           >
-            <MonoText className="text-terminal-green text-xs">Launch flasher</MonoText>
+            <MonoText className="text-terminal-green text-xs font-bold">Launch flasher</MonoText>
           </Pressable>
         ) : (
           <Pressable
             onPress={copyDesktopHint}
-            className="border border-terminal-amber px-3 py-2 active:bg-terminal-border"
+            className="border border-terminal-amber px-4 py-3 min-h-[44px] justify-center active:bg-terminal-border flex-1"
           >
-            <MonoText className="text-terminal-amber text-xs">Copy flasher URL</MonoText>
+            <MonoText className="text-terminal-amber text-xs font-bold">Copy flasher URL</MonoText>
           </Pressable>
         )}
         <Pressable
           onPress={() => openExternal(firmware.url)}
-          className="border border-terminal-border px-3 py-2 active:bg-terminal-border"
+          className="border border-terminal-border px-4 py-3 min-h-[44px] justify-center active:bg-terminal-border"
         >
           <MonoText className="text-terminal-muted text-xs">Release page</MonoText>
         </Pressable>
       </View>
 
       {!canFlashHere && (
-        <MonoText className="text-terminal-muted text-[10px] mt-2">{desktopUrl}</MonoText>
+        <MonoText className="text-terminal-muted text-[10px] mt-2 leading-4" selectable>
+          {desktopUrl}
+        </MonoText>
       )}
     </View>
   );

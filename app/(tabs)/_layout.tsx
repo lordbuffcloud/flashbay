@@ -14,7 +14,13 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: ACTIVE_TINT,
         tabBarInactiveTintColor: INACTIVE_TINT,
-        tabBarStyle: { backgroundColor: TAB_BAR_BG, borderTopColor: BORDER },
+        tabBarStyle: {
+          backgroundColor: TAB_BAR_BG,
+          borderTopColor: BORDER,
+          paddingBottom: 4,
+          height: 56,
+        },
+        tabBarLabelStyle: { fontSize: 11, fontFamily: "SpaceMono" },
         headerShown: false,
         tabBarButton: HapticTab,
       }}

@@ -1,5 +1,4 @@
 import { FlatList, RefreshControl, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { useDevices } from "@/hooks/useDevices";
@@ -11,6 +10,7 @@ import { MonoText } from "@/components/MonoText";
 import { CategoryChips } from "@/components/CategoryChips";
 import { SearchBar } from "@/components/SearchBar";
 import { CatalogStats } from "@/components/CatalogStats";
+import { ScreenShell } from "@/components/ScreenShell";
 import type { Device } from "@/types/Device";
 
 export default function SearchScreen() {
@@ -26,11 +26,11 @@ export default function SearchScreen() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }} edges={["top"]}>
-      <View className="flex-1 bg-terminal-black">
+    <ScreenShell edges={["top", "bottom"]}>
+      <View className="flex-1">
         <View className="border-b border-terminal-border px-4 py-3">
           <MonoText className="text-terminal-green text-base font-bold">Search catalog</MonoText>
-          <MonoText className="text-terminal-muted text-xs mt-1">
+          <MonoText className="text-terminal-muted text-xs mt-1 leading-5">
             Match device names, manufacturers, fork names, or tags.
           </MonoText>
         </View>
@@ -56,7 +56,7 @@ export default function SearchScreen() {
               <DeviceCard device={item} onPress={handleDevicePress} />
             )}
             ItemSeparatorComponent={() => <View className="h-2" />}
-            contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
+            contentContainerStyle={{ paddingHorizontal: 12, paddingTop: 8, paddingBottom: 16 }}
             refreshControl={
               <RefreshControl
                 refreshing={syncing}
@@ -69,6 +69,6 @@ export default function SearchScreen() {
           />
         )}
       </View>
-    </SafeAreaView>
+    </ScreenShell>
   );
 }

@@ -5,7 +5,12 @@ import { useDevices } from "@/hooks/useDevices";
 import { FirmwareRow } from "@/components/FirmwareRow";
 import { MonoText } from "@/components/MonoText";
 import { ErrorState } from "@/components/ErrorState";
-import { formatCategoryLabel, getActiveFirmware } from "@/lib/deviceHelpers";
+import { ScreenShell } from "@/components/ScreenShell";
+import {
+  formatCategoryLabel,
+  formatDeviceStatus,
+  getActiveFirmware,
+} from "@/lib/deviceHelpers";
 import { openExternal } from "@/lib/openExternal";
 import type { Device } from "@/types/Device";
 
@@ -26,22 +31,26 @@ export default function DeviceDetailScreen() {
 
   if (!device && !syncing) {
     return (
-      <View className="flex-1 bg-terminal-black">
-        <Stack.Screen options={{ title: "Not found" }} />
-        <ErrorState
-          label={error ? "Catalog sync failed" : "Device not found"}
-          onRetry={error ? refresh : undefined}
-        />
-      </View>
+      <ScreenShell edges={["bottom"]}>
+        <View className="flex-1">
+          <Stack.Screen options={{ title: "Not found" }} />
+          <ErrorState
+            label={error ? "Catalog sync failed" : "Device not found"}
+            onRetry={error ? refresh : undefined}
+          />
+        </View>
+      </ScreenShell>
     );
   }
 
   if (!device) {
     return (
-      <View className="flex-1 bg-terminal-black items-center justify-center">
-        <Stack.Screen options={{ title: "Loading…" }} />
-        <MonoText className="text-terminal-muted text-xs">Loading device…</MonoText>
-      </View>
+      <ScreenShell edges={["bottom"]}>
+        <View className="flex-1 items-center justify-center">
+          <Stack.Screen options={{ title: "Loading…" }} />
+          <MonoText className="text-terminal-muted text-xs">Loading device…</MonoText>
+        </View>
+      </ScreenShell>
     );
   }
 
@@ -51,19 +60,21 @@ export default function DeviceDetailScreen() {
   );
 
   return (
-    <View className="flex-1 bg-terminal-black">
-      <Stack.Screen options={{ title: device.name }} />
-      <FlatList
-        data={device.firmware}
-        keyExtractor={(item) => `${item.fork}-${item.name}-${item.version}`}
-        renderItem={({ item }) => <FirmwareRow firmware={item} />}
-        ItemSeparatorComponent={() => <View className="h-2" />}
-        ListHeaderComponent={
-          <DeviceHeader device={device} activeCount={activeCount} mobileFlashHint={mobileFlashHint} />
-        }
-        contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
-      />
-    </View>
+    <ScreenShell edges={["bottom"]}>
+      <View className="flex-1">
+        <Stack.Screen options={{ title: device.name }} />
+        <FlatList
+          data={device.firmware}
+          keyExtractor={(item) => `${item.fork}-${item.name}-${item.version}`}
+          renderItem={({ item }) => <FirmwareRow firmware={item} />}
+          ItemSeparatorComponent={() => <View className="h-2" />}
+          ListHeaderComponent={
+            <DeviceHeader device={device} activeCount={activeCount} mobileFlashHint={mobileFlashHint} />
+          }
+          contentContainerStyle={{ paddingHorizontal: 12, paddingTop: 8, paddingBottom: 24 }}
+        />
+      </View>
+    </ScreenShell>
   );
 }
 
@@ -75,10 +86,18 @@ interface DeviceHeaderProps {
 
 function DeviceHeader({ device, activeCount, mobileFlashHint }: DeviceHeaderProps) {
   const isMobile = Platform.OS !== "web";
+  const statusLabel = formatDeviceStatus(device.status);
 
   return (
     <View className="mb-4">
-      <MonoText className="text-terminal-green text-xl font-bold">{device.name}</MonoText>
+      <View className="flex-row flex-wrap items-center gap-2">
+        <MonoText className="text-terminal-green text-xl font-bold">{device.name}</MonoText>
+        {statusLabel && (
+          <View className="border border-terminal-amber px-2 py-1">
+            <MonoText className="text-terminal-amber text-[10px] font-bold">{statusLabel}</MonoText>
+          </View>
+        )}
+      </View>
       <MonoText className="text-terminal-muted text-sm mt-1">{device.manufacturer}</MonoText>
 
       <View className="flex-row flex-wrap mt-3 gap-2">
@@ -87,7 +106,7 @@ function DeviceHeader({ device, activeCount, mobileFlashHint }: DeviceHeaderProp
             {formatCategoryLabel(device.category)}
           </MonoText>
         </View>
-        {device.tags.slice(0, 6).map((tag) => (
+        {device.tags.slice(0, 8).map((tag) => (
           <View key={tag} className="border border-terminal-border px-2 py-1">
             <MonoText className="text-terminal-muted text-[10px]">{tag}</MonoText>
           </View>
@@ -98,18 +117,18 @@ function DeviceHeader({ device, activeCount, mobileFlashHint }: DeviceHeaderProp
 
       <Pressable
         onPress={() => openExternal(device.url)}
-        className="mt-4 self-start border border-terminal-green px-3 py-2 active:bg-terminal-border"
+        className="mt-4 self-start border border-terminal-green px-4 py-3 min-h-[44px] justify-center active:bg-terminal-border"
       >
-        <MonoText className="text-terminal-green text-xs">Vendor / project page →</MonoText>
+        <MonoText className="text-terminal-green text-xs font-bold">Vendor / project page →</MonoText>
       </Pressable>
 
       {isMobile && mobileFlashHint && (
         <View className="mt-4 border border-terminal-amber bg-terminal-surface px-4 py-3">
           <MonoText className="text-terminal-amber text-xs font-bold">Flash on desktop</MonoText>
           <MonoText className="text-terminal-muted text-xs mt-2 leading-5">
-            Some firmware supports in-browser flashing. Open this page in Chrome or Edge on a desktop:
+            In-browser flashing needs Chrome or Edge on a desktop. Open:
           </MonoText>
-          <MonoText className="text-terminal-text text-xs mt-2">
+          <MonoText className="text-terminal-text text-xs mt-2 leading-5" selectable>
             https://flashbay.ck42x.com/device/{device.id}
           </MonoText>
         </View>

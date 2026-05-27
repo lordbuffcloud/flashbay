@@ -13,7 +13,7 @@ export function SearchBar({
   placeholder = "Search devices, forks, tags…",
 }: SearchBarProps) {
   return (
-    <View className="border border-terminal-border bg-terminal-surface px-3 py-2 flex-row items-center">
+    <View className="border border-terminal-border bg-terminal-surface px-3 py-3 flex-row items-center min-h-[48px]">
       <MonoText className="text-terminal-green text-sm mr-2">/</MonoText>
       <TextInput
         value={value}
@@ -23,16 +23,22 @@ export function SearchBar({
         autoCapitalize="none"
         autoCorrect={false}
         returnKeyType="search"
-        className="flex-1 text-terminal-text font-mono text-sm py-0"
+        className="flex-1 text-terminal-text font-mono text-base py-0 min-h-[24px]"
+        style={{ outlineStyle: "none" } as object}
       />
       {value.length > 0 && (
-        <MonoText
-          onPress={() => onChangeText("")}
-          className="text-terminal-amber text-xs ml-2 px-1"
-        >
-          clear
-        </MonoText>
+        <PressableClear onPress={() => onChangeText("")} />
       )}
+    </View>
+  );
+}
+
+function PressableClear({ onPress }: { onPress: () => void }) {
+  return (
+    <View className="ml-2 px-2 py-2 min-h-[36px] min-w-[36px] items-center justify-center">
+      <MonoText onPress={onPress} className="text-terminal-amber text-xs">
+        clear
+      </MonoText>
     </View>
   );
 }

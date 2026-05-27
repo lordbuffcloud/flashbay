@@ -1,5 +1,4 @@
 import { FlatList, Image, Platform, RefreshControl, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { useDevices } from "@/hooks/useDevices";
@@ -11,7 +10,9 @@ import { MonoText } from "@/components/MonoText";
 import { CategoryChips } from "@/components/CategoryChips";
 import { SearchBar } from "@/components/SearchBar";
 import { CatalogStats } from "@/components/CatalogStats";
+import { ScreenShell } from "@/components/ScreenShell";
 import { openExternal } from "@/lib/openExternal";
+import { useIsCompact } from "@/hooks/useLayout";
 import { images } from "@/constants/images";
 import type { Device } from "@/types/Device";
 
@@ -31,8 +32,8 @@ export default function DeviceBrowseScreen() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#000000" }} edges={["top"]}>
-      <View className="flex-1 bg-terminal-black">
+    <ScreenShell edges={["top", "bottom"]}>
+      <View className="flex-1">
         <Header />
         <View className="px-3 pt-3 pb-1 gap-2">
           <SearchBar value={query} onChangeText={setQuery} />
@@ -49,7 +50,7 @@ export default function DeviceBrowseScreen() {
               <DeviceCard device={item} onPress={handleDevicePress} />
             )}
             ItemSeparatorComponent={() => <View className="h-2" />}
-            contentContainerStyle={{ padding: 12, paddingBottom: 24 }}
+            contentContainerStyle={{ paddingHorizontal: 12, paddingTop: 8, paddingBottom: 16 }}
             refreshControl={
               <RefreshControl
                 refreshing={syncing}
@@ -63,19 +64,21 @@ export default function DeviceBrowseScreen() {
         )}
         <SubmitBar />
       </View>
-    </SafeAreaView>
+    </ScreenShell>
   );
 }
 
 function Header() {
+  const compact = useIsCompact();
+
   return (
-    <View className="border-b border-terminal-border px-4 py-3 flex-row items-center justify-between">
+    <View className="border-b border-terminal-border px-4 py-3 flex-row items-center justify-between gap-3">
       <Image
         source={images.wordmark}
-        style={{ width: 160, height: 32 }}
+        style={{ width: compact ? 140 : 160, height: compact ? 28 : 32, maxWidth: "70%" }}
         resizeMode="contain"
       />
-      <MonoText className="text-terminal-muted text-xs">
+      <MonoText className="text-terminal-muted text-xs shrink-0">
         {Platform.OS === "web" ? "WEB" : Platform.OS.toUpperCase()}
       </MonoText>
     </View>
@@ -84,9 +87,9 @@ function Header() {
 
 function SubmitBar() {
   return (
-    <View className="border-t border-terminal-border px-4 py-3 bg-terminal-surface">
+    <View className="border-t border-terminal-border px-4 py-3.5 bg-terminal-surface">
       <MonoText
-        className="text-terminal-amber text-xs"
+        className="text-terminal-amber text-xs leading-5"
         onPress={() => openExternal(SUBMIT_URL)}
       >
         Submit firmware via GitHub issue →

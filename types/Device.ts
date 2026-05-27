@@ -26,6 +26,9 @@ export interface Firmware {
   confidence?: "HIGH" | "MED" | "LOW";
 }
 
+/** Optional lifecycle flag for hardware not yet shipping flashable builds. */
+export type DeviceStatus = "available" | "coming_soon" | "preorder";
+
 export interface Device {
   id: string;
   name: string;
@@ -35,6 +38,7 @@ export interface Device {
   description: string;
   url: string;
   firmware: Firmware[];
+  status?: DeviceStatus;
 }
 
 export interface DevicesCatalog {

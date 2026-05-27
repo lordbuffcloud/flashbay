@@ -38,6 +38,11 @@ yarn-error.*
 
 app-example
 
+# link verification output (local/CI artifact)
+verify-links-report.json
+research-report.md
+data/devices.proposed.json
+
 # generated native folders
 /ios
 /android

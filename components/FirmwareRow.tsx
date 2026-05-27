@@ -60,20 +60,20 @@ export function FirmwareRow({ firmware }: FirmwareRowProps) {
         <View className="flex-row flex-wrap mt-3 gap-2">
           <Pressable
             onPress={() => openExternal(firmware.url)}
-            className="border border-terminal-green px-3 py-2 active:bg-terminal-border"
+            className="border border-terminal-green px-4 py-3 min-h-[44px] justify-center active:bg-terminal-border"
           >
-            <MonoText className="text-terminal-green text-xs">Download</MonoText>
+            <MonoText className="text-terminal-green text-xs font-bold">Download</MonoText>
           </Pressable>
 
           {canFlashHere ? (
             <Pressable
               onPress={() => firmware.flash_url && openExternal(firmware.flash_url)}
-              className="border border-terminal-amber px-3 py-2 active:bg-terminal-border"
+              className="border border-terminal-amber px-4 py-3 min-h-[44px] justify-center active:bg-terminal-border"
             >
-              <MonoText className="text-terminal-amber text-xs">Flash in browser</MonoText>
+              <MonoText className="text-terminal-amber text-xs font-bold">Flash in browser</MonoText>
             </Pressable>
           ) : firmware.flashable_in_browser && firmware.flash_url ? (
-            <View className="border border-terminal-border px-3 py-2">
+            <View className="border border-terminal-border px-4 py-3 min-h-[44px] justify-center">
               <MonoText className="text-terminal-muted text-xs">Flash on desktop</MonoText>
             </View>
           ) : null}
