@@ -12,7 +12,7 @@ import { SearchBar } from "@/components/SearchBar";
 import { CatalogStats } from "@/components/CatalogStats";
 import { ScreenShell } from "@/components/ScreenShell";
 import { openExternal } from "@/lib/openExternal";
-import { useIsCompact } from "@/hooks/useLayout";
+import { useIsCompact, useIsWideDesktop } from "@/hooks/useLayout";
 import { images } from "@/constants/images";
 import type { Device } from "@/types/Device";
 
@@ -24,6 +24,7 @@ export default function DeviceBrowseScreen() {
   const router = useRouter();
   const [category, setCategory] = useState<string>("all");
   const [query, setQuery] = useState<string>("");
+  const wideDesktop = useIsWideDesktop();
 
   const devices = useFilteredDevices(catalog.devices, { category, query });
 
@@ -46,9 +47,14 @@ export default function DeviceBrowseScreen() {
           <FlatList
             data={devices}
             keyExtractor={(item) => item.id}
+            key={wideDesktop ? "desktop-grid" : "single-column"}
+            numColumns={wideDesktop ? 2 : 1}
             renderItem={({ item }) => (
-              <DeviceCard device={item} onPress={handleDevicePress} />
+              <View style={wideDesktop ? { flex: 1, maxWidth: "50%" } : undefined}>
+                <DeviceCard device={item} onPress={handleDevicePress} />
+              </View>
             )}
+            columnWrapperStyle={wideDesktop ? { gap: 8 } : undefined}
             ItemSeparatorComponent={() => <View className="h-2" />}
             contentContainerStyle={{ paddingHorizontal: 12, paddingTop: 8, paddingBottom: 16 }}
             refreshControl={

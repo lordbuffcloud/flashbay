@@ -1,3 +1,4 @@
+import { Platform, useWindowDimensions } from "react-native";
 import { Tabs } from "expo-router";
 import React from "react";
 import { HapticTab } from "@/components/haptic-tab";
@@ -9,17 +10,28 @@ const TAB_BAR_BG = "#000000";
 const BORDER = "#1F1F1F";
 
 export default function TabLayout() {
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 1024;
+
   return (
     <Tabs
       screenOptions={{
+        tabBarPosition: desktopWeb ? "left" : "bottom",
         tabBarActiveTintColor: ACTIVE_TINT,
         tabBarInactiveTintColor: INACTIVE_TINT,
-        tabBarStyle: {
-          backgroundColor: TAB_BAR_BG,
-          borderTopColor: BORDER,
-          paddingBottom: 4,
-          height: 56,
-        },
+        tabBarStyle: desktopWeb
+          ? {
+              backgroundColor: TAB_BAR_BG,
+              borderRightColor: BORDER,
+              paddingTop: 16,
+              paddingBottom: 16,
+            }
+          : {
+              backgroundColor: TAB_BAR_BG,
+              borderTopColor: BORDER,
+              paddingBottom: 4,
+              height: 56,
+            },
         tabBarLabelStyle: { fontSize: 11, fontFamily: "SpaceMono" },
         headerShown: false,
         tabBarButton: HapticTab,

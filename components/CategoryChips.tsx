@@ -25,6 +25,7 @@ export function CategoryChips({ active, onChange }: CategoryChipsProps) {
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
+      style={{ flexGrow: 0, flexShrink: 0, height: 60 }}
       contentContainerStyle={{ paddingHorizontal: 12, paddingVertical: 10, gap: 8 }}
     >
       {DEVICE_CATEGORIES.map((cat) => (
