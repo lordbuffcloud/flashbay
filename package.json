@@ -9,6 +9,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
+    "test": "bun run verify-catalog",
+    "verify": "bun run verify-catalog && bun run verify-links && bun run lint && bunx tsc --noEmit",
+    "verify-catalog": "bun run tools/verify-catalog.ts",
     "verify-links": "bun run tools/verify-links.ts",
     "expand-catalog": "bun run tools/expand-catalog.ts",
     "expand-catalog:batch2": "bun run tools/expand-catalog-batch2.ts"

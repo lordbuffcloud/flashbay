@@ -1,6 +1,6 @@
 {
-  "version": "1.2.0",
-  "generated": "2026-05-27T21:24:26.944Z",
+  "version": "1.3.0",
+  "generated": "2026-08-02T20:13:34.928Z",
   "license": "CC-BY-4.0",
   "submission_url": "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml",
   "devices": [
@@ -309,12 +309,12 @@
           "name": "Mark II (PayloadStudio architecture)",
           "version": "flashless",
           "release_date": "2022-08-12",
-          "url": "https://docs.hak5.org/hak5-usb-rubber-ducky/usb-rubber-ducky-by-hak5/",
+          "url": "https://docs.hak5.org/hak5-usb-rubber-ducky/",
           "notes": "Mark II (2022) is explicitly flashless — payloads are compiled in Hak5 PayloadStudio rather than firmware-flashed. There is no 'Gen3'. Mark I (2011) and Mark II (2022) are the only generations.",
           "flashable_in_browser": true,
           "flash_url": "https://payloadstudio.hak5.org",
           "release_tracking": "payload_compiler",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]
@@ -389,6 +389,31 @@
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-23",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cardputer.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Evil-M5Project",
+          "version": "1.5.4",
+          "release_date": "2026-08-01",
+          "url": "https://github.com/7h30th3r0n3/Evil-M5Project",
+          "notes": "Current Cardputer build with WiFi security assessment, captive portal, wardriving, and network monitoring features. Published from main rather than GitHub Releases.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]
@@ -523,6 +548,19 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cplus2.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -553,6 +591,19 @@
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-embed-cc1101.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]
@@ -598,6 +649,32 @@
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-CYD-2432S028.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Marauder (CYD)",
+          "version": "v1.4.3",
+          "release_date": "2025-04-17",
+          "url": "https://github.com/Fr4nkFletcher/ESP32-Marauder-Cheap-Yellow-Display/tree/v1.4.3",
+          "notes": "CYD-specific ESP32 Marauder port for WiFi/Bluetooth security assessment. Supports common 2.8-inch CYD variants and publishes a WebSerial flasher.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fr4nkfletcher.github.io/Adafruit_WebSerial_ESPTool/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]
@@ -674,6 +751,19 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-dongle-s3-tft.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -716,6 +806,19 @@
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cardputer.bin (ADV auto-detection) for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]
@@ -793,6 +896,19 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-deck.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -852,6 +968,19 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-embed.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -880,6 +1009,19 @@
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-watch-s3.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]
@@ -924,6 +1066,19 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-lora-pager.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -939,7 +1094,7 @@
         "ir"
       ],
       "description": "Older compact M5 stick (ESP32-PICO). Bruce LITE builds available; superseded by PLUS2 but still common.",
-      "url": "https://docs.m5stack.com/en/core/M5StickC%20PLUS",
+      "url": "https://docs.m5stack.com/en/core/m5stickc_plus",
       "firmware": [
         {
           "fork": "community",
@@ -964,6 +1119,19 @@
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cplus1_1.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]
@@ -994,6 +1162,31 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-core2.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Evil-M5Project",
+          "version": "1.5.1",
+          "release_date": "2026-07-23",
+          "url": "https://github.com/7h30th3r0n3/Evil-M5Project",
+          "notes": "Current M5Stack Core2 source build. Published from main rather than GitHub Releases.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -1021,6 +1214,19 @@
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cores3.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]
@@ -1373,6 +1579,19 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-sticks3.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -1473,7 +1692,7 @@
         "grove"
       ],
       "description": "Original M5Stack Core (ESP32) with 2\" TFT and Grove port. Bruce community target when paired with CC1101/NRF24 shields.",
-      "url": "https://docs.m5stack.com/en/core/Core",
+      "url": "https://docs.m5stack.com/en/core/basic",
       "firmware": [
         {
           "fork": "community",
@@ -1486,6 +1705,19 @@
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Launcher",
+          "version": "2.8.0",
+          "release_date": "2026-07-31",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-core.bin for this hardware.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-08-02",
           "confidence": "HIGH"
         }
       ]

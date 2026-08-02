@@ -6,7 +6,8 @@
  *
  * Behavior:
  *   - HEADs every `url` and `flash_url` across every device + firmware
- *   - Treats 200-399 as healthy. 4xx/5xx + timeouts + network errors = broken.
+ *   - Treats 200-399 as healthy, permanent 400/404/410 responses as broken,
+ *     and rate limits, server errors, timeouts, and network failures as transient.
  *   - Writes results to verify-links-report.json (consumed by the GH Action).
  *   - Exits non-zero if any link is broken, so the Action step fails.
  *
@@ -16,6 +17,8 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+
+import { classifyLinkStatus, isLinkCheckOk, type LinkHealth, type LinkStatus } from "./link-health";
 
 interface Firmware {
   fork: string;
@@ -43,7 +46,8 @@ interface LinkCheck {
   firmware_name?: string;
   field: "device.url" | "firmware.url" | "firmware.flash_url";
   url: string;
-  status: number | "TIMEOUT" | "ERROR";
+  status: LinkStatus;
+  classification: LinkHealth;
   ok: boolean;
   error?: string;
 }
@@ -53,13 +57,14 @@ interface Report {
   catalog_version: string;
   total_links: number;
   broken_count: number;
+  transient_count: number;
   results: LinkCheck[];
 }
 
 const TIMEOUT_MS = 15_000;
 const USER_AGENT = "Flashbay-LinkVerifier/1.0 (+https://github.com/lordbuffcloud/flashbay)";
 
-async function headCheck(url: string): Promise<{ status: number | "TIMEOUT" | "ERROR"; error?: string }> {
+async function headCheck(url: string): Promise<{ status: LinkStatus; error?: string }> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
@@ -70,7 +75,7 @@ async function headCheck(url: string): Promise<{ status: number | "TIMEOUT" | "E
       redirect: "follow",
       signal: controller.signal,
     });
-    if (res.status === 405 || res.status === 501) {
+    if ([403, 404, 405, 501].includes(res.status)) {
       res = await fetch(url, {
         method: "GET",
         headers: { "User-Agent": USER_AGENT },
@@ -118,14 +123,15 @@ async function main(): Promise<void> {
     const batchResults = await Promise.all(
       batch.map(async (c) => {
         const probe = await headCheck(c.url);
-        const ok = typeof probe.status === "number" && probe.status >= 200 && probe.status < 400;
+        const classification = classifyLinkStatus(probe.status);
         const result: LinkCheck = {
           device_id: c.device_id,
           firmware_name: c.firmware_name,
           field: c.check,
           url: c.url,
           status: probe.status,
-          ok,
+          classification,
+          ok: isLinkCheckOk(probe.status),
         };
         if (probe.error) result.error = probe.error;
         return result;
@@ -136,13 +142,15 @@ async function main(): Promise<void> {
     console.log(`  ${completed}/${checks.length}`);
   }
 
-  const broken = results.filter((r) => !r.ok);
+  const broken = results.filter((result) => result.classification === "broken");
+  const transient = results.filter((result) => result.classification === "transient");
 
   const report: Report = {
     generated_at: new Date().toISOString(),
     catalog_version: catalog.version,
     total_links: results.length,
     broken_count: broken.length,
+    transient_count: transient.length,
     results,
   };
 
@@ -151,6 +159,19 @@ async function main(): Promise<void> {
   console.log("");
   console.log(`Total checked: ${report.total_links}`);
   console.log(`Broken:        ${report.broken_count}`);
+  console.log(`Transient:     ${report.transient_count}`);
+
+  if (transient.length > 0) {
+    console.log("");
+    console.log("Transient/unverified links:");
+    for (const result of transient) {
+      const where = result.firmware_name
+        ? `${result.device_id} / ${result.firmware_name} (${result.field})`
+        : `${result.device_id} (${result.field})`;
+      console.log(`  [${result.status}] ${where} → ${result.url}`);
+      if (result.error) console.log(`         ${result.error}`);
+    }
+  }
 
   if (broken.length > 0) {
     console.log("");
