@@ -1,4 +1,5 @@
 import { Pressable, View } from "react-native";
+import { Image } from "expo-image";
 import { MonoText } from "./MonoText";
 import {
   formatCategoryLabel,
@@ -8,6 +9,7 @@ import {
 } from "@/lib/deviceHelpers";
 import { useIsCompact } from "@/hooks/useLayout";
 import type { Device } from "@/types/Device";
+import { deviceImages } from "@/constants/deviceImages";
 
 interface DeviceCardProps {
   device: Device;
@@ -31,22 +33,37 @@ export function DeviceCard({ device, onPress }: DeviceCardProps) {
       <View
         className={compact ? "gap-2" : "flex-row items-start justify-between gap-3"}
       >
-        <View className="flex-1 min-w-0">
-          <View className="flex-row flex-wrap items-center gap-x-2 gap-y-1">
-            <MonoText className="text-terminal-green text-base font-bold flex-shrink">
-              {device.name}
-            </MonoText>
-            {statusLabel && (
-              <View className="border border-terminal-amber px-2 py-0.5">
-                <MonoText className="text-terminal-amber text-[10px] font-bold">
-                  {statusLabel}
-                </MonoText>
+        <View className="flex-row gap-3 flex-1 min-w-0">
+          <View className="w-12 h-12 rounded border border-terminal-border overflow-hidden bg-black shrink-0">
+            {deviceImages[device.id] ? (
+              <Image
+                source={deviceImages[device.id]}
+                className="w-full h-full opacity-80"
+                contentFit="cover"
+              />
+            ) : (
+              <View className="flex-1 items-center justify-center opacity-30">
+                <MonoText className="text-[10px]">?</MonoText>
               </View>
             )}
           </View>
-          <MonoText className="text-terminal-muted text-xs mt-1" numberOfLines={1}>
-            {device.manufacturer}
-          </MonoText>
+          <View className="flex-1 min-w-0">
+            <View className="flex-row flex-wrap items-center gap-x-2 gap-y-1">
+              <MonoText className="text-terminal-green text-base font-bold flex-shrink">
+                {device.name}
+              </MonoText>
+              {statusLabel && (
+                <View className="border border-terminal-amber px-2 py-0.5">
+                  <MonoText className="text-terminal-amber text-[10px] font-bold">
+                    {statusLabel}
+                  </MonoText>
+                </View>
+              )}
+            </View>
+            <MonoText className="text-terminal-muted text-xs mt-1" numberOfLines={1}>
+              {device.manufacturer}
+            </MonoText>
+          </View>
         </View>
 
         <View className={compact ? "flex-row flex-wrap items-center gap-2" : "items-end shrink-0"}>
