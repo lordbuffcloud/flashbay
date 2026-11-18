@@ -31,17 +31,18 @@ const firmware = (deviceId: string, name: string) => {
   return match!;
 };
 
+// Baseline pinned to the 2026-11-18 verified refresh (catalog v1.4.0).
 assert.equal(
   device("m5stickc-plus").url,
-  "https://docs.m5stack.com/en/core/m5stickc_plus",
+  "https://docs.m5stack.com/en/core/StickC-Plus",
 );
 assert.equal(
   device("m5stack-core-basic").url,
-  "https://docs.m5stack.com/en/core/basic",
+  "https://docs.m5stack.com/en/core/Basic",
 );
 assert.equal(
   firmware("usb-rubber-ducky-mk2", "Mark II (PayloadStudio architecture)").url,
-  "https://docs.hak5.org/hak5-usb-rubber-ducky/",
+  "https://documentation.hak5.org/hak5-usb-rubber-ducky",
 );
 
 const launcherDeviceIds = [
@@ -62,21 +63,25 @@ const launcherDeviceIds = [
   "lilygo-t-lora-pager",
 ];
 
+// Board-support confidence stays MED where the 2026-11-18 pass could not
+// fully confirm the Launcher 3.0.0 target matrix for that exact board.
+const launcherMedConfidence = new Set(["m5stack-cardputer-adv", "m5stickc-plus"]);
+
 for (const deviceId of launcherDeviceIds) {
   const entry = firmware(deviceId, "Launcher");
-  assert.equal(entry.version, "2.8.0");
-  assert.equal(entry.release_date, "2026-07-31");
-  assert.equal(entry.url, "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0");
+  assert.equal(entry.version, "3.0.0");
+  assert.equal(entry.release_date, "2026-11-06");
+  assert.equal(entry.url, "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0");
   assert.equal(entry.flashable_in_browser, true);
-  assert.equal(entry.flash_url, "https://bmorcelli.github.io/Launcher/");
+  assert.equal(entry.flash_url, "https://bmorcelli.github.io/Launcher/webflasher.html");
   assert.equal(entry.release_tracking, "tagged_releases");
-  assert.equal(entry.last_verified_at, "2026-08-02");
-  assert.equal(entry.confidence, "HIGH");
+  assert.equal(entry.last_verified_at, "2026-11-18");
+  assert.equal(entry.confidence, launcherMedConfidence.has(deviceId) ? "MED" : "HIGH");
 }
 
 const evilCardputer = firmware("m5stack-cardputer", "Evil-M5Project");
-assert.equal(evilCardputer.version, "1.5.4");
-assert.equal(evilCardputer.release_date, "2026-08-01");
+assert.equal(evilCardputer.version, "1.5.8");
+assert.equal(evilCardputer.release_date, "2026-11-15");
 assert.equal(evilCardputer.release_tracking, "main_branch_only");
 assert.equal(evilCardputer.confidence, "HIGH");
 

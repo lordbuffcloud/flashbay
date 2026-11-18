@@ -6,7 +6,7 @@
 [![Data License](https://img.shields.io/badge/data-CC--BY--4.0-39FF14)](https://creativecommons.org/licenses/by/4.0/)
 [![Code License](https://img.shields.io/badge/code-MIT-39FF14)]()
 [![Status](https://img.shields.io/badge/status-v1.1--catalog-FFAA00)]()
-[![Devices](https://img.shields.io/badge/devices-59-39FF14)]()
+[![Devices](https://img.shields.io/badge/devices-75-39FF14)]()
 
 ---
 

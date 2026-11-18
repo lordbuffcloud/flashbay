@@ -1,6 +1,6 @@
 {
-  "version": "1.3.0",
-  "generated": "2026-08-02T20:13:34.928Z",
+  "version": "1.4.0",
+  "generated": "2026-11-18T20:39:04.772Z",
   "license": "CC-BY-4.0",
   "submission_url": "https://github.com/lordbuffcloud/flashbay/issues/new?template=firmware-submission.yml",
   "devices": [
@@ -27,12 +27,12 @@
           "fork": "stock",
           "name": "nyanBOX",
           "version": "main-branch",
-          "release_date": "2026-05-01",
+          "release_date": "2026-10-25",
           "url": "https://github.com/jbohack/nyanBOX",
-          "notes": "Canonical upstream by jbohack + zr_crackiin. Ships from main branch only — repo has no tagged releases.",
+          "notes": "Canonical upstream by jbohack + zr_crackiin. Ships from main branch only — repository has no tagged releases. Repository activity was checked 2026-11-18.",
           "flashable_in_browser": false,
           "release_tracking": "main_branch_only",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
@@ -40,13 +40,25 @@
           "name": "nyanBEE",
           "version": "v1.4.26",
           "release_date": "2026-05-05",
-          "url": "https://ck42x.com/nyanbee",
+          "url": "https://www.ck42x.com/nyanbee",
           "notes": "ck42x firmware — 54 tools across WiFi/BLE/RF/recon, 22 exclusive to Nyanbee. Bee-themed Mission Mode + gamification. Free binary; source private during active development. SHA-256 verification published.",
           "flashable_in_browser": true,
-          "flash_url": "https://ck42x.com/nyanbee/flash-stock",
+          "flash_url": "https://www.ck42x.com/nyanbee/flash-stock",
           "release_tracking": "vendor_portal",
           "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "CiferTech nRFBox",
+          "version": "v2.7.2",
+          "release_date": "2025-06-22",
+          "url": "https://github.com/cifertech/nRFBox/releases/tag/v2.7.2",
+          "notes": "Upstream original nRFBOX by CiferTech (Nyanbox is a hardware fork). Latest tagged release v2.7.2 verified 2026-11-18; confirm board compatibility before flashing.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "MED"
         }
       ]
     },
@@ -65,32 +77,32 @@
         "badusb"
       ],
       "description": "Portable multi-tool for pentesters and geeks. Sub-GHz, NFC, RFID, IR, iButton, GPIO, BadUSB.",
-      "url": "https://flipperzero.one",
+      "url": "https://flipper.net/",
       "firmware": [
         {
           "fork": "stock",
           "name": "Official",
-          "version": "1.4.3",
-          "release_date": "2025-12-05",
-          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.4.3",
-          "notes": "Official Flipper firmware. Update cadence has slowed — 1.4.3 was a bugfix to 1.4.2's IR CLI plugin. Still the latest tagged OFW release.",
+          "version": "1.5.1",
+          "release_date": "2026-10-15",
+          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.5.1",
+          "notes": "Official Flipper firmware. Update cadence has slowed — 1.5.1 was a bugfix to 1.4.2's IR CLI plugin. Still the latest tagged OFW release.",
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Unleashed",
-          "version": "unlshd-089",
-          "release_date": "2026-05-09",
-          "url": "https://github.com/DarkFlippers/unleashed-firmware/releases/tag/unlshd-089",
-          "notes": "Most stable community fork — API-compatible with OFW, adds region unlock and protocol expansions. unlshd-089 is a SubGHz hotfix for FAAC SLH decode.",
+          "version": "unlshd-095",
+          "release_date": "2026-11-11",
+          "url": "https://github.com/DarkFlippers/unleashed-firmware/releases/tag/unlshd-095",
+          "notes": "Most stable community fork — API-compatible with OFW, adds region unlock and protocol expansions. unlshd-095 is a SubGHz hotfix for FAAC SLH decode.",
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
@@ -109,14 +121,14 @@
         {
           "fork": "community",
           "name": "RogueMaster",
-          "version": "RM0526-0321-0.420.0-0e7e039",
-          "release_date": "2026-03-21",
-          "url": "https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/tag/RM0526-0321-0.420.0-0e7e039",
+          "version": "RM1117-1555-26299030",
+          "release_date": "2026-11-17",
+          "url": "https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/tag/RM1117-1555-26299030",
           "notes": "Bleeding-edge kitchen-sink fork that syncs both OFW and Unleashed. GitHub weekly builds; Patreon daily.",
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
@@ -125,11 +137,23 @@
           "version": "XFW-0053_02022024",
           "release_date": "2024-02-02",
           "url": "https://github.com/Flipper-XFW/Xtreme-Firmware",
-          "notes": "ARCHIVED 2024-11-19. Dev team forked forward into Momentum. Historical reference only — do not flash.",
+          "notes": "Historical Xtreme firmware (XFW-0053). Upstream Flipper-XFW/Xtreme-Firmware repo is archived (verified 2026-11-18); kept for legacy reference only — not actively maintained.",
           "flashable_in_browser": false,
           "archived": true,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "FoxFW",
+          "version": "v2.1",
+          "release_date": "2026-11-04",
+          "url": "https://github.com/FoxFW/flipperzero-firmware/releases/tag/v2.1",
+          "notes": "Active custom Flipper Zero firmware fork focused on Sub-GHz, NFC, automotive research, and ESP32 companion tooling. Use only on owned or authorized devices.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -172,6 +196,18 @@
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-23",
           "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "PortaPack Havoc Modified",
+          "version": "v1.64",
+          "release_date": "2026-03-18",
+          "url": "https://github.com/jamesshao8/portapack-havoc-modified/releases/tag/v1.64",
+          "notes": "Community PortaPack firmware with additional applications; upstream describes H3 and H1-with-add-on compatibility. Hardware-specific compatibility must be checked before flashing.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "MED"
         }
       ]
     },
@@ -193,13 +229,26 @@
         {
           "fork": "community",
           "name": "Iceman (RRG)",
-          "version": "v4.21611",
-          "release_date": "2026-04-14",
-          "url": "https://github.com/RfidResearchGroup/proxmark3/releases/tag/v4.21611",
+          "version": "v4.23346",
+          "release_date": "2026-09-17",
+          "url": "https://github.com/RfidResearchGroup/proxmark3/releases/tag/v4.23346",
           "notes": "De-facto standard Proxmark3 firmware — 'BREAKMEIFYOUCAN!' release. Adds Qt6 client, new `lf relay` command, fixes hf mf/mfp wrbl. Tuned for RDV4 by default.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "stock",
+          "name": "Official Proxmark3",
+          "version": "v3.1.0",
+          "release_date": "2018-10-27",
+          "url": "https://github.com/Proxmark/proxmark3/releases/tag/v3.1.0",
+          "notes": "Historical official Proxmark3 firmware line (v3.1.0, 2018-10-27), superseded by the RRG/Iceman fork. Upstream repo still public but inactive; kept as historical reference.",
+          "flashable_in_browser": false,
+          "archived": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -221,14 +270,14 @@
         {
           "fork": "stock",
           "name": "O.MG Universal Firmware",
-          "version": "v3.0-251217",
-          "release_date": "2025-12-17",
-          "url": "https://github.com/O-MG/O.MG-Firmware/releases/tag/v3.0-251217",
-          "notes": "Single universal firmware for all O.MG devices (Cable, Adapter, Plug, UnBlocker). v3.0-251217 fixed BR keymap forward/back slash transposition. The legacy DemonSeed variant is absorbed into this universal firmware.",
+          "version": "v3.0-260728",
+          "release_date": "2026-07-28",
+          "url": "https://github.com/O-MG/O.MG-Firmware/releases/tag/v3.0-260728",
+          "notes": "Single universal firmware for all O.MG devices (Cable, Adapter, Plug, UnBlocker). v3.0-260728 fixed BR keymap forward/back slash transposition. The legacy DemonSeed variant is absorbed into this universal firmware.",
           "flashable_in_browser": true,
           "flash_url": "https://o-mg.github.io/WebFlasher/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -251,13 +300,37 @@
         {
           "fork": "community",
           "name": "jayofelony Pwnagotchi",
-          "version": "2.9.5.4",
-          "release_date": "2026-01-29",
-          "url": "https://github.com/jayofelony/pwnagotchi/releases/tag/v2.9.5.4",
-          "notes": "Current de-facto Pwnagotchi distribution — the original evilsocket project is unmaintained. Adds Trixie RPi OS support, Bluetooth tethering, PiSugar plugin updates. Active 2026 development on main branch but no new tagged release since 2.9.5.4.",
+          "version": "v2.9.5.8",
+          "release_date": "2026-08-18",
+          "url": "https://github.com/jayofelony/pwnagotchi/releases/tag/v2.9.5.8",
+          "notes": "Current de-facto Pwnagotchi distribution — the original evilsocket project is unmaintained. Adds Trixie RPi OS support, Bluetooth tethering, PiSugar plugin updates. Active 2026 development on main branch but no new tagged release since v2.9.5.8.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Pwnagotchi 64-Bit AI Edition",
+          "version": "v2.9.5.9",
+          "release_date": "2026-10-11",
+          "url": "https://github.com/tedead/pwnagotchi-64/releases/tag/v2.9.5.9",
+          "notes": "64-bit Pwnagotchi fork with optional experimental AI mode and flashable Raspberry Pi images; target architecture must match the Pi.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "pwnagotchi64",
+          "version": "0.0.1.2",
+          "release_date": "2026-09-19",
+          "url": "https://github.com/ex18a/pwnagotchi64/releases/tag/0.0.1.2",
+          "notes": "Independent 64-bit AI Pwnagotchi build; README describes a rebuilt 64-bit platform using PyTorch/stable-baselines3. Match image to Raspberry Pi architecture.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -309,7 +382,7 @@
           "name": "Mark II (PayloadStudio architecture)",
           "version": "flashless",
           "release_date": "2022-08-12",
-          "url": "https://docs.hak5.org/hak5-usb-rubber-ducky/",
+          "url": "https://documentation.hak5.org/hak5-usb-rubber-ducky",
           "notes": "Mark II (2022) is explicitly flashless — payloads are compiled in Hak5 PayloadStudio rather than firmware-flashed. There is no 'Gen3'. Mark I (2011) and Mark II (2022) are the only generations.",
           "flashable_in_browser": true,
           "flash_url": "https://payloadstudio.hak5.org",
@@ -369,51 +442,89 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Most feature-rich Cardputer firmware — CC1101/NRF24/FM/PN532/BadUSB/RFID/WiFi/BLE. Full hardware support (microphone, RGB LED). Also runs on M5StickC PLUS/PLUS2, Core/Core2/CoreS3, plus Lilygo T-series.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Most feature-rich Cardputer firmware — CC1101/NRF24/FM/PN532/BadUSB/RFID/WiFi/BLE. Full hardware support (microphone, RGB LED). Also runs on M5StickC PLUS/PLUS2, Core/Core2/CoreS3, plus Lilygo T-series Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Nemo",
-          "version": "v3.2.1",
-          "release_date": "2026-01-27",
-          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
-          "notes": "Defensive/prank-focused firmware. Targets Cardputer/ADV, StickCPlus2, StickS3. Includes BadUSB Hunter for testing cables against BadUSB attacks.",
+          "version": "v3.2.2",
+          "release_date": "2026-07-15",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.2",
+          "notes": "Defensive/prank-focused firmware. Targets Cardputer/ADV, StickCPlus2, StickS3. Includes BadUSB Hunter for testing cables against BadUSB attacks Upstream release v3.2.2 was checked on 2026-11-18.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cardputer.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-m5stack-cardputer.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Evil-M5Project",
-          "version": "1.5.4",
-          "release_date": "2026-08-01",
+          "version": "1.5.8",
+          "release_date": "2026-11-15",
           "url": "https://github.com/7h30th3r0n3/Evil-M5Project",
-          "notes": "Current Cardputer build with WiFi security assessment, captive portal, wardriving, and network monitoring features. Published from main rather than GitHub Releases.",
+          "notes": "Current Cardputer build with WiFi security assessment, captive portal, wardriving, and network monitoring features. README feature table currently identifies Evil-Cardputer v1.5.8; published from main rather than GitHub Releases.",
           "flashable_in_browser": false,
           "release_tracking": "main_branch_only",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Bit Pirate",
+          "version": "v1.8",
+          "release_date": "2026-10-11",
+          "url": "https://github.com/geo-tp/ESP32-Bit-Pirate/releases/tag/v1.8",
+          "notes": "Open hardware-hacking firmware with web CLI and protocol analysis; upstream README lists M5 Cardputer as a supported device.",
+          "flashable_in_browser": true,
+          "flash_url": "https://geo-tp.github.io/ESP32-Bit-Pirate/webflasher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "M5PORKCHOP",
+          "version": "v0.1.8b-PSTH",
+          "release_date": "2026-02-08",
+          "url": "https://github.com/0ct0sec/M5PORKCHOP/releases/tag/v0.1.8b-PSTH",
+          "notes": "Embedded RF protocol analysis / Wi-Fi research firmware for M5Cardputer; ADV adds IMU dial mode. The project includes optional ESP32-C5 coprocessor workflows.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Marauder",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Official ESP32 Marauder release with a board-specific asset containing `m5cardputer`; verify the exact image and pin mapping before flashing.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fzeeflasher.github.io/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -438,27 +549,27 @@
         {
           "fork": "stock",
           "name": "ESP32 Marauder (official)",
-          "version": "v1.12.1",
-          "release_date": "2026-05-05",
-          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
-          "notes": "Canonical WiFi/Bluetooth offensive+defensive ESP32 firmware. v1.12.1 adds Flock advertising rework and channel hop for Flock Sniff. Flash via FZEE Flasher (board-aware) or ESP Terminator; Spacehuhn Web Updater also works with manual binary selection.",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Canonical WiFi/Bluetooth offensive+defensive ESP32 firmware. v1.20.0 adds Flock advertising rework and channel hop for Flock Sniff. Flash via FZEE Flasher (board-aware) or ESP Terminator; Spacehuhn Web Updater also works with manual binary selection Upstream release v1.20.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://fzeeflasher.github.io/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Bruce (Marauder-compatible boards)",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
           "notes": "Bruce runs on many of the same ESP32-S3/CYD boards as Marauder. Different feature focus (BadUSB, RFID) but overlapping wardriving/deauther toolset.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
@@ -467,11 +578,25 @@
           "version": "VA1.4.8",
           "release_date": "2025-03-31",
           "url": "https://github.com/Spooks4576/Ghost_ESP/releases/tag/VA1.4.8",
-          "notes": "Pentest-focused ESP32 firmware optimized for screen-based boards, especially Cheap Yellow Display (CYD). Adds tap-to-scroll, numpad AP selection, UI scaling. Public site ghostesp.net.",
+          "notes": "Pentest-focused ESP32 firmware optimized for screen-based boards, especially Cheap Yellow Display (CYD). Adds tap-to-scroll, numpad AP selection, UI scaling. Public site ghostesp.net. Upstream repository archived (verified 2026-11-18); historical only.",
           "flashable_in_browser": true,
-          "flash_url": "https://flasher.ghostesp.net/",
+          "flash_url": "https://flasher.ghostesp.net/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "archived": true
+        },
+        {
+          "fork": "community",
+          "name": "GhostESP Revival",
+          "version": "v2.2.2",
+          "release_date": "2026-10-15",
+          "url": "https://github.com/GhostESP-Revival/GhostESP/releases/tag/v2.2.2",
+          "notes": "Active community revival of the archived Spooks4576 Ghost_ESP. ESP-IDF based; 62 board targets with full support for Marauder v4/v6 and CYD2 variants per upstream matrix. GhostLink dual-device radio bridging.",
+          "flashable_in_browser": true,
+          "flash_url": "https://flasher.ghostesp.net/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -527,39 +652,65 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Same Bruce release as Cardputer — WiFi/BLE/RFID/BadUSB. Targets StickCPlus2 explicitly.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Same Bruce release as Cardputer — WiFi/BLE/RFID/BadUSB. Targets StickCPlus2 explicitly Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Nemo",
-          "version": "v3.2.1",
-          "release_date": "2026-01-27",
-          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
-          "notes": "Defensive/prank firmware. Nemo targets StickCPlus2 as a first-class platform.",
+          "version": "v3.2.2",
+          "release_date": "2026-07-15",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.2",
+          "notes": "Defensive/prank firmware. Nemo targets StickCPlus2 as a first-class platform Upstream release v3.2.2 was checked on 2026-11-18.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cplus2.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-m5stack-cplus2.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "OUI-SPY Unified Blue",
+          "version": "v0.6.1",
+          "release_date": "2026-10-03",
+          "url": "https://github.com/lukeswitz/oui-spy-unified-blue/releases/tag/v0.6.1",
+          "notes": "Passive BLE/Wi-Fi detection and wardriving firmware; v0.6.1 release includes a board-specific M5StickC PLUS2 node image. Defensive/research use.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lukeswitz.github.io/oui-spy-unified-blue/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Marauder",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Official ESP32 Marauder release with a board-specific asset containing `m5stickc_plus2`; verify the exact image and pin mapping before flashing.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fzeeflasher.github.io/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -583,27 +734,27 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "T-Embed CC1101 is a flagship Bruce target — first-class CC1101 Sub-GHz support, rotary-encoder UI.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "T-Embed CC1101 is a flagship Bruce target — first-class CC1101 Sub-GHz support, rotary-encoder UI Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-embed-cc1101.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-lilygo-t-embed-cc1101.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -631,37 +782,38 @@
           "version": "VA1.4.8",
           "release_date": "2025-03-31",
           "url": "https://github.com/Spooks4576/Ghost_ESP/releases/tag/VA1.4.8",
-          "notes": "Ghost ESP is optimized for CYD specifically — tap-to-scroll, touch-friendly numpad AP selection, UI scaling for the 320x240 display.",
+          "notes": "Ghost ESP is optimized for CYD specifically — tap-to-scroll, touch-friendly numpad AP selection, UI scaling for the 320x240 display. Upstream repository archived (verified 2026-11-18); historical only.",
           "flashable_in_browser": true,
-          "flash_url": "https://flasher.ghostesp.net/",
+          "flash_url": "https://flasher.ghostesp.net/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
-          "confidence": "HIGH"
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "archived": true
         },
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce supports CYD as one of its core target platforms.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce supports CYD as one of its core target platforms Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-CYD-2432S028.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-CYD-2432S028.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
@@ -675,6 +827,31 @@
           "flash_url": "https://fr4nkfletcher.github.io/Adafruit_WebSerial_ESPTool/",
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "HaleHound-CYD",
+          "version": "v4.1.5",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/JesseCHale/HaleHound-CYD/releases/tag/v4.1.5",
+          "notes": "Multi-protocol CYD research firmware with Wi-Fi/BLE/Sub-GHz/2.4GHz/NFC modules. Supports ESP32-2432S028 and NM-RF-Hat; external radios need correct power and pin mapping.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "GhostESP Revival",
+          "version": "v2.2.2",
+          "release_date": "2026-10-15",
+          "url": "https://github.com/GhostESP-Revival/GhostESP/releases/tag/v2.2.2",
+          "notes": "Active community revival of the archived Spooks4576 Ghost_ESP. ESP-IDF based; 62 board targets with full support for Marauder v4/v6 and CYD2 variants per upstream matrix. GhostLink dual-device radio bridging.",
+          "flashable_in_browser": true,
+          "flash_url": "https://flasher.ghostesp.net/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -698,13 +875,13 @@
         {
           "fork": "stock",
           "name": "rfcat + CC-Bootloader",
-          "version": "v2.0.1",
-          "release_date": "2023-08-29",
-          "url": "https://github.com/atlas0fd00m/rfcat/releases/tag/v2.0.1",
-          "notes": "rfcat firmware + Python control library by Atlas. Latest tagged release is v2.0.1 — stable, infrequent updates. Flashed via dfu-util when device is in bootloader mode (hold button on connect).",
+          "version": "v3.0.0",
+          "release_date": "2026-08-11",
+          "url": "https://github.com/atlas0fd00m/rfcat/releases/tag/v3.0.0",
+          "notes": "rfcat firmware + Python control library by Atlas. Latest tagged release is v3.0.0 — stable, infrequent updates. Flashed via dfu-util when device is in bootloader mode (hold button on connect).",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-23",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -731,38 +908,51 @@
           "fork": "community",
           "name": "USB Army Knife",
           "version": "main-branch",
-          "release_date": "2026-05-27",
+          "release_date": "2026-10-14",
           "url": "https://github.com/i-am-shodan/USBArmyKnife",
-          "notes": "HID + mass storage + WiFi/BLE attack surface with web UI. Builds from GitHub Actions (no tagged releases). Flash via ESP Web Tools or project docs; hold BOOT (G0) for download mode.",
+          "notes": "HID + mass storage + WiFi/BLE attack surface with web UI. Builds from GitHub Actions (no tagged releases). Flash via ESP Web Tools or project docs; hold BOOT (G0) for download mode Upstream main branch activity checked 2026-11-18; no newer tagged release supersedes the main-branch tracking policy.",
           "flashable_in_browser": false,
           "release_tracking": "main_branch_only",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "stock",
           "name": "ESP32 Marauder",
-          "version": "v1.12.1",
-          "release_date": "2026-05-05",
-          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
-          "notes": "Marauder port for T-Dongle S3 — select board in FZEE Flasher or ESP32 Marauder web updater.",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Marauder port for T-Dongle S3 — select board in FZEE Flasher or ESP32 Marauder web updater Upstream release v1.20.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://fzeeflasher.github.io/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-dongle-s3-tft.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-lilygo-t-dongle-s3-tft.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "OUI-SPY Unified Blue",
+          "version": "v0.6.1",
+          "release_date": "2026-10-03",
+          "url": "https://github.com/lukeswitz/oui-spy-unified-blue/releases/tag/v0.6.1",
+          "notes": "Passive BLE/Wi-Fi detection and wardriving firmware; v0.6.1 release includes a board-specific LilyGO T-Dongle-S3 node image. Defensive/research use.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lukeswitz.github.io/oui-spy-unified-blue/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -786,39 +976,89 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Full Bruce feature set on Cardputer ADV — CC1101 cap, PN532, BadUSB, WiFi/BLE offensive tools.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Full Bruce feature set on Cardputer ADV — CC1101 cap, PN532, BadUSB, WiFi/BLE offensive tools Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Nemo",
-          "version": "v3.2.1",
-          "release_date": "2026-01-27",
-          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
-          "notes": "Nemo targets Cardputer ADV alongside StickCPlus2 and original Cardputer.",
+          "version": "v3.2.2",
+          "release_date": "2026-07-15",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.2",
+          "notes": "Nemo targets Cardputer ADV alongside StickCPlus2 and original Cardputer Upstream release v3.2.2 was checked on 2026-11-18.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cardputer.bin (ADV auto-detection) for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-m5stack-cardputer.bin (ADV auto-detection) for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
+          "confidence": "MED"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Bit Pirate",
+          "version": "v1.8",
+          "release_date": "2026-10-11",
+          "url": "https://github.com/geo-tp/ESP32-Bit-Pirate/releases/tag/v1.8",
+          "notes": "Open hardware-hacking firmware with web CLI and protocol analysis; upstream README lists M5 Cardputer ADV as a supported device.",
+          "flashable_in_browser": true,
+          "flash_url": "https://geo-tp.github.io/ESP32-Bit-Pirate/webflasher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "M5PORKCHOP",
+          "version": "v0.1.8b-PSTH",
+          "release_date": "2026-02-08",
+          "url": "https://github.com/0ct0sec/M5PORKCHOP/releases/tag/v0.1.8b-PSTH",
+          "notes": "Embedded RF protocol analysis / Wi-Fi research firmware for M5Stack Cardputer ADV; ADV adds IMU dial mode. The project includes optional ESP32-C5 coprocessor workflows.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Marauder",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Official ESP32 Marauder release with a board-specific asset containing `m5cardputer_adv`; verify the exact image and pin mapping before flashing.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fzeeflasher.github.io/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Evil-M5Project",
+          "version": "1.5.8",
+          "release_date": "2026-11-15",
+          "url": "https://github.com/7h30th3r0n3/Evil-M5Project",
+          "notes": "Evil-M5Project main-branch build for Cardputer ADV; README lists this platform in its supported-device matrix. No tagged GitHub releases; build/flash from upstream project.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -874,40 +1114,40 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce on T-Deck / T-Deck Pro — BadUSB and CC1101; no NRF24 on Deck form factor.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce on T-Deck / T-Deck Pro — BadUSB and CC1101; no NRF24 on Deck form factor Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Meshtastic",
-          "version": "check-releases",
-          "release_date": "2026-05-27",
-          "url": "https://github.com/meshtastic/firmware/releases/latest",
-          "notes": "Primary firmware for many T-Deck owners — LoRa mesh, not offensive WiFi. Flash via Meshtastic web flasher or device OTA.",
+          "version": "v2.7.26.54e0d8d",
+          "release_date": "2026-06-24",
+          "url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+          "notes": "Current stable Meshtastic firmware release; newer 2.8.x entries are prereleases/alpha and some are revoked. Flash the exact board target via Meshtastic flasher.",
           "flashable_in_browser": true,
           "flash_url": "https://flasher.meshtastic.org/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-deck.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-lilygo-t-deck.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -930,14 +1170,14 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce T-Display-S3 — WiFi/BLE/CC1101 shield support; touchscreen pin conflicts documented upstream.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce T-Display-S3 — WiFi/BLE/CC1101 shield support; touchscreen pin conflicts documented upstream Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -959,27 +1199,27 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce on original T-Embed — add CC1101/NRF shields per Bruce wiring docs.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce on original T-Embed — add CC1101/NRF shields per Bruce wiring docs Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-embed.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-lilygo-t-embed.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1001,27 +1241,27 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce T-Watch S3 — primarily BadUSB + WiFi tooling in wearable form factor.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce T-Watch S3 — primarily BadUSB + WiFi tooling in wearable form factor Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-watch-s3.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-lilygo-t-watch-s3.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1044,40 +1284,40 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce BadUSB + WiFi on T-LoRa Pager.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce BadUSB + WiFi on T-LoRa Pager Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Meshtastic",
-          "version": "check-releases",
-          "release_date": "2026-05-27",
-          "url": "https://github.com/meshtastic/firmware/releases/latest",
-          "notes": "Stock use case for this device — LoRa mesh pager firmware.",
+          "version": "v2.7.26.54e0d8d",
+          "release_date": "2026-06-24",
+          "url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+          "notes": "Current stable Meshtastic firmware release; newer 2.8.x entries are prereleases/alpha and some are revoked. Flash the exact board target via Meshtastic flasher.",
           "flashable_in_browser": true,
           "flash_url": "https://flasher.meshtastic.org/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-lilygo-t-lora-pager.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-lilygo-t-lora-pager.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1094,44 +1334,70 @@
         "ir"
       ],
       "description": "Older compact M5 stick (ESP32-PICO). Bruce LITE builds available; superseded by PLUS2 but still common.",
-      "url": "https://docs.m5stack.com/en/core/m5stickc_plus",
+      "url": "https://docs.m5stack.com/en/core/StickC-Plus",
       "firmware": [
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce supports M5StickC PLUS with LITE_VERSION constraints — check Bruce board matrix.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce supports M5StickC PLUS with LITE_VERSION constraints — check Bruce board matrix Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Nemo",
-          "version": "v3.2.1",
-          "release_date": "2026-01-27",
-          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
-          "notes": "Nemo lists StickCPlus as supported platform.",
+          "version": "v3.2.2",
+          "release_date": "2026-07-15",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.2",
+          "notes": "Nemo lists StickCPlus as supported platform Upstream release v3.2.2 was checked on 2026-11-18.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cplus1_1.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-m5stack-cplus1_1.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
+          "confidence": "MED"
+        },
+        {
+          "fork": "community",
+          "name": "OUI-SPY Unified Blue",
+          "version": "v0.6.1",
+          "release_date": "2026-10-03",
+          "url": "https://github.com/lukeswitz/oui-spy-unified-blue/releases/tag/v0.6.1",
+          "notes": "Passive BLE/Wi-Fi detection and wardriving firmware; v0.6.1 release includes a board-specific M5StickC PLUS node image. Defensive/research use.",
+          "flashable_in_browser": true,
+          "flash_url": "https://lukeswitz.github.io/oui-spy-unified-blue/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Marauder",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Official ESP32 Marauder release with a board-specific asset containing `m5stickc_plus`; verify the exact image and pin mapping before flashing.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fzeeflasher.github.io/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1153,27 +1419,27 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce on M5Core2 — tone speaker, no RGB; add CC1101/NRF via Grove/shields.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce on M5Core2 — tone speaker, no RGB; add CC1101/NRF via Grove/shields Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-core2.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-m5stack-core2.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
@@ -1186,6 +1452,19 @@
           "flashable_in_browser": false,
           "release_tracking": "main_branch_only",
           "last_verified_at": "2026-08-02",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Marauder",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Official ESP32 Marauder release with a board-specific asset containing `m5stack_core2_aws`; verify the exact image and pin mapping before flashing.",
+          "flashable_in_browser": true,
+          "flash_url": "https://fzeeflasher.github.io/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1206,27 +1485,39 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce on CoreS3/SE — ESP32-S3 performance; no microphone path on Bruce matrix.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce on CoreS3/SE — ESP32-S3 performance; no microphone path on Bruce matrix Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-cores3.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-m5stack-cores3.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Evil-M5Project",
+          "version": "1.1.9",
+          "release_date": "2026-11-15",
+          "url": "https://github.com/7h30th3r0n3/Evil-M5Project",
+          "notes": "Evil-M5Project main-branch build for M5CoreS3; README lists this platform in its supported-device matrix. No tagged GitHub releases; build/flash from upstream project.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1250,13 +1541,37 @@
         {
           "fork": "stock",
           "name": "Chameleon Ultra FW",
-          "version": "v2.1.0",
-          "release_date": "2024-09-02",
-          "url": "https://github.com/RfidResearchGroup/ChameleonUltra/releases/tag/v2.1.0",
-          "notes": "Official Ultra firmware v2.1.0 — Ultralight emulation, hardnested, HIDProx LF, CLI rework. Flash via chameleon CLI or MTools.",
+          "version": "v2.3.0",
+          "release_date": "2026-10-24",
+          "url": "https://github.com/RfidResearchGroup/ChameleonUltra/releases/tag/v2.3.0",
+          "notes": "Official Ultra firmware v2.3.0 — Ultralight emulation, hardnested, HIDProx LF, CLI rework. Flash via chameleon CLI or MTools.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Phreakbyte Edition",
+          "version": "v2.6",
+          "release_date": "2026-10-22",
+          "url": "https://github.com/nieldk/ChameleonUltra/releases/tag/v2.6",
+          "notes": "Independent Chameleon firmware/tooling distribution derived from RRG ChameleonUltra; README explicitly names unmodified ChameleonUltra and ChameleonLite hardware.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Chameleon Unleashed",
+          "version": "v2.2.0",
+          "release_date": "2026-11-16",
+          "url": "https://github.com/SecLabz/ChameleonUnleashed/releases/tag/v2.2.0",
+          "notes": "Experimental Chameleon Ultra fork with USB/BLE web update tooling, faster MIFARE Classic recovery, and experimental NFC-B/NFC-V support. Use only with owned/authorized cards.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1278,14 +1593,26 @@
         {
           "fork": "stock",
           "name": "Chameleon Lite FW",
-          "version": "v2.1.0",
-          "release_date": "2024-09-02",
-          "url": "https://github.com/RfidResearchGroup/ChameleonUltra/releases/tag/v2.1.0",
+          "version": "v2.3.0",
+          "release_date": "2026-10-24",
+          "url": "https://github.com/RfidResearchGroup/ChameleonUltra/releases/tag/v2.3.0",
           "notes": "Lite builds ship as lite-dfu-app.zip on the ChameleonUltra release page. Flash via chameleon CLI, Ultra GUI, or MTools BLE.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
-          "confidence": "MED"
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Phreakbyte Edition",
+          "version": "v2.6",
+          "release_date": "2026-10-22",
+          "url": "https://github.com/nieldk/ChameleonUltra/releases/tag/v2.6",
+          "notes": "Independent Chameleon firmware/tooling distribution derived from RRG ChameleonUltra; README explicitly names unmodified ChameleonUltra and ChameleonLite hardware.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -1312,7 +1639,7 @@
           "url": "https://github.com/SpacehuhnTech/esp8266_deauther/releases/tag/2.6.1",
           "notes": "Stable 2.6.1 — project maintenance slowed but still the reference deauther FW. Flash via esptool or deauther web installer builds.",
           "flashable_in_browser": true,
-          "flash_url": "https://deauther.com/",
+          "flash_url": "https://docs.spacehuhn.com/deauther32/installer/",
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
@@ -1337,14 +1664,14 @@
         {
           "fork": "stock",
           "name": "ESP32 Marauder",
-          "version": "v1.12.1",
-          "release_date": "2026-05-05",
-          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
-          "notes": "Primary community use — Marauder on WiFi Devboard via FZEE or Marauder flasher.",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Primary community use — Marauder on WiFi Devboard via FZEE or Marauder flasher Upstream release v1.20.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://fzeeflasher.github.io/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
@@ -1458,14 +1785,14 @@
         "ducky-script"
       ],
       "description": "WiFi-controlled HID injectors (Hak5 WiFi Duck, WHID Elite clones). Web UI for payload staging over WiFi.",
-      "url": "https://docs.hak5.org/",
+      "url": "https://documentation.hak5.org/hak5-docs",
       "firmware": [
         {
           "fork": "stock",
           "name": "WiFi Duck (Hak5 legacy)",
           "version": "check-vendor-docs",
           "release_date": "2026-05-27",
-          "url": "https://docs.hak5.org/",
+          "url": "https://documentation.hak5.org/hak5-docs",
           "notes": "Hak5 WiFi Duck firmware updates via vendor docs. WHID Elite uses separate WHID ecosystem — not interchangeable.",
           "flashable_in_browser": false,
           "release_tracking": "vendor_portal",
@@ -1477,7 +1804,7 @@
           "name": "WHID Elite (community)",
           "version": "check-vendor",
           "release_date": "2026-05-27",
-          "url": "https://whid.ninja/",
+          "url": "https://www.whid.ninja/",
           "notes": "Popular WHID Elite injector — firmware/tools on vendor site, not GitHub releases.",
           "flashable_in_browser": false,
           "release_tracking": "vendor_portal",
@@ -1503,13 +1830,13 @@
         {
           "fork": "stock",
           "name": "RTL2832U drivers + software",
-          "version": "vendor-bundle",
-          "release_date": "2026-05-27",
-          "url": "https://github.com/rtlsdrblog/rtl-sdr-blog",
-          "notes": "No flashable MCU firmware — configure host drivers (Zadig on Windows) and SDR application stack.",
+          "version": "V1.4.0",
+          "release_date": "2026-08-10",
+          "url": "https://github.com/rtlsdrblog/rtl-sdr-blog/releases/tag/V1.4.0",
+          "notes": "No flashable MCU firmware — configure host drivers; current RTL-SDR Blog driver/software release is V1.4.0.",
           "flashable_in_browser": false,
           "release_tracking": "vendor_portal",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1558,39 +1885,52 @@
         {
           "fork": "community",
           "name": "Nemo",
-          "version": "v3.2.1",
-          "release_date": "2026-01-27",
-          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.1",
-          "notes": "Nemo lists StickS3 as supported target.",
+          "version": "v3.2.2",
+          "release_date": "2026-07-15",
+          "url": "https://github.com/n0xa/m5stick-nemo/releases/tag/v3.2.2",
+          "notes": "Nemo lists StickS3 as supported target Upstream release v3.2.2 was checked on 2026-11-18.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Check Bruce board matrix for StickS3 — same generation as PLUS2/Cardputer.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Check Bruce board matrix for StickS3 — same generation as PLUS2/Cardputer Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-sticks3.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-m5stack-sticks3.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "ESP32 Bit Pirate",
+          "version": "v1.8",
+          "release_date": "2026-10-11",
+          "url": "https://github.com/geo-tp/ESP32-Bit-Pirate/releases/tag/v1.8",
+          "notes": "Open hardware-hacking firmware with web CLI and protocol analysis; upstream README lists M5 Stick S3 as a supported device.",
+          "flashable_in_browser": true,
+          "flash_url": "https://geo-tp.github.io/ESP32-Bit-Pirate/webflasher/",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1612,13 +1952,13 @@
         {
           "fork": "community",
           "name": "Iceman (RRG)",
-          "version": "v4.21611",
-          "release_date": "2026-04-14",
-          "url": "https://github.com/RfidResearchGroup/proxmark3/releases/tag/v4.21611",
+          "version": "v4.23346",
+          "release_date": "2026-09-17",
+          "url": "https://github.com/RfidResearchGroup/proxmark3/releases/tag/v4.23346",
           "notes": "Same Iceman build as RDV4 — verify antenna/flash size for clone hardware before flashing.",
           "flashable_in_browser": false,
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1664,18 +2004,30 @@
         "coming-soon"
       ],
       "description": "CK42X-native Cheap Yellow Display firmware (MIT fork of ESP32-DIV + nyanBEE modules). Alpha — not flashable yet.",
-      "url": "https://ck42x.com/houndbee",
+      "url": "https://www.ck42x.com/houndbee/flash",
       "firmware": [
         {
           "fork": "community",
           "name": "houndBEE-CYD",
           "version": "alpha-phase-0",
           "release_date": "2026-05-27",
-          "url": "https://ck42x.com/houndbee",
+          "url": "https://www.ck42x.com/houndbee/flash",
           "notes": "Phase 0 scaffolding only — no binaries. Watch ck42x.com/houndbee for first flashable release.",
           "flashable_in_browser": false,
           "release_tracking": "main_branch_only",
           "last_verified_at": "2026-05-27",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "HaleHound-CYD",
+          "version": "v4.1.5",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/JesseCHale/HaleHound-CYD/releases/tag/v4.1.5",
+          "notes": "Multi-protocol CYD research firmware with Wi-Fi/BLE/Sub-GHz/2.4GHz/NFC modules. Supports ESP32-2432S028 and NM-RF-Hat; external radios need correct power and pin mapping.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1692,32 +2044,32 @@
         "grove"
       ],
       "description": "Original M5Stack Core (ESP32) with 2\" TFT and Grove port. Bruce community target when paired with CC1101/NRF24 shields.",
-      "url": "https://docs.m5stack.com/en/core/basic",
+      "url": "https://docs.m5stack.com/en/core/Basic",
       "firmware": [
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce on M5Core BASIC — tone speaker, BadUSB¹ via USB; add RF modules per Bruce wiring docs.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce on M5Core BASIC — tone speaker, BadUSB¹ via USB; add RF modules per Bruce wiring docs Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Launcher",
-          "version": "2.8.0",
-          "release_date": "2026-07-31",
-          "url": "https://github.com/bmorcelli/Launcher/releases/tag/2.8.0",
-          "notes": "Multi-firmware launcher and OTA catalog. Release 2.8.0 publishes Launcher-m5stack-core.bin for this hardware.",
+          "version": "3.0.0",
+          "release_date": "2026-11-06",
+          "url": "https://github.com/bmorcelli/Launcher/releases/tag/3.0.0",
+          "notes": "Multi-firmware launcher and OTA catalog. Release 3.0.0 publishes Launcher-m5stack-core.bin for this hardware Upstream release 3.0.0 was checked on 2026-11-18.",
           "flashable_in_browser": true,
-          "flash_url": "https://bmorcelli.github.io/Launcher/",
+          "flash_url": "https://bmorcelli.github.io/Launcher/webflasher.html",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-08-02",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1740,14 +2092,14 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Flagship Bruce OSS board — full RF feature matrix on bruce.computer/boards. Order PCBs via Elecrow/PCBWay links on site.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Flagship Bruce OSS board — full RF feature matrix on bruce.computer/boards. Order PCBs via Elecrow/PCBWay links on site Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1770,14 +2122,14 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Smoochiee V2 in Bruce board matrix — same flasher flow as other ESP32-S3 Bruce targets.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Smoochiee V2 in Bruce board matrix — same flasher flow as other ESP32-S3 Bruce targets Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1853,7 +2205,7 @@
         "rx"
       ],
       "description": "USB 3.0 SDR platform (bladeRF x40/x115, micro, 2.0 micro xA4/xA9). FPGA-hosted signal processing; distinct from HackRF use cases.",
-      "url": "https://www.nuand.com/bladeRF/",
+      "url": "https://www.nuand.com/bladerf-1/",
       "firmware": [
         {
           "fork": "stock",
@@ -1915,15 +2267,15 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Check Bruce release notes for M5Dial support — flash via bruce.computer flasher when listed in board picker.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Check Bruce release notes for M5Dial support — flash via bruce.computer flasher when listed in board picker Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
-          "confidence": "HIGH"
+          "last_verified_at": "2026-11-18",
+          "confidence": "MED"
         }
       ]
     },
@@ -1943,14 +2295,39 @@
         {
           "fork": "stock",
           "name": "ESP32 Marauder",
-          "version": "v1.12.1",
-          "release_date": "2026-05-05",
-          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.12.1",
-          "notes": "Some Marauder community builds target AtomS3 — confirm board variant in FZEE Flasher before flashing.",
+          "version": "v1.20.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0",
+          "notes": "Some Marauder community builds target AtomS3 — confirm board variant in FZEE Flasher before flashing Upstream release v1.20.0 was checked on 2026-11-18. The v1.20.0 asset list did not expose an AtomS3-specific binary; verify board mapping before flashing.",
           "flashable_in_browser": true,
           "flash_url": "https://fzeeflasher.github.io/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
+          "confidence": "MED"
+        },
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce Predatory ESP32 firmware; v1.17 release includes a dedicated M5Stack AtomS3 binary.",
+          "flashable_in_browser": true,
+          "flash_url": "https://bruce.computer/flasher",
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Evil-M5Project",
+          "version": "1.5.6",
+          "release_date": "2026-11-15",
+          "url": "https://github.com/7h30th3r0n3/Evil-M5Project",
+          "notes": "Evil-M5Project main-branch build for AtomS3; README lists this platform in its supported-device matrix. No tagged GitHub releases; build/flash from upstream project.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -1972,14 +2349,14 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "Bruce ESP32-C5 row — WiFi/BLE/RF features per BruceDevices board matrix; no BadUSB on C5.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce ESP32-C5 row — WiFi/BLE/RF features per BruceDevices board matrix; no BadUSB on C5 Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -2001,14 +2378,14 @@
         {
           "fork": "community",
           "name": "Bruce",
-          "version": "1.15",
-          "release_date": "2026-05-25",
-          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.15",
-          "notes": "T-Embed CC1101 Plus — full CC1101 + NRF24 in Bruce 1.15 board matrix.",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "T-Embed CC1101 Plus — full CC1101 + NRF24 in Bruce 1.17 board matrix Upstream release 1.17 was checked on 2026-11-18.",
           "flashable_in_browser": true,
           "flash_url": "https://bruce.computer/flasher",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -2030,14 +2407,14 @@
         {
           "fork": "community",
           "name": "Meshtastic",
-          "version": "check-releases",
-          "release_date": "2026-05-27",
-          "url": "https://github.com/meshtastic/firmware/releases/latest",
-          "notes": "Primary firmware for T-Beam Supreme — flash via flasher.meshtastic.org and select board target.",
+          "version": "v2.7.26.54e0d8d",
+          "release_date": "2026-06-24",
+          "url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+          "notes": "Current stable Meshtastic firmware release; newer 2.8.x entries are prereleases/alpha and some are revoked. Flash the exact board target via Meshtastic flasher.",
           "flashable_in_browser": true,
           "flash_url": "https://flasher.meshtastic.org/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -2060,12 +2437,12 @@
           "fork": "community",
           "name": "USB Army Knife",
           "version": "main-branch",
-          "release_date": "2026-05-27",
+          "release_date": "2026-10-14",
           "url": "https://github.com/i-am-shodan/USBArmyKnife",
-          "notes": "Documented USB Army Knife compatible board. Build from GitHub Actions artifacts per project README.",
+          "notes": "Documented USB Army Knife compatible board. Build from GitHub Actions artifacts per project README Upstream main branch activity checked 2026-11-18; no newer tagged release supersedes the main-branch tracking policy.",
           "flashable_in_browser": false,
           "release_tracking": "main_branch_only",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -2087,13 +2464,13 @@
           "fork": "community",
           "name": "USB Army Knife",
           "version": "main-branch",
-          "release_date": "2026-05-27",
+          "release_date": "2026-10-14",
           "url": "https://github.com/i-am-shodan/USBArmyKnife",
-          "notes": "Listed in USB Army Knife hardware table as Pocket-Dongle-S3. Use Generic board profile if autodetect fails.",
+          "notes": "Listed in USB Army Knife hardware table as Pocket-Dongle-S3. Use Generic board profile if autodetect fails Upstream main branch activity checked 2026-11-18; no newer tagged release supersedes the main-branch tracking policy.",
           "flashable_in_browser": false,
           "release_tracking": "main_branch_only",
-          "last_verified_at": "2026-05-27",
-          "confidence": "MED"
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
         }
       ]
     },
@@ -2120,7 +2497,7 @@
           "url": "https://github.com/SpacehuhnTech/esp8266_deauther/releases/tag/2.6.1",
           "notes": "Same firmware as generic ESP8266 Deauther entry — DSTIKE boards ship pre-flashed but often outdated. Re-flash via deauther.com or esptool.",
           "flashable_in_browser": true,
-          "flash_url": "https://deauther.com/",
+          "flash_url": "https://docs.spacehuhn.com/deauther32/installer/",
           "release_tracking": "tagged_releases",
           "last_verified_at": "2026-05-27",
           "confidence": "HIGH"
@@ -2144,14 +2521,14 @@
         {
           "fork": "stock",
           "name": "Flipper OFW (includes NFC stack)",
-          "version": "1.4.3",
-          "release_date": "2025-12-05",
-          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.4.3",
+          "version": "1.5.1",
+          "release_date": "2026-10-15",
+          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.5.1",
           "notes": "NFC features driven by main Flipper firmware. Use lab.flipper.net or qFlipper to update.",
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -2173,27 +2550,27 @@
         {
           "fork": "stock",
           "name": "Flipper OFW",
-          "version": "1.4.3",
-          "release_date": "2025-12-05",
-          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.4.3",
+          "version": "1.5.1",
+          "release_date": "2026-10-15",
+          "url": "https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.5.1",
           "notes": "Sub-GHz stack updated via Flipper firmware. Community forks (Unleashed, Momentum) add regional/protocol patches.",
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         },
         {
           "fork": "community",
           "name": "Unleashed",
-          "version": "unlshd-089",
-          "release_date": "2026-05-09",
-          "url": "https://github.com/DarkFlippers/unleashed-firmware/releases/tag/unlshd-089",
+          "version": "unlshd-095",
+          "release_date": "2026-11-11",
+          "url": "https://github.com/DarkFlippers/unleashed-firmware/releases/tag/unlshd-095",
           "notes": "Region unlock and extended Sub-GHz protocols — flash entire Flipper, module follows.",
           "flashable_in_browser": true,
           "flash_url": "https://lab.flipper.net/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]
@@ -2215,14 +2592,650 @@
         {
           "fork": "community",
           "name": "Meshtastic",
-          "version": "check-releases",
-          "release_date": "2026-05-27",
-          "url": "https://github.com/meshtastic/firmware/releases/latest",
-          "notes": "Heltec V3 is a common Meshtastic target — select exact board in Meshtastic flasher.",
+          "version": "v2.7.26.54e0d8d",
+          "release_date": "2026-06-24",
+          "url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+          "notes": "Current stable Meshtastic firmware release; newer 2.8.x entries are prereleases/alpha and some are revoked. Flash the exact board target via Meshtastic flasher.",
           "flashable_in_browser": true,
           "flash_url": "https://flasher.meshtastic.org/",
           "release_tracking": "tagged_releases",
-          "last_verified_at": "2026-05-27",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "nrfbox",
+      "name": "CiferTech nRFBOX",
+      "manufacturer": "CiferTech",
+      "category": "multi-tool",
+      "tags": [
+        "esp32",
+        "wifi",
+        "ble",
+        "nrf24",
+        "2.4ghz",
+        "rf-research",
+        "handheld",
+        "oled"
+      ],
+      "description": "Handheld ESP32-WROOM-32U wireless research tool combining three nRF24 GTmini radios, a 128x64 OLED and SD storage for Wi-Fi, BLE and 2.4 GHz experimentation.",
+      "url": "https://github.com/cifertech/nRFBox",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "nRFBOX",
+          "version": "v2.7.2",
+          "release_date": "2025-06-22",
+          "url": "https://github.com/cifertech/nRFBox/releases/tag/v2.7.2",
+          "notes": "Latest tagged nRFBOX release; adds BLE Spoofer for Android, SD-card firmware support, Wi-Fi deauther, menu remake and bug fixes.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "catsniffer",
+      "name": "CatSniffer V3",
+      "manufacturer": "Electronic Cats",
+      "category": "sdr",
+      "tags": [
+        "usb",
+        "iot",
+        "zigbee",
+        "thread",
+        "ble",
+        "sub-ghz",
+        "802.15.4",
+        "cc1352p7",
+        "sx1262",
+        "rp2040"
+      ],
+      "description": "USB multiprotocol IoT radio sniffer built around an RP2040, TI CC1352P7 and Semtech SX1262 for authorized Zigbee, Thread, BLE and sub-GHz research.",
+      "url": "https://github.com/ElectronicCats/CatSniffer",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "CatSniffer Firmware",
+          "version": "v3.1.0.1",
+          "release_date": "2026-09-04",
+          "url": "https://github.com/ElectronicCats/CatSniffer-Firmware/releases/tag/v3.1.0.1",
+          "notes": "Official release contains CatSniffer V3 UF2, CC1352P7 sniffer HEX images and SHA256SUMS.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "CatSniffer Tools",
+          "version": "v3.3.3.0",
+          "release_date": "2026-10-20",
+          "url": "https://github.com/ElectronicCats/CatSniffer-Tools/releases/tag/v3.3.3.0",
+          "notes": "Official host tooling release; catnip adds board-aware flashing for V1/V2/V3 and radio capture tooling.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "bus-pirate-5",
+      "name": "Bus Pirate 5",
+      "manufacturer": "Dangerous Prototypes",
+      "category": "multi-tool",
+      "tags": [
+        "rp2040",
+        "spi",
+        "i2c",
+        "uart",
+        "1-wire",
+        "logic-analyzer",
+        "hardware-debugging",
+        "usb-c"
+      ],
+      "description": "Open-source USB serial protocol tool using an RP2040 dual-core MCU to probe and automate 1-Wire, I2C, SPI, UART and other hardware buses.",
+      "url": "https://buspirate.com/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Bus Pirate 5 firmware",
+          "version": "main-9fa22b1",
+          "release_date": "2026-02-08",
+          "url": "https://github.com/DangerousPrototypes/BusPirate5-firmware",
+          "notes": "Official main-branch auto-builds (commit-based versions; ci-buspirate-main-9fa22b1.zip verified). Canonical source repo active; auto-build announcements posted on forum.buspirate.com. No tagged semver releases.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "evilcrow-rf-v2",
+      "name": "EvilCrow RF V2",
+      "manufacturer": "Senape3000 / Joel Serna Moreno",
+      "category": "sdr",
+      "tags": [
+        "esp32",
+        "cc1101",
+        "nrf24",
+        "sub-ghz",
+        "rf-research",
+        "ble",
+        "web-flasher"
+      ],
+      "description": "ESP32-based RF research tool with dual CC1101 transceivers, optional nRF24 support, BLE control, SD storage and a web flasher for sub-GHz experimentation.",
+      "url": "https://github.com/Senape3000/EvilCrowRF-V2",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "EvilCrowRF-V2",
+          "version": "v1.1.3",
+          "release_date": "2026-02-21",
+          "url": "https://github.com/Senape3000/EvilCrowRF-V2/releases/tag/v1.1.3",
+          "notes": "Latest Senape3000 firmware/app release; the project README documents a hosted ESP Web Tools flasher.",
+          "flashable_in_browser": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "flash_url": "https://senape3000.github.io/EvilCrowRF-V2/web-flasher/"
+        }
+      ]
+    },
+    {
+      "id": "chipwhisperer-husky",
+      "name": "ChipWhisperer-Husky",
+      "manufacturer": "NewAE Technology",
+      "category": "sdr",
+      "tags": [
+        "side-channel",
+        "power-analysis",
+        "fault-injection",
+        "glitching",
+        "fpga",
+        "adc",
+        "jtag",
+        "swd",
+        "usb"
+      ],
+      "description": "Open hardware-security capture and glitching platform with a 12-bit 200 MS/s ADC, FPGA-based clock/voltage fault generation, TraceWhisperer and JTAG/SWD I/O.",
+      "url": "https://www.newae.com/product-page/chipwhisperer-husky",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "ChipWhisperer software and firmware",
+          "version": "v6.0.0b",
+          "release_date": "2025-03-26",
+          "url": "https://github.com/newaetech/chipwhisperer/releases/tag/v6.0.0b",
+          "notes": "Official ChipWhisperer 6.0.0 release moved capture-board firmware into dedicated chipwhisperer-capture and added Husky-Plus support; Husky SAM3U firmware is maintained in chipwhisperer-husky with active CI.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "stock",
+          "name": "Husky SAM3U firmware",
+          "version": "main-2890c13",
+          "release_date": "2026-11-17",
+          "url": "https://github.com/newaetech/chipwhisperer-husky/commit/2890c138ccf7481d7bd76380362ce6f2a065ea3f",
+          "notes": "Active firmware source/CI repository; no tagged releases. FPGA bitstream is updated/reloaded by the ChipWhisperer software workflow.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "cynthion",
+      "name": "Cynthion USB Test Instrument",
+      "manufacturer": "Great Scott Gadgets",
+      "category": "sdr",
+      "tags": [
+        "usb",
+        "fpga",
+        "usb-analysis",
+        "usb-proxy",
+        "facedancer",
+        "luna",
+        "hardware-security"
+      ],
+      "description": "FPGA-based USB test instrument for building, testing, monitoring and experimenting with USB devices; supports LUNA gateware and Facedancer workflows.",
+      "url": "https://greatscottgadgets.com/cynthion/",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Cynthion host/gateware",
+          "version": "0.2.5",
+          "release_date": "2026-05-22",
+          "url": "https://github.com/greatscottgadgets/cynthion/releases/tag/0.2.5",
+          "notes": "Official Cynthion release adds gateware resources for earlier revisions and fixes Facedancer bitstream configuration on some hosts.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Facedancer",
+          "version": "3.1.3",
+          "release_date": "2026-05-22",
+          "url": "https://github.com/greatscottgadgets/facedancer/releases/tag/3.1.3",
+          "notes": "Active USB-device emulation/fuzzing library supporting Cynthion and GreatFET backends.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "waveshare-esp32-s3-touch-amoled-175c",
+      "name": "Waveshare ESP32-S3-Touch-AMOLED-1.75C",
+      "manufacturer": "Waveshare",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "amoled",
+        "touchscreen",
+        "display",
+        "mic",
+        "imu",
+        "rtc",
+        "arduino",
+        "esp-idf"
+      ],
+      "description": "ESP32-S3 development board in an aluminum enclosure with a 1.75-inch 466x466 AMOLED touchscreen, dual microphones, IMU and RTC for portable embedded prototyping.",
+      "url": "https://www.waveshare.com/esp32-s3-touch-amoled-1.75c.htm",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Waveshare ESP32-S3 examples",
+          "version": "main-9b295b1",
+          "release_date": "2026-11-16",
+          "url": "https://github.com/waveshareteam/ESP32-S3-Touch-AMOLED-1.75C",
+          "notes": "Official Waveshare Apache-2.0 example/resource repository; active main branch and product image. No tagged firmware releases are published.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "heltec-wireless-tracker-v2",
+      "name": "Heltec Wireless Tracker V2",
+      "manufacturer": "Heltec Automation",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "lora",
+        "sx1262",
+        "gnss",
+        "gps",
+        "meshtastic",
+        "meshcore",
+        "lorawan"
+      ],
+      "description": "ESP32-S3FN8 LoRa/GNSS tracker integrating SX1262 radio and UC6580 GNSS, with Wi-Fi/Bluetooth and Meshtastic, MeshCore and LoRaWAN ecosystem support.",
+      "url": "https://heltec.org/project/wireless-tracker-v2/",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Meshtastic",
+          "version": "v2.7.26.54e0d8d",
+          "release_date": "2026-06-24",
+          "url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+          "notes": "Official Meshtastic release; device hardware API lists heltec-wireless-tracker-v2 as actively supported. Select the exact V2 target in the Meshtastic web flasher.",
+          "flashable_in_browser": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "flash_url": "https://flasher.meshtastic.org/"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-tab5",
+      "name": "M5Stack Tab5",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-p4",
+        "esp32-c6",
+        "display",
+        "touchscreen",
+        "camera",
+        "mipi-dsi",
+        "m5stack"
+      ],
+      "description": "Portable M5Stack smart-IoT terminal built around ESP32-P4 with a 7.0-inch 720x1280 touch display, ESP32-C6 wireless companion, camera, IMU and battery.",
+      "url": "https://docs.m5stack.com/en/core/Tab5",
+      "firmware": [
+        {
+          "fork": "stock",
+          "name": "Tab5 User Demo",
+          "version": "V0.4",
+          "release_date": "2026-06-03",
+          "url": "https://github.com/m5stack/M5Tab5-UserDemo/releases/tag/V0.4",
+          "notes": "Official MIT-licensed factory/user-demo build; release fixes Wi-Fi initialization with updated C6 firmware and provides a binary asset.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce release includes Bruce-m5stack-tab5.bin among release assets; use board-specific image.",
+          "flashable_in_browser": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "flash_url": "https://bruce.computer/flasher"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-cores3-se",
+      "name": "M5Stack CoreS3 SE",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "touchscreen",
+        "speaker",
+        "microphone",
+        "microsd",
+        "usb-otg",
+        "m5stack"
+      ],
+      "description": "Lightweight M5Stack CoreS3-family controller using ESP32-S3 at 240 MHz with 16 MB Flash, 8 MB PSRAM, capacitive touch, speaker, microphones, microSD and USB OTG/CDC.",
+      "url": "https://docs.m5stack.com/en/core/CoreS3-SE",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce release asset Bruce-m5stack-cores3.bin targets the CoreS3 family; active release notes include CoreS3/CoreS3-SE fixes.",
+          "flashable_in_browser": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "flash_url": "https://bruce.computer/flasher"
+        }
+      ]
+    },
+    {
+      "id": "m5stack-stamps3",
+      "name": "M5Stack StampS3",
+      "manufacturer": "M5Stack",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "embedded",
+        "wifi",
+        "rgb-led",
+        "zephyr",
+        "circuitpython"
+      ],
+      "description": "Compact ESP32-S3FN8 embedded module with 8 MB Flash, USB-C, programmable button and RGB LED, suitable for custom embedded hardware.",
+      "url": "https://docs.m5stack.com/en/core/StampS3",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "CircuitPython",
+          "version": "10.3.2",
+          "release_date": "2026-11-11",
+          "url": "https://github.com/adafruit/circuitpython/releases/tag/10.3.2",
+          "notes": "CircuitPython stable release supports the M5Stamp S3 board; release covers stable Espressif and nRF52840 ports.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Zephyr",
+          "version": "v4.5.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/zephyrproject-rtos/zephyr/releases/tag/v4.5.0",
+          "notes": "Maintained Zephyr board target m5stack_stamps3; upstream 4.5.0 release.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "stock",
+          "name": "UiFlow MicroPython",
+          "version": "2.5.5",
+          "release_date": "2026-11-18",
+          "url": "https://github.com/m5stack/uiflow-micropython/releases/tag/2.5.5",
+          "notes": "Official M5Stack UiFlow MicroPython release; board firmware ecosystem is active even though the STAMP-S3 case-program repo is archived.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "esp32-c6-devkitc-1",
+      "name": "ESP32-C6-DevKitC-1",
+      "manufacturer": "Espressif",
+      "category": "esp32",
+      "tags": [
+        "esp32-c6",
+        "wifi-6",
+        "ble",
+        "zigbee",
+        "thread",
+        "devkit",
+        "usb"
+      ],
+      "description": "Espressif reference development board based on ESP32-C6-WROOM-1 with 8 MB Flash, Wi-Fi 6, Bluetooth LE, Zigbee, Thread and native USB capabilities.",
+      "url": "https://www.espressif.com/en/products/devkits/esp32-c6-devkitc-1",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "CircuitPython",
+          "version": "10.3.2",
+          "release_date": "2026-11-11",
+          "url": "https://github.com/adafruit/circuitpython/releases/tag/10.3.2",
+          "notes": "CircuitPython stable Espressif port includes ESP32-C6 support; select the exact board build from circuitpython.org.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        },
+        {
+          "fork": "community",
+          "name": "Zephyr",
+          "version": "v4.5.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/zephyrproject-rtos/zephyr/releases/tag/v4.5.0",
+          "notes": "Maintained Zephyr ESP32-C6-DevKitC board target and active upstream release.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "xiao-esp32s3-sense",
+      "name": "Seeed XIAO ESP32S3 Sense",
+      "manufacturer": "Seeed Studio",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "camera",
+        "microphone",
+        "microsd",
+        "wifi",
+        "ble",
+        "tinyml",
+        "compact"
+      ],
+      "description": "Tiny ESP32-S3R8 camera development board with OV2640 camera, digital microphone and microSD expansion for edge-AI, imaging and embedded Wi-Fi/BLE projects.",
+      "url": "https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Bruce",
+          "version": "1.17",
+          "release_date": "2026-11-12",
+          "url": "https://github.com/BruceDevices/firmware/releases/tag/1.17",
+          "notes": "Bruce release includes the board-specific Bruce-seeedstudio-xiao-esp32s3.bin asset.",
+          "flashable_in_browser": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "flash_url": "https://bruce.computer/flasher"
+        },
+        {
+          "fork": "community",
+          "name": "MicroPython",
+          "version": "v1.29.0",
+          "release_date": "2026-08-24",
+          "url": "https://github.com/micropython/micropython/releases/tag/v1.29.0",
+          "notes": "MicroPython release supports the ESP32-S3 port; use the Seeed XIAO ESP32S3 board build.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t3-s3",
+      "name": "LilyGo T3-S3",
+      "manufacturer": "LilyGo",
+      "category": "esp32",
+      "tags": [
+        "esp32-s3",
+        "lora",
+        "sx1262",
+        "sx1276",
+        "sx1280",
+        "meshtastic",
+        "oled",
+        "microsd"
+      ],
+      "description": "ESP32-S3 LoRa board with 0.96-inch OLED, microSD and multi-band radio options including SX1262/SX1276/SX1280; an actively supported Meshtastic target.",
+      "url": "https://wiki.lilygo.cc/products/t3-series/t3-s3/",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Meshtastic",
+          "version": "v2.7.26.54e0d8d",
+          "release_date": "2026-06-24",
+          "url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+          "notes": "Official Meshtastic release; device hardware API lists T-LoRa T3-S3 as actively supported. Select the exact radio/revision target in the web flasher.",
+          "flashable_in_browser": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "flash_url": "https://flasher.meshtastic.org/"
+        },
+        {
+          "fork": "community",
+          "name": "LilyGo LoRa Series examples",
+          "version": "main-5f537f1",
+          "release_date": "2026-11-16",
+          "url": "https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/commit/5f537f1783933eae79723478c80b69d8c1530b99",
+          "notes": "Active official LilyGo example repository; latest commit adds T-Beam S3 144 MHz firmware and documents T3-S3 variants.",
+          "flashable_in_browser": false,
+          "release_tracking": "main_branch_only",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "lilygo-t-echo",
+      "name": "LilyGo T-Echo",
+      "manufacturer": "LilyGo",
+      "category": "lora-mesh",
+      "tags": [
+        "nrf52840",
+        "lora",
+        "sx1262",
+        "e-ink",
+        "gps",
+        "nfc",
+        "meshtastic",
+        "low-power"
+      ],
+      "description": "Low-power nRF52840 LoRa node with e-paper display, GNSS, NFC and battery enclosure; a first-class Meshtastic nRF52 target with drag-and-drop firmware updates.",
+      "url": "https://lilygo.cc/en-us/products/t-echo-meshtastic",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Meshtastic",
+          "version": "v2.7.26.54e0d8d",
+          "release_date": "2026-06-24",
+          "url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+          "notes": "Official release; Meshtastic hardware docs specify firmware-t-echo-2.x.x.uf2 and active T-Echo support.",
+          "flashable_in_browser": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "flash_url": "https://flasher.meshtastic.org/"
+        }
+      ]
+    },
+    {
+      "id": "rak-wisblock-rak4631",
+      "name": "RAK WisBlock RAK4631",
+      "manufacturer": "RAKwireless",
+      "category": "lora-mesh",
+      "tags": [
+        "nrf52840",
+        "lora",
+        "sx1262",
+        "ble",
+        "meshtastic",
+        "wisblock",
+        "low-power"
+      ],
+      "description": "Low-power WisBlock core module combining Nordic nRF52840, SX1262 LoRa and BLE 5.0; widely used as a modular Meshtastic node core.",
+      "url": "https://docs.rakwireless.com/product-categories/wisblock/rak4631/overview/",
+      "firmware": [
+        {
+          "fork": "community",
+          "name": "Meshtastic",
+          "version": "v2.7.26.54e0d8d",
+          "release_date": "2026-06-24",
+          "url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+          "notes": "Official release; Meshtastic hardware API lists RAK WisBlock 4631 as actively supported and documents firmware-rak4631-X.X.X.xxxxxxx.uf2.",
+          "flashable_in_browser": true,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
+          "confidence": "HIGH",
+          "flash_url": "https://flasher.meshtastic.org/"
+        },
+        {
+          "fork": "community",
+          "name": "Zephyr",
+          "version": "v4.5.0",
+          "release_date": "2026-10-28",
+          "url": "https://github.com/zephyrproject-rtos/zephyr/releases/tag/v4.5.0",
+          "notes": "Maintained Zephyr rak4631 board target; useful alternate development firmware ecosystem.",
+          "flashable_in_browser": false,
+          "release_tracking": "tagged_releases",
+          "last_verified_at": "2026-11-18",
           "confidence": "HIGH"
         }
       ]

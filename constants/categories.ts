@@ -14,5 +14,6 @@ export const DEVICE_CATEGORIES: readonly Category[] = [
   { id: "badusb", label: "BADUSB" },
   { id: "implant", label: "IMPLANT" },
   { id: "esp32", label: "ESP32" },
+  { id: "lora-mesh", label: "LORA / MESH" },
   { id: "flipper-accessory", label: "FLIPPER ACC." },
 ] as const;
